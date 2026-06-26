@@ -50,7 +50,7 @@ export default function CustomDropdown({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0152FA] focus:bg-white rounded-xl py-3 px-4 text-xs font-medium text-zinc-800 outline-none transition-all flex items-center justify-between cursor-pointer active:scale-[0.99] select-none text-left"
+        className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 px-4 text-xs font-medium text-zinc-800 outline-none transition-all flex items-center justify-between cursor-pointer active:scale-[0.99] select-none text-left"
       >
         <span className="truncate">{selectedOption?.label}</span>
         <ChevronDown 
@@ -83,14 +83,14 @@ export default function CustomDropdown({
                   }}
                   className={`w-full text-left px-3.5 py-2.5 rounded-xl transition-all flex flex-col gap-0.5 select-none cursor-pointer ${
                     isSelected 
-                      ? 'bg-[#0152FA]/10 text-zinc-950 font-bold' 
+                      ? 'bg-[#0f2b5e]/10 text-zinc-950 font-bold' 
                       : 'text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950'
                   }`}
                 >
                   <span className="text-xs">{option.label}</span>
                   {option.description && (
                     <span className={`text-[9.5px] font-sans font-medium ${
-                      isSelected ? 'text-[#0152FA]' : 'text-zinc-400'
+                      isSelected ? 'text-[#0f2b5e]' : 'text-zinc-400'
                     }`}>
                       {option.description}
                     </span>

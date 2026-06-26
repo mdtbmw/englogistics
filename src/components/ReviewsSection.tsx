@@ -52,7 +52,7 @@ export default function ReviewsSection() {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="text-center mb-12"
       >
-        <h2 className="text-[10px] font-bold text-[#0152FA] uppercase tracking-widest mb-2 font-mono">Testimonials</h2>
+        <h2 className="text-[10px] font-bold text-[#0f2b5e] uppercase tracking-widest mb-2 font-mono">Testimonials</h2>
         <h3 className="text-2xl md:text-3.5xl font-medium text-zinc-950 tracking-tight">What Our Clients Say</h3>
         <p className="text-zinc-500 text-xs md:text-sm max-w-lg mx-auto mt-3">
           Real feedback from our valued clients across Nigeria.
@@ -71,17 +71,17 @@ export default function ReviewsSection() {
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 className="bg-white border border-zinc-100 rounded-[2rem] p-8 md:p-12 shadow-lg text-center relative w-full"
               >
-                <Quote size={32} className="text-[#0152FA]/10 absolute top-6 left-6" />
+                <Quote size={32} className="text-[#0f2b5e]/10 absolute top-6 left-6" />
                 <div className="flex justify-center gap-1 mb-4">
                   {Array.from({ length: reviews[current].rating }).map((_, i) => (
-                    <Star key={i} size={18} className="fill-[#0152FA] text-[#0152FA]" />
+                    <Star key={i} size={18} className="fill-[#0f2b5e] text-[#0f2b5e]" />
                   ))}
                 </div>
                 <p className="text-zinc-700 text-sm md:text-base leading-relaxed italic mb-6 font-sans">
                   "{reviews[current].text}"
                 </p>
                 <div>
-                  <p className="text-[#0152FA] font-bold text-sm font-sans">{reviews[current].name}</p>
+                  <p className="text-[#0f2b5e] font-bold text-sm font-sans">{reviews[current].name}</p>
                   <p className="text-zinc-400 text-[10px] font-mono mt-1">{reviews[current].date}</p>
                 </div>
               </motion.div>
@@ -89,13 +89,13 @@ export default function ReviewsSection() {
 
             <button
               onClick={prev}
-              className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-lg flex items-center justify-center text-zinc-600 hover:text-[#0152FA] hover:border-[#0152FA]/30 transition-all cursor-pointer active:scale-90"
+              className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-lg flex items-center justify-center text-zinc-600 hover:text-[#0f2b5e] hover:border-[#0f2b5e]/30 transition-all cursor-pointer active:scale-90"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={next}
-              className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-lg flex items-center justify-center text-zinc-600 hover:text-[#0152FA] hover:border-[#0152FA]/30 transition-all cursor-pointer active:scale-90"
+              className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-lg flex items-center justify-center text-zinc-600 hover:text-[#0f2b5e] hover:border-[#0f2b5e]/30 transition-all cursor-pointer active:scale-90"
             >
               <ChevronRight size={18} />
             </button>
@@ -109,7 +109,7 @@ export default function ReviewsSection() {
               key={idx}
               onClick={() => setCurrent(idx)}
               className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                idx === current ? 'bg-[#0152FA] w-6' : 'bg-zinc-300 hover:bg-zinc-400'
+                idx === current ? 'bg-[#0f2b5e] w-6' : 'bg-zinc-300 hover:bg-zinc-400'
               }`}
             />
           ))}

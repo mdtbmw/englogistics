@@ -36,7 +36,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
       <nav className={`fixed top-0 left-0 w-full z-50 px-4 md:px-8 transition-all duration-500 ${scrolled ? 'py-3' : 'py-5'}`}>
         <div className={`transition-all duration-500 flex items-center justify-between px-6 py-3.5 max-w-7xl mx-auto rounded-2xl ${
           scrolled 
-            ? 'bg-white/90 backdrop-blur-lg shadow-[0_12px_40px_rgba(1,82,250,0.06)] border border-[#0152FA]/15' 
+            ? 'bg-white/90 backdrop-blur-lg shadow-[0_12px_40px_rgba(15,43,94,0.06)] border border-[#0f2b5e]/15' 
             : 'bg-white/95 backdrop-blur-md shadow-lg border border-zinc-100'
         }`}>
           {/* Logo */}
@@ -44,11 +44,9 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
             onClick={() => { setView('home'); setIsOpen(false); }}
             className="flex items-center gap-2.5 text-left group cursor-pointer focus:outline-none"
           >
-            <div className="w-8 h-8 bg-[#0152FA] rounded-xl flex items-center justify-center shadow-[0_4px_12px_rgba(1,82,250,0.25)] group-hover:bg-zinc-950 transition-colors p-1 text-white">
-              <LogoIcon className="w-full h-full text-white" strokeWidth={0.5} />
-            </div>
+            <LogoIcon className="w-10 h-10" />
             <div>
-              <span className="font-bold text-zinc-950 tracking-tight text-xs uppercase block" style={{color:'#0152FA'}}>ENGRACED</span>
+              <span className="font-bold text-zinc-950 tracking-tight text-xs uppercase block" style={{color:'#0f2b5e'}}>ENGRACED</span>
               <span className="text-[9px] font-mono text-zinc-400 uppercase tracking-widest block -mt-1">LOGISTICS</span>
             </div>
           </button>
@@ -61,7 +59,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
                 onClick={() => setView(item.view)}
                 className={`text-[10px] font-bold py-1.5 px-3 rounded-lg uppercase tracking-wider transition-all cursor-pointer relative ${
                   currentView === item.view
-                    ? 'text-[#0152FA]'
+                    ? 'text-[#0f2b5e]'
                     : 'text-zinc-500 hover:text-zinc-950'
                 }`}
               >
@@ -69,7 +67,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
                 {currentView === item.view && (
                   <motion.div 
                     layoutId="activeIndicator"
-                    className="absolute inset-0 bg-[#0152FA]/10 rounded-lg"
+                    className="absolute inset-0 bg-[#0f2b5e]/10 rounded-lg"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -81,7 +79,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
           <div className="hidden lg:flex items-center gap-4">
             <button 
               onClick={() => setView('booking')}
-              className="bg-zinc-950 text-white text-[10px] font-bold px-5 py-3 rounded-xl hover:bg-[#0152FA] transition-colors uppercase tracking-widest active:scale-95 cursor-pointer shadow-md"
+              className="bg-zinc-950 text-white text-[10px] font-bold px-5 py-3 rounded-xl hover:bg-[#0f2b5e] transition-colors uppercase tracking-widest active:scale-95 cursor-pointer shadow-md"
             >
               Book a Ride
             </button>
@@ -118,7 +116,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
                   }}
                   className={`text-xs font-bold uppercase tracking-widest text-left py-2 px-3 rounded-xl transition-all ${
                     currentView === item.view
-                      ? 'bg-[#0152FA]/10 text-[#0152FA]'
+                      ? 'bg-[#0f2b5e]/10 text-[#0f2b5e]'
                       : 'text-zinc-500 hover:bg-zinc-50 hover:text-zinc-950'
                   }`}
                 >
@@ -131,7 +129,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
                     setView('booking');
                     setIsOpen(false);
                   }}
-                  className="w-full bg-[#0152FA] text-white text-[10px] font-bold py-3 px-4 rounded-xl text-center uppercase tracking-widest active:scale-95"
+                  className="w-full bg-[#0f2b5e] text-white text-[10px] font-bold py-3 px-4 rounded-xl text-center uppercase tracking-widest active:scale-95"
                 >
                   Book a Ride
                 </button>

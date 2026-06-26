@@ -44,12 +44,12 @@ export default function MetricsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ type: "spring", stiffness: 80, damping: 15 }}
-        className="bg-zinc-950 rounded-[2.5rem] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl"
+        className="bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden shadow-2xl"
       >
-        <div className="absolute top-0 right-0 w-[45rem] h-[45rem] bg-[#0152FA]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[45rem] h-[45rem] bg-[#0f2b5e]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
         
         <div className="w-full lg:w-1/3 relative z-10 text-left">
-          <span className="text-[9px] font-mono text-[#0152FA] uppercase tracking-widest block mb-2">Operational Integrity</span>
+          <span className="text-[9px] font-mono text-[#6b9fff] uppercase tracking-widest block mb-2">Operational Integrity</span>
           <h3 className="text-white text-2xl lg:text-3xl font-medium leading-[1.15] mb-4 tracking-tight">
             Certified Excellence in Motion. Nationwide.
           </h3>
@@ -67,7 +67,7 @@ export default function MetricsSection() {
         >
           {metrics.map((metric, idx) => (
             <motion.div variants={itemVariants} key={idx} className="flex flex-col gap-2 border-l border-zinc-800 pl-4.5 py-1">
-              <span className="text-[#0152FA] text-xl md:text-2.5xl font-mono font-bold tracking-tight">
+              <span className="text-[#6b9fff] text-xl md:text-2.5xl font-mono font-bold tracking-tight">
                 {metric.value}
               </span>
               <div>

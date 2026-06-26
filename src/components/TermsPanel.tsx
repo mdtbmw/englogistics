@@ -42,9 +42,9 @@ export default function TermsPanel({ setView }: TermsPanelProps) {
       
       {/* Header Section */}
       <section className="mb-12 bg-zinc-950 rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden text-white shadow-2xl">
-        <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-[#0152FA]/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-[#0f2b5e]/5 rounded-full blur-3xl pointer-events-none"></div>
         <div className="relative z-10 max-w-3xl">
-          <h2 className="text-[10px] font-bold text-[#0152FA] uppercase tracking-widest mb-3 font-mono">Operations Desk</h2>
+          <h2 className="text-[10px] font-bold text-[#0f2b5e] uppercase tracking-widest mb-3 font-mono">Operations Desk</h2>
           <h1 className="text-3xl md:text-5xl font-medium tracking-tight mb-5 leading-tight">
             Terms of Service
           </h1>
@@ -54,7 +54,7 @@ export default function TermsPanel({ setView }: TermsPanelProps) {
           <div className="flex gap-4">
             <button 
               onClick={() => setView('booking')}
-              className="bg-[#0152FA] text-zinc-950 text-[10px] font-bold px-6 py-3.5 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0152FA]/20"
+              className="bg-[#0f2b5e] text-zinc-950 text-[10px] font-bold px-6 py-3.5 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0f2b5e]/20"
             >
               Open Booking Desk
             </button>
@@ -79,8 +79,8 @@ export default function TermsPanel({ setView }: TermsPanelProps) {
 
         <div className="lg:col-span-8 space-y-8">
           {termsSections.map((sec) => (
-            <div key={sec.num} className="bg-zinc-50 border border-zinc-150 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-[#0152FA]/25 transition-all">
-              <span className="text-2xl font-bold font-mono text-[#0152FA] leading-none">{sec.num}</span>
+            <div key={sec.num} className="bg-zinc-50 border border-zinc-150 rounded-2xl p-6 md:p-8 flex gap-6 items-start hover:border-[#0f2b5e]/25 transition-all">
+              <span className="text-2xl font-bold font-mono text-[#0f2b5e] leading-none">{sec.num}</span>
               <div>
                 <h4 className="text-sm font-bold text-zinc-950 uppercase tracking-wider mb-2 font-sans">{sec.title}</h4>
                 <p className="text-[11.5px] text-zinc-500 leading-relaxed font-sans">{sec.content}</p>

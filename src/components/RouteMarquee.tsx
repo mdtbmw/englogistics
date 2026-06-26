@@ -17,7 +17,7 @@ export default function RouteMarquee() {
             <span className="text-[10.5px] font-bold text-zinc-500 uppercase tracking-[0.2em] font-mono">
               {dest}
             </span>
-            <span className="text-[#0152FA] text-sm">✦</span>
+            <span className="text-[#0f2b5e] text-sm">✦</span>
           </div>
         ))}
       </div>

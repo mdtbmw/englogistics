@@ -58,7 +58,7 @@ export default function CoverageSimulation() {
         {/* Monitoring Info */}
         <div className="w-full md:w-[52%] p-4 sm:p-6 lg:p-12 relative z-10 text-left flex flex-col justify-between">
            <div>
-             <span className="text-[7px] xs:text-[8.5px] font-mono text-[#0152FA] uppercase tracking-widest block mb-1 font-bold">Standard Regional Operations</span>
+             <span className="text-[7px] xs:text-[8.5px] font-mono text-[#0f2b5e] uppercase tracking-widest block mb-1 font-bold">Standard Regional Operations</span>
              <h3 className="text-[10px] xs:text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium text-zinc-950 leading-tight mb-2 tracking-tight">
                Regional Protocol & Fleet Coverage Map
              </h3>
@@ -75,7 +75,7 @@ export default function CoverageSimulation() {
                  onClick={() => setActiveRegion(region)}
                  className={`text-[7px] xs:text-[8.5px] sm:text-[9.5px] font-bold py-1 sm:py-1.5 rounded-md sm:rounded-lg uppercase tracking-wider transition-colors cursor-pointer text-center truncate ${
                    activeRegion === region 
-                     ? 'bg-[#0152FA] text-zinc-950 shadow-md font-bold' 
+                     ? 'bg-[#0f2b5e] text-zinc-950 shadow-md font-bold' 
                      : 'bg-white border border-zinc-200 text-zinc-500 hover:text-zinc-950'
                  }`}
                >
@@ -97,7 +97,7 @@ export default function CoverageSimulation() {
                 >
                   <div className="flex flex-col xs:flex-row items-start xs:items-center justify-between border-b border-zinc-100 pb-1.5 sm:pb-2 gap-0.5">
                     <span className="text-[7.5px] xs:text-[9.5px] sm:text-[10px] font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-1 sm:gap-2">
-                      <Cpu size={10} className="text-[#0152FA] animate-pulse shrink-0" />
+                      <Cpu size={10} className="text-[#0f2b5e] animate-pulse shrink-0" />
                       {regionDetails[activeRegion].name}
                     </span>
                     <span className="text-[6.5px] xs:text-[8px] sm:text-[9px] font-mono text-zinc-400 truncate max-w-full">{regionDetails[activeRegion].coordinates}</span>
@@ -114,7 +114,7 @@ export default function CoverageSimulation() {
                     </div>
                     <div className="col-span-1 xs:col-span-2">
                        <span className="text-[7px] xs:text-[8.5px] sm:text-[9px] text-zinc-400 block font-mono">DESK STATUS ASSESSMENT</span>
-                       <span className="text-[7.5px] xs:text-[10px] sm:text-xs font-bold text-[#0152FA] uppercase font-sans">{regionDetails[activeRegion].threatLevel}</span>
+                       <span className="text-[7.5px] xs:text-[10px] sm:text-xs font-bold text-[#0f2b5e] uppercase font-sans">{regionDetails[activeRegion].threatLevel}</span>
                     </div>
                   </div>
       
@@ -122,7 +122,7 @@ export default function CoverageSimulation() {
                     <span className="text-[8.5px] font-bold text-zinc-400 block uppercase tracking-widest mb-1">Operations Log</span>
                     {regionDetails[activeRegion].history.map((hist, i) => (
                       <p key={i} className="text-[10px] text-zinc-500 font-mono flex items-center gap-1.5 mt-0.5">
-                        <span className="w-1 h-1 rounded-full bg-[#0152FA] shrink-0" />
+                        <span className="w-1 h-1 rounded-full bg-[#0f2b5e] shrink-0" />
                         {hist}
                       </p>
                     ))}
@@ -144,15 +144,15 @@ export default function CoverageSimulation() {
            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/50 z-10 pointer-events-none" />
            
            {/* Technical Grid Pattern Overlay */}
-           <div className="absolute inset-0 opacity-10 z-10 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#0152FA 1px, transparent 1px), linear-gradient(90deg, #0152FA 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+           <div className="absolute inset-0 opacity-10 z-10 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#0f2b5e 1px, transparent 1px), linear-gradient(90deg, #0f2b5e 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
            
            {/* Elegant overlay detail representing active transit paths */}
            <div className="relative z-20 flex flex-col items-center gap-1.5 sm:gap-3 bg-zinc-900/90 border border-zinc-850 p-3 sm:p-6 rounded-xl sm:rounded-2xl max-w-[90%] text-center backdrop-blur-md shadow-2xl">
-             <div className="w-7 h-7 sm:w-10 sm:h-10 bg-[#0152FA]/10 border border-[#0152FA]/30 rounded-lg sm:rounded-xl flex items-center justify-center text-[#0152FA]">
+             <div className="w-7 h-7 sm:w-10 sm:h-10 bg-[#0f2b5e]/10 border border-[#0f2b5e]/30 rounded-lg sm:rounded-xl flex items-center justify-center text-[#0f2b5e]">
                <Navigation className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 animate-pulse" />
              </div>
              <div>
-               <span className="text-[7px] xs:text-[8px] sm:text-[9px] font-bold text-[#0152FA] uppercase tracking-widest font-mono block">GPS Protocol Active</span>
+               <span className="text-[7px] xs:text-[8px] sm:text-[9px] font-bold text-[#0f2b5e] uppercase tracking-widest font-mono block">GPS Protocol Active</span>
                <span className="text-[8px] xs:text-[10px] sm:text-[11.5px] font-medium text-white block mt-0.5 sm:mt-1">Lagos • Abuja • Benin • PH</span>
                <span className="hidden xs:block text-[7.5px] xs:text-[8.5px] sm:text-[9px] text-zinc-500 block mt-0.5 sm:mt-1 font-mono">Real-Time Transit Logging</span>
              </div>
