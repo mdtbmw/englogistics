@@ -38,7 +38,7 @@ export default function MetricsSection() {
   };
 
   return (
-    <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto w-full">
+    <section id="metrics" className="py-12 px-4 md:px-8 max-w-7xl mx-auto w-full">
       <motion.div 
         initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}

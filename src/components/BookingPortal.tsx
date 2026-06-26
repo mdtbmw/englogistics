@@ -148,7 +148,7 @@ _This booking request has been authorized by the central desk and requires direc
         <LogoIcon className="w-12 h-12 mx-auto mb-1" />
         <div>
           <span className="text-[9px] font-mono text-[#0f2b5e] uppercase tracking-widest block mb-1">Booking Desk</span>
-          <h2 className="text-3xl md:text-4xl font-medium text-zinc-950 tracking-tight">Book a Vehicle</h2>
+          <h1 className="text-3xl md:text-4xl font-medium text-zinc-950 tracking-tight">Book a Vehicle</h1>
         </div>
         <p className="text-zinc-500 text-xs md:text-sm max-w-sm mx-auto mt-2">
           Select your vehicle, choose your options, and book instantly.
@@ -444,7 +444,7 @@ _This booking request has been authorized by the central desk and requires direc
 
                 <div className="flex flex-col gap-3.5 bg-[#0a1f4a]/60 p-4 border border-[#0f2b5e]/30 rounded-2xl">
                   <div className="flex items-center gap-4">
-                    <img src={selectedVehicle.image} className="w-20 h-14 object-cover rounded-xl border border-[#0f2b5e]/20 shrink-0" />
+                    <img src={selectedVehicle.image} alt={selectedVehicle.name} className="w-20 h-14 object-cover rounded-xl border border-[#0f2b5e]/20 shrink-0" />
                     <div className="text-left flex-1 min-w-0">
                       <span className="text-[8px] font-bold text-zinc-500 uppercase font-mono block">Selected Vehicle Class</span>
                       <span className="text-xs font-semibold text-white uppercase block mt-0.5 truncate">{selectedVehicle.name}</span>

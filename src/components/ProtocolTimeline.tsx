@@ -34,7 +34,7 @@ export default function ProtocolTimeline() {
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full overflow-hidden text-left">
+    <section id="process" className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full overflow-hidden text-left">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

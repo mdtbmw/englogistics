@@ -13,7 +13,7 @@ export default function ClientsSection() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full overflow-hidden">
+    <section id="clients" className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

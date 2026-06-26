@@ -41,7 +41,7 @@ export default function PrivacyPanel({ setView }: PrivacyPanelProps) {
     <div className="pt-32 md:pt-40 pb-16 px-4 md:px-8 max-w-7xl mx-auto w-full text-left animate-slide-up">
       
       {/* Header Section */}
-      <section className="mb-12 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden text-white shadow-2xl">
+      <section id="privacy-hero" className="mb-12 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden text-white shadow-2xl">
         <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-[#6b9fff]/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="relative z-10 max-w-3xl">
           <h2 className="text-[10px] font-bold text-[#6b9fff] uppercase tracking-widest mb-3 font-mono">Operations Desk</h2>

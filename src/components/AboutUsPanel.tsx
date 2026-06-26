@@ -61,7 +61,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
     <div className="pt-32 md:pt-40 pb-20 px-4 md:px-8 max-w-7xl mx-auto w-full text-left">
       
       {/* Hero Section */}
-      <section className="mb-20 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl">
+      <section id="about-hero" className="mb-20 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl">
         <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#6b9fff]/10 rounded-full blur-3xl pointer-events-none -translate-y-1/3 translate-x-1/3"></div>
         <div className="relative z-10 max-w-3xl">
           <h2 className="text-[10px] font-bold text-[#6b9fff] uppercase tracking-[0.25em] mb-4 font-mono">Corporate Profile</h2>

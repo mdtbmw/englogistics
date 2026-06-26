@@ -44,7 +44,7 @@ export default function ReviewsSection() {
   const prev = () => setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full">
+    <section id="reviews" className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

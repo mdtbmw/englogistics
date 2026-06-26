@@ -46,7 +46,7 @@ export default function CoverageSimulation() {
   };
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full">
+    <section id="coverage" className="py-16 px-4 md:px-8 max-w-7xl mx-auto w-full">
       <motion.div 
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
