@@ -96,7 +96,7 @@ export const FLEET_DATA: FleetItem[] = [
     images: [prado2025],
     cutout: '/assets/images/prado_2025.png',
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Premium 4x4 SUV' },
-    desc: 'The best car rental in Benin City for luxury SUV hire. The Toyota Prado offers elite travel experience for executive transfers, corporate assignments, and interstate travel across Nigeria.',
+    desc: 'The best car rental in Benin City for luxury SUV hire. The Toyota Prado offers elite travel experience for executive transfers, corporate assignments, and interstate travel across Nigeria. Toyota Prado rental per day at ₦120,000 — book your Prado SUV hire in Benin City, Lagos, or Abuja.',
     pricePerDay: 120000,
     category: 'suvs'
   },
@@ -107,7 +107,7 @@ export const FLEET_DATA: FleetItem[] = [
     images: [lcAngle, lcTop],
     cutout: '/assets/images/land_cruiser_2024.png',
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Elite Convoy SUV' },
-    desc: 'Renowned for durability and commanding presence, the Land Cruiser delivers unmatched VIP transport and security for government assignments, protocol services, and executive movement in Nigeria.',
+    desc: 'Renowned for durability and commanding presence, the Land Cruiser delivers unmatched VIP transport and security for government assignments, protocol services, and executive movement in Nigeria. Land Cruiser rental Lagos — premium SUV hire for VIP convoys at ₦180,000 per day.',
     pricePerDay: 180000,
     category: 'vip'
   },
@@ -118,7 +118,7 @@ export const FLEET_DATA: FleetItem[] = [
     images: [hiluxAngle, hiluxBack, hiluxFront, hiluxSide],
     cutout: '/assets/images/hilux_2023.png',
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Medium Bags', type: 'Premium Escort Pickup' },
-    desc: 'A rugged and reliable premium pickup truck, ideal for security escort services, cargo logistics, rugged terrain operations, and protocol convoy management in Benin City and nationwide.',
+    desc: 'A rugged and reliable premium pickup truck, ideal for security escort services, cargo logistics, rugged terrain operations, and protocol convoy management in Benin City and nationwide. Toyota Hilux for security escort — hire per day at ₦95,000. The best Hilux rental in Benin City.',
     pricePerDay: 95000,
     category: 'vip'
   },
@@ -131,7 +131,7 @@ export const FLEET_DATA: FleetItem[] = [
       'https://www.engracedlogistics.com.ng/storage/2019/02/corolla-2016.jpg'
     ],
     specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Comfort Sedan' },
-    desc: 'A popular and reliable choice for daily car hire in Benin City, corporate meetings, and airport transfers, offering excellent fuel efficiency and air-conditioned comfort.',
+    desc: 'A popular and reliable choice for daily car hire in Benin City, corporate meetings, and airport transfers, offering excellent fuel efficiency and air-conditioned comfort. Toyota Corolla rental in Benin City — affordable sedan hire at ₦35,000 per day.',
     pricePerDay: 35000,
     category: 'sedans'
   },
@@ -141,7 +141,7 @@ export const FLEET_DATA: FleetItem[] = [
     image: 'https://www.engracedlogistics.com.ng/storage/2019/02/camry-2010-740x556.jpg',
     images: ['https://www.engracedlogistics.com.ng/storage/2019/02/camry-2010-740x556.jpg'],
     specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Premium Sedan' },
-    desc: 'Combining a spacious cabin with smooth ride quality, the Toyota Camry is a highly dependable vehicle for executive car rental and corporate transit in Lagos, Abuja, and Benin City.',
+    desc: 'Combining a spacious cabin with smooth ride quality, the Toyota Camry is a highly dependable vehicle for executive car rental and corporate transit in Lagos, Abuja, and Benin City. Executive sedan hire — Toyota Camry rental at ₦40,000 per day.',
     pricePerDay: 40000,
     category: 'sedans'
   },
@@ -154,7 +154,7 @@ export const FLEET_DATA: FleetItem[] = [
       'https://www.engracedlogistics.com.ng/storage/2019/02/rav4.jpg'
     ],
     specs: { pax: 'Up to 4 Passengers', luggage: '3 Medium Bags', type: 'Compact Crossover SUV' },
-    desc: 'Perfect for navigating city streets or light rugged terrain, the RAV4 is a popular SUV rental choice in Benin City for comfort, safety, and cargo flexibility.',
+    desc: 'Perfect for navigating city streets or light rugged terrain, the RAV4 is a popular SUV rental choice in Benin City for comfort, safety, and cargo flexibility. Toyota RAV4 hire in Nigeria at ₦60,000 per day.',
     pricePerDay: 60000,
     category: 'suvs'
   },
@@ -167,7 +167,7 @@ export const FLEET_DATA: FleetItem[] = [
       'https://www.engracedlogistics.com.ng/storage/2019/02/bus.jpg'
     ],
     specs: { pax: 'Up to 14 Passengers', luggage: '8 Medium Bags', type: 'Executive Commuter Bus' },
-    desc: 'Designed for group transport, corporate retreats, and family trips. The best bus rental in Benin City for group travel with ample passenger space and air conditioning.',
+    desc: 'Designed for group transport, corporate retreats, and family trips. The best bus rental in Benin City for group travel with ample passenger space and air conditioning. Toyota Hiace 14-seater bus hire in Nigeria at ₦75,000 per day.',
     pricePerDay: 75000,
     category: 'vans'
   },
@@ -177,7 +177,7 @@ export const FLEET_DATA: FleetItem[] = [
     image: 'https://www.engracedlogistics.com.ng/storage/2019/02/coaster-740x556.jpg',
     images: ['https://www.engracedlogistics.com.ng/storage/2019/02/coaster-740x556.jpg'],
     specs: { pax: 'Up to 28 Passengers', luggage: '15 Large Bags', type: 'Group Transit Coach' },
-    desc: 'The ultimate choice for large group transfers, delegation travel, weddings, and corporate site movements. Reliable bus hire for events across Nigeria.',
+    desc: 'The ultimate choice for large group transfers, delegation travel, weddings, and corporate site movements. Reliable bus hire for events across Nigeria. Toyota Coaster 28-seater bus rental at ₦120,000 per day.',
     pricePerDay: 120000,
     category: 'vans'
   },
@@ -187,7 +187,7 @@ export const FLEET_DATA: FleetItem[] = [
     image: 'https://www.engracedlogistics.com.ng/storage/2021/05/sienna-740x556.jpg',
     images: ['https://www.engracedlogistics.com.ng/storage/2021/05/sienna-740x556.jpg'],
     specs: { pax: 'Up to 7 Passengers', luggage: '5 Medium Bags', type: 'Premium Minivan' },
-    desc: 'Spacious, highly comfortable, and smooth-driving. The Sienna is the ideal minivan for family transfers, airport runs, and business travel in Nigeria.',
+    desc: 'Spacious, highly comfortable, and smooth-driving. The Sienna is the ideal minivan for family transfers, airport runs, and business travel in Nigeria. Toyota Sienna minivan rental in Benin City at ₦65,000 per day.',
     pricePerDay: 65000,
     category: 'vans'
   },
@@ -200,7 +200,7 @@ export const FLEET_DATA: FleetItem[] = [
       'https://www.engracedlogistics.com.ng/storage/2021/05/lexus.jpg'
     ],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Luxury Executive SUV' },
-    desc: 'Unparalleled luxury, leather trims, advanced suspension comfort. The Lexus GX is the premium choice for VIP transport and executive movements in Nigeria.',
+    desc: 'Unparalleled luxury, leather trims, advanced suspension comfort. The Lexus GX is the premium choice for VIP transport and executive movements in Nigeria. Luxury SUV rental — Lexus GX hire at ₦160,000 per day.',
     pricePerDay: 160000,
     category: 'vip'
   }
