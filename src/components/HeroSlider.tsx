@@ -17,11 +17,11 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
   const [feedIndex, setFeedIndex] = useState(0);
 
   const LIVE_FEED = [
-    "Unit 04: Logistics Escort En Route - Abuja",
-    "Unit 12: Sienna Rental Transfer - Lagos",
-    "Unit 07: Sedan Delivery - Lagos Intl",
-    "System: All Fleet Routes Active & Monitored",
-    "Unit 18: Premium Sedan Client Pick-Up"
+    "Unit 04: Security Escort En Route - Abuja Highway",
+    "Unit 12: Sienna Rental Transfer - Lagos Airport",
+    "Unit 07: Sedan Delivery - Benin City GRA",
+    "System: All Fleet Routes Active - Benin to Lagos",
+    "Unit 18: Executive Chauffeur Pick-Up - Port Harcourt"
   ];
 
   useEffect(() => {

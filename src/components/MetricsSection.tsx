@@ -54,7 +54,7 @@ export default function MetricsSection() {
             Certified Excellence in Motion. Nationwide.
           </h3>
           <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
-            From the bustling economic highways of Lagos to VIP convoys in Abuja, we set the benchmark for state-of-the-art secure executive travel.
+            From the bustling economic highways of Lagos to VIP convoys in Abuja and executive transfers in Benin City, we set the benchmark for state-of-the-art secure travel and logistics services in Nigeria.
           </p>
         </div>
 

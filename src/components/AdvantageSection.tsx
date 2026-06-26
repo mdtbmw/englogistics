@@ -64,7 +64,7 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
             </div>
             <h4 className="text-[10px] xs:text-xs md:text-sm font-bold text-zinc-950 uppercase tracking-wide mb-1 md:mb-2">Professional Chauffeur & Logistics Support</h4>
             <p className="text-[8px] xs:text-[9.5px] md:text-xs lg:text-sm text-zinc-500 leading-normal md:leading-relaxed">
-              We deploy certified professional chauffeurs, maintain a modern fleet of well-serviced vehicles, and provide reliable logistics coordination to ensure safe and timely transport across Nigeria.
+              The best logistics company in Benin City for car hire, chauffeur service, and fleet management. We deploy certified professional chauffeurs, maintain a modern fleet of well-serviced vehicles, and provide reliable logistics coordination across Nigeria.
             </p>
           </div>
 

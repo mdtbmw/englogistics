@@ -89,9 +89,9 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
             Comprehensive<br/>Mobility Architecture
           </h3>
         </div>
-        <p className="text-zinc-500 text-xs md:text-sm max-w-md leading-relaxed">
-          Our logistics and transport network has been custom-built to deliver safe, reliable, and professional mobility services across Nigeria.
-        </p>
+          <p className="text-zinc-500 text-xs md:text-sm max-w-md leading-relaxed">
+            Need the best car rental in Benin City, executive chauffeur service in Lagos, or VIP transport in Abuja? Our logistics and transport network delivers safe, reliable, and professional mobility across Nigeria.
+          </p>
       </motion.div>
 
       <motion.div 

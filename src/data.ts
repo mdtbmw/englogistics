@@ -19,20 +19,20 @@ export const HERO_SLIDES = [
   {
     id: 1,
     image: lcAngle,
-    tagline: 'Premium Rentals',
-    title: 'Executive Car Hire & Logistics',
+    tagline: 'Car Rental Benin City',
+    title: 'Executive Car Hire & Logistics Services in Benin City',
   },
   {
     id: 2,
     image: prado2025,
-    tagline: 'Luxury Fleet',
-    title: 'SUVs, Sedans & VIP Transport',
+    tagline: 'Luxury Fleet Nigeria',
+    title: 'SUVs, Sedans & VIP Transport Across Lagos, Abuja & Benin',
   },
   {
     id: 3,
     image: hiluxSide,
-    tagline: 'Secure Travel',
-    title: 'Hilux Escort & Security Services',
+    tagline: 'Security Escort Nigeria',
+    title: 'Hilux Escort & Security Convoy Services Nationwide',
   }
 ];
 
@@ -47,8 +47,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     title: 'Corporate & Airport',
     iconName: 'Briefcase',
     items: [
-      { name: 'Corporate Logistics', desc: 'Reliable corporate mobility solutions and long-term transport contracts for businesses and organizations.' },
-      { name: 'Airport Transfers', desc: 'Professional airport pickup and drop-off with meet & greet service and flight tracking.' }
+      { name: 'Corporate Logistics', desc: 'Reliable corporate mobility solutions and long-term transport contracts for businesses and organizations in Benin City, Lagos, and Abuja.' },
+      { name: 'Airport Transfers', desc: 'Professional airport pickup and drop-off across Nigeria with meet & greet service, flight tracking, and executive chauffeur handling.' }
     ]
   },
   {
@@ -56,8 +56,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     title: 'Rentals & Chauffeurs',
     iconName: 'Car',
     items: [
-      { name: 'Vehicle Rentals', desc: 'Daily, weekly, and monthly rentals of sedans, SUVs, and buses.' },
-      { name: 'Chauffeur Hire', desc: 'Professional drivers for personal and corporate use.' }
+      { name: 'Vehicle Rentals', desc: 'Daily, weekly, and monthly car hire in Benin City, Lagos, and Abuja — sedans, SUVs, buses, and luxury vehicles with insurance.' },
+      { name: 'Chauffeur Hire', desc: 'Professional drivers for personal and corporate use. Certified chauffeur service with defensive driving credentials.' }
     ]
   },
   {
@@ -65,7 +65,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     title: 'Interstate Travel',
     iconName: 'MapPin',
     items: [
-      { name: 'Interstate Travel', desc: 'Comfortable, safe, and secure routes connecting Benin, Lagos, Abuja, Port Harcourt, and Warri.' }
+      { name: 'Interstate Travel', desc: 'Comfortable, safe, and secure interstate transport connecting Benin City to Lagos, Abuja, Port Harcourt, and Warri with double-driver safety protocol.' }
     ]
   },
   {
@@ -73,8 +73,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     title: 'Protocol & Security',
     iconName: 'ShieldCheck',
     items: [
-      { name: 'VIP & Protocol', desc: 'Premium fast-track airport clearance, diplomatic coordination, and VIP movement services.' },
-      { name: 'Security Escort', desc: 'Professional escort coordination, convoy management, and executive protection services.' }
+      { name: 'VIP & Protocol', desc: 'Premium fast-track airport clearance, diplomatic coordination, and VIP movement services for government officials and executives.' },
+      { name: 'Security Escort', desc: 'Professional escort coordination, armed convoy management, and executive protection services across high-risk corridors in Nigeria.' }
     ]
   },
   {
@@ -82,8 +82,8 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     title: 'Events & Tourism',
     iconName: 'CalendarDays',
     items: [
-      { name: 'Event Transport', desc: 'Tailored fleet transit for weddings, funerals, birthdays, and major corporate conferences.' },
-      { name: 'Tour & Leisure', desc: 'Curated city tours, local excursions, resort transfers, and hotel transfers.' }
+      { name: 'Event Transport', desc: 'Tailored fleet transit for weddings, funerals, birthdays, and major corporate conferences — bus rental and luxury car hire available.' },
+      { name: 'Tour & Leisure', desc: 'Curated city tours, local excursions in Benin City, resort transfers, and hotel transfers with knowledgeable driver guides.' }
     ]
   }
 ];
@@ -96,7 +96,7 @@ export const FLEET_DATA: FleetItem[] = [
     images: [prado2025],
     cutout: '/assets/images/prado_2025.png',
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Premium 4x4 SUV' },
-    desc: 'Combining luxury, performance, and versatility, the Toyota Prado offers an elite travel experience for executive transfers, corporate assignments, and interstate travel.',
+    desc: 'The best car rental in Benin City for luxury SUV hire. The Toyota Prado offers elite travel experience for executive transfers, corporate assignments, and interstate travel across Nigeria.',
     pricePerDay: 120000,
     category: 'suvs'
   },
@@ -107,7 +107,7 @@ export const FLEET_DATA: FleetItem[] = [
     images: [lcAngle, lcTop],
     cutout: '/assets/images/land_cruiser_2024.png',
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Elite Convoy SUV' },
-    desc: 'Renowned worldwide for its durability and commanding presence, the Land Cruiser delivers unmatched security for government assignments, protocol services, and VIP movement.',
+    desc: 'Renowned for durability and commanding presence, the Land Cruiser delivers unmatched VIP transport and security for government assignments, protocol services, and executive movement in Nigeria.',
     pricePerDay: 180000,
     category: 'vip'
   },
@@ -118,7 +118,7 @@ export const FLEET_DATA: FleetItem[] = [
     images: [hiluxAngle, hiluxBack, hiluxFront, hiluxSide],
     cutout: '/assets/images/hilux_2023.png',
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Medium Bags', type: 'Premium Escort Pickup' },
-    desc: 'A rugged and reliable premium pickup truck, ideal for security escorts, cargo transport, rugged terrains, and protocol convoy operations.',
+    desc: 'A rugged and reliable premium pickup truck, ideal for security escort services, cargo logistics, rugged terrain operations, and protocol convoy management in Benin City and nationwide.',
     pricePerDay: 95000,
     category: 'vip'
   },
@@ -131,7 +131,7 @@ export const FLEET_DATA: FleetItem[] = [
       'https://www.engracedlogistics.com.ng/storage/2019/02/corolla-2016.jpg'
     ],
     specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Comfort Sedan' },
-    desc: 'A popular and reliable choice for daily city runs, corporate meetings, and airport transfers, offering excellent efficiency and air-conditioned comfort.',
+    desc: 'A popular and reliable choice for daily car hire in Benin City, corporate meetings, and airport transfers, offering excellent fuel efficiency and air-conditioned comfort.',
     pricePerDay: 35000,
     category: 'sedans'
   },
@@ -141,7 +141,7 @@ export const FLEET_DATA: FleetItem[] = [
     image: 'https://www.engracedlogistics.com.ng/storage/2019/02/camry-2010-740x556.jpg',
     images: ['https://www.engracedlogistics.com.ng/storage/2019/02/camry-2010-740x556.jpg'],
     specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Premium Sedan' },
-    desc: 'Combining a spacious cabin with smooth, quiet ride quality, the Toyota Camry is a highly dependable vehicle for corporate and executive transit.',
+    desc: 'Combining a spacious cabin with smooth ride quality, the Toyota Camry is a highly dependable vehicle for executive car rental and corporate transit in Lagos, Abuja, and Benin City.',
     pricePerDay: 40000,
     category: 'sedans'
   },
@@ -154,7 +154,7 @@ export const FLEET_DATA: FleetItem[] = [
       'https://www.engracedlogistics.com.ng/storage/2019/02/rav4.jpg'
     ],
     specs: { pax: 'Up to 4 Passengers', luggage: '3 Medium Bags', type: 'Compact Crossover SUV' },
-    desc: 'Perfect for navigating city streets or light rugged terrains, the RAV4 crossover delivers comfort, safety, and cargo flexibility.',
+    desc: 'Perfect for navigating city streets or light rugged terrain, the RAV4 is a popular SUV rental choice in Benin City for comfort, safety, and cargo flexibility.',
     pricePerDay: 60000,
     category: 'suvs'
   },
@@ -167,7 +167,7 @@ export const FLEET_DATA: FleetItem[] = [
       'https://www.engracedlogistics.com.ng/storage/2019/02/bus.jpg'
     ],
     specs: { pax: 'Up to 14 Passengers', luggage: '8 Medium Bags', type: 'Executive Commuter Bus' },
-    desc: 'Designed for group transport, corporate retreats, and family trips, offering ample passenger space and air conditioning comfort.',
+    desc: 'Designed for group transport, corporate retreats, and family trips. The best bus rental in Benin City for group travel with ample passenger space and air conditioning.',
     pricePerDay: 75000,
     category: 'vans'
   },
@@ -177,7 +177,7 @@ export const FLEET_DATA: FleetItem[] = [
     image: 'https://www.engracedlogistics.com.ng/storage/2019/02/coaster-740x556.jpg',
     images: ['https://www.engracedlogistics.com.ng/storage/2019/02/coaster-740x556.jpg'],
     specs: { pax: 'Up to 28 Passengers', luggage: '15 Large Bags', type: 'Group Transit Coach' },
-    desc: 'The ultimate choice for large group transfers, delegation travels, weddings, and corporate site movements.',
+    desc: 'The ultimate choice for large group transfers, delegation travel, weddings, and corporate site movements. Reliable bus hire for events across Nigeria.',
     pricePerDay: 120000,
     category: 'vans'
   },
@@ -187,7 +187,7 @@ export const FLEET_DATA: FleetItem[] = [
     image: 'https://www.engracedlogistics.com.ng/storage/2021/05/sienna-740x556.jpg',
     images: ['https://www.engracedlogistics.com.ng/storage/2021/05/sienna-740x556.jpg'],
     specs: { pax: 'Up to 7 Passengers', luggage: '5 Medium Bags', type: 'Premium Minivan' },
-    desc: 'Spacious, highly comfortable, and smooth-driving, the Sienna is the ideal minivan choice for family transfers and business travels.',
+    desc: 'Spacious, highly comfortable, and smooth-driving. The Sienna is the ideal minivan for family transfers, airport runs, and business travel in Nigeria.',
     pricePerDay: 65000,
     category: 'vans'
   },
@@ -200,7 +200,7 @@ export const FLEET_DATA: FleetItem[] = [
       'https://www.engracedlogistics.com.ng/storage/2021/05/lexus.jpg'
     ],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Luxury Executive SUV' },
-    desc: 'Unparalleled luxury, leather trims, advanced suspension comfort, and presence for VIP protocols and executive movements.',
+    desc: 'Unparalleled luxury, leather trims, advanced suspension comfort. The Lexus GX is the premium choice for VIP transport and executive movements in Nigeria.',
     pricePerDay: 160000,
     category: 'vip'
   }
