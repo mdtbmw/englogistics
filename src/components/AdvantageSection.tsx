@@ -80,7 +80,7 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
           variants={itemVariants}
           className="bg-white border border-zinc-100 rounded-[2rem] p-8 shadow-sm flex flex-col justify-between group hover:border-zinc-200 transition-all active:scale-[0.98] cursor-default text-left"
         >
-          <div className="w-10 h-10 bg-zinc-50 rounded-xl flex items-center justify-center text-zinc-950 mb-6 group-hover:bg-zinc-950 group-hover:text-white transition-colors">
+          <div className="w-10 h-10 bg-zinc-50 rounded-xl flex items-center justify-center text-zinc-950 mb-6 group-hover:bg-[#0f2b5e] group-hover:text-white transition-colors">
             <Clock size={18} className="text-[#0f2b5e]" />
           </div>
           <div>
@@ -93,7 +93,7 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
           variants={itemVariants}
           className="bg-white border border-zinc-100 rounded-[2rem] p-8 shadow-sm flex flex-col justify-between group hover:border-zinc-200 transition-all active:scale-[0.98] cursor-default text-left"
         >
-          <div className="w-10 h-10 bg-zinc-50 rounded-xl flex items-center justify-center text-zinc-950 mb-6 group-hover:bg-zinc-950 group-hover:text-white transition-colors">
+          <div className="w-10 h-10 bg-zinc-50 rounded-xl flex items-center justify-center text-zinc-950 mb-6 group-hover:bg-[#0f2b5e] group-hover:text-white transition-colors">
             <Zap size={18} className="text-[#0f2b5e]" />
           </div>
           <div>
@@ -105,7 +105,7 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
         {/* Medium Horizontal Card with Floating Right Image */}
         <motion.div 
           variants={itemVariants}
-          className="md:col-span-2 bg-zinc-950 rounded-[2rem] p-5 sm:p-7 md:p-8 lg:p-10 relative overflow-hidden flex items-center justify-between active:scale-[0.99] transition-transform duration-300 h-[170px] xs:h-[190px] md:h-auto"
+          className="md:col-span-2 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2rem] p-5 sm:p-7 md:p-8 lg:p-10 relative overflow-hidden flex items-center justify-between active:scale-[0.99] transition-transform duration-300 h-[170px] xs:h-[190px] md:h-auto"
         >
           <div className="absolute left-0 top-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.02)_50%,transparent_75%)] bg-[length:200%_200%] animate-[gradient_4s_linear_infinite]"></div>
           
@@ -120,12 +120,12 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
           <img 
             src={hiluxSide} 
             alt="Toyota Hilux Utility Fleet" 
-            className="absolute right-0 top-6 md:top-10 h-full w-[38%] object-cover rounded-tl-[1.5rem] shadow-2xl border-l border-t border-zinc-800" 
+            className="absolute right-0 top-6 md:top-10 h-full w-[38%] object-cover rounded-tl-[1.5rem] shadow-2xl border-l border-t border-[#0f2b5e]/30" 
           />
 
           <button 
             onClick={() => setView('booking')}
-            className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-[#0f2b5e] hover:bg-white text-zinc-950 hover:text-zinc-950 rounded-full items-center justify-center cursor-pointer active:scale-90 transition-all shadow-xl"
+            className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-[#6b9fff] hover:bg-white text-[#071a3d] hover:text-[#071a3d] rounded-full items-center justify-center cursor-pointer active:scale-90 transition-all shadow-xl"
           >
             <ArrowUpRight size={20} />
           </button>

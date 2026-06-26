@@ -112,7 +112,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                 onClick={() => setActiveTab(category.id)}
                 className={`flex items-center gap-2 md:gap-3 p-2.5 md:p-3.5 md:pr-6 rounded-xl md:rounded-2xl text-left transition-all duration-300 cursor-pointer active:scale-95 border ${
                   isActive 
-                    ? 'bg-zinc-950 text-white shadow-lg border-zinc-950 font-bold' 
+                    ? 'bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] text-white shadow-lg border-[#0f2b5e]/40 font-bold' 
                     : 'bg-white border border-zinc-100 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-50'
                 }`}
               >
@@ -217,7 +217,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
 
                                 <button 
                                   onClick={() => setView('booking')}
-                                  className="w-full py-2 bg-zinc-950 text-white rounded-xl text-[9px] font-bold uppercase tracking-widest hover:bg-[#0f2b5e] hover:text-zinc-950 transition-all duration-300 cursor-pointer active:scale-[0.98] flex items-center justify-center gap-1.5"
+                                  className="w-full py-2 bg-[#0f2b5e] text-white rounded-xl text-[9px] font-bold uppercase tracking-widest hover:bg-[#071a3d] transition-all duration-300 cursor-pointer active:scale-[0.98] flex items-center justify-center gap-1.5"
                                 >
                                   Book Now
                                   <ArrowRight size={10} />

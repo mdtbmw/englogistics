@@ -99,10 +99,10 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="bg-zinc-950 rounded-[2.5rem] p-6 md:p-12 flex flex-col overflow-hidden relative shadow-2xl"
+        className="bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-6 md:p-12 flex flex-col overflow-hidden relative shadow-2xl"
       >
         {/* Ambient Blur */}
-        <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#0f2b5e]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#6b9fff]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
 
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6 relative z-10 text-left">
           <div className="max-w-2xl">
@@ -125,8 +125,8 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
               onClick={() => setActiveCategory(cat.id)}
               className={`flex items-center justify-between gap-2 md:gap-5 p-2.5 md:p-3.5 md:pr-6 rounded-xl md:rounded-2xl transition-all duration-300 cursor-pointer active:scale-95 border ${
                 activeCategory === cat.id 
-                  ? 'bg-zinc-900 text-white border-zinc-700 shadow-xl font-bold' 
-                  : 'bg-transparent text-zinc-500 border-zinc-800/40 hover:text-zinc-300 hover:bg-zinc-900/40'
+                  ? 'bg-[#0a1f4a] text-white border-[#0f2b5e]/40 shadow-xl font-bold' 
+                  : 'bg-transparent text-zinc-400 border-[#0f2b5e]/20 hover:text-white hover:bg-[#0a1f4a]/50'
               }`}
             >
               <span className="text-[10px] md:text-[11.5px] font-bold uppercase tracking-widest pl-1 md:pl-2 font-sans truncate">{cat.name}</span>
@@ -136,19 +136,19 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
         </div>
 
         {/* Fleet Active Detail Card */}
-        <div className="w-full bg-zinc-900/40 rounded-[2rem] p-6 md:p-10 relative z-10 overflow-hidden min-h-[480px] flex flex-col justify-between gap-6">
+        <div className="w-full bg-[#0a1f4a]/60 rounded-[2rem] p-6 md:p-10 relative z-10 overflow-hidden min-h-[480px] flex flex-col justify-between gap-6">
           
           {/* Sub-selector for models in the category */}
           {filteredVehicles.length > 1 && (
-            <div className="flex flex-wrap gap-2 pb-5 border-b border-zinc-900/60 mb-2">
+            <div className="flex flex-wrap gap-2 pb-5 border-b border-[#0f2b5e]/20 mb-2">
               {filteredVehicles.map((vehicle) => (
                 <button
                   key={vehicle.id}
                   onClick={() => setSelectedVehicle(vehicle)}
                   className={`px-4 py-2 rounded-xl text-[9px] font-bold uppercase tracking-widest transition-all duration-300 border cursor-pointer active:scale-95 ${
                     selectedVehicle.id === vehicle.id
-                      ? 'bg-[#0f2b5e] text-zinc-950 border-[#0f2b5e] font-bold shadow-md shadow-[#0f2b5e]/10'
-                      : 'bg-zinc-950 text-zinc-400 border-zinc-850 hover:text-white hover:border-zinc-800'
+                      ? 'bg-[#6b9fff] text-[#071a3d] border-[#6b9fff] font-bold shadow-md shadow-[#0f2b5e]/10'
+                      : 'bg-[#071a3d] text-zinc-300 border-[#0f2b5e]/20 hover:text-white hover:border-[#0f2b5e]/50'
                   }`}
                 >
                   {vehicle.name.split(' (')[0]}
@@ -171,7 +171,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                   <motion.div variants={imageReveal} className="relative w-full h-52 md:h-72 rounded-2xl overflow-hidden mb-4 shadow-inner group">
                      <img src={activeImage} alt={selectedVehicle.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/45 to-transparent"></div>
-                     <div className="absolute top-4 left-4 bg-[#0f2b5e] text-zinc-950 font-bold font-mono text-[9px] px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-lg">
+                     <div className="absolute top-4 left-4 bg-[#6b9fff] text-[#071a3d] font-bold font-mono text-[9px] px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-lg">
                        Premium Fleet
                      </div>
                   </motion.div>
@@ -184,7 +184,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                           key={idx}
                           onClick={() => setActiveImage(img)}
                           className={`w-20 h-14 rounded-lg overflow-hidden border-2 transition-all cursor-pointer shrink-0 active:scale-95 ${
-                            activeImage === img ? 'border-[#0f2b5e] scale-95 shadow-md shadow-[#0f2b5e]/10' : 'border-zinc-800 hover:border-zinc-700'
+                            activeImage === img ? 'border-[#0f2b5e] scale-95 shadow-md shadow-[#0f2b5e]/10' : 'border-[#0f2b5e]/30 hover:border-[#0f2b5e]/50'
                           }`}
                         >
                           <img src={img} alt={`${selectedVehicle.name} view ${idx + 1}`} className="w-full h-full object-cover" />
@@ -206,7 +206,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                      
                      <button 
                        onClick={() => handleReserve(selectedVehicle.id)}
-                       className="bg-[#0f2b5e] text-zinc-950 text-[10.5px] font-bold px-6 py-3.5 rounded-xl hover:bg-white transition-all flex items-center gap-2 uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0f2b5e]/15 cursor-pointer"
+                       className="bg-[#6b9fff] text-[#071a3d] text-[10.5px] font-bold px-6 py-3.5 rounded-xl hover:bg-white transition-all flex items-center gap-2 uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0f2b5e]/30 cursor-pointer"
                      >
                        Book This Vehicle <ArrowRight size={14} />
                      </button>
@@ -216,17 +216,17 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                     variants={specsContainer}
                     className="grid grid-cols-2 gap-4 md:flex md:flex-row md:flex-nowrap self-stretch lg:self-auto justify-start lg:justify-end w-full md:w-auto"
                   >
-                    <motion.div variants={specBadgeReveal} className="col-span-2 md:w-auto bg-zinc-950 border border-zinc-800 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
+                    <motion.div variants={specBadgeReveal} className="col-span-2 md:w-auto bg-[#071a3d] border border-[#0f2b5e]/30 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
                       <Users size={16} className="text-[#0f2b5e]" />
                       <span className="text-[8.5px] font-bold text-zinc-400 uppercase tracking-widest font-mono">Pax Cap</span>
                       <span className="text-xs font-bold text-zinc-200 uppercase font-sans text-center">{selectedVehicle.specs.pax}</span>
                     </motion.div>
-                    <motion.div variants={specBadgeReveal} className="col-span-1 md:flex-initial bg-zinc-950 border border-zinc-800 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
+                    <motion.div variants={specBadgeReveal} className="col-span-1 md:flex-initial bg-[#071a3d] border border-[#0f2b5e]/30 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
                       <Briefcase size={16} className="text-[#0f2b5e]" />
                       <span className="text-[8.5px] font-bold text-zinc-400 uppercase tracking-widest font-mono">Luggage</span>
                       <span className="text-xs font-bold text-zinc-200 uppercase font-sans text-center">{selectedVehicle.specs.luggage}</span>
                     </motion.div>
-                    <motion.div variants={specBadgeReveal} className="col-span-1 md:flex-initial bg-zinc-950 border border-zinc-800 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
+                    <motion.div variants={specBadgeReveal} className="col-span-1 md:flex-initial bg-[#071a3d] border border-[#0f2b5e]/30 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
                       <Award size={16} className="text-[#0f2b5e]" />
                       <span className="text-[8.5px] font-bold text-zinc-400 uppercase tracking-widest font-mono">Specs Type</span>
                       <span className="text-xs font-bold text-zinc-200 uppercase font-sans text-center">{selectedVehicle.specs.type}</span>

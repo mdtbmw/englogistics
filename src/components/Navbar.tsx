@@ -79,7 +79,7 @@ export default function Navbar({ currentView, setView }: NavbarProps) {
           <div className="hidden lg:flex items-center gap-4">
             <button 
               onClick={() => setView('booking')}
-              className="bg-zinc-950 text-white text-[10px] font-bold px-5 py-3 rounded-xl hover:bg-[#0f2b5e] transition-colors uppercase tracking-widest active:scale-95 cursor-pointer shadow-md"
+              className="bg-[#0f2b5e] text-white text-[10px] font-bold px-5 py-3 rounded-xl hover:bg-[#071a3d] transition-colors uppercase tracking-widest active:scale-95 cursor-pointer shadow-md"
             >
               Book a Ride
             </button>

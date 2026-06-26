@@ -133,7 +133,7 @@ export default function CoverageSimulation() {
           </div>
  
          {/* RADAR CANVAS SCREEN (MAP IMAGE CARD) */}
-         <div className="w-full md:w-[48%] aspect-square bg-zinc-950 rounded-[1.2rem] sm:rounded-[2rem] p-3 sm:p-6 lg:p-12 relative overflow-hidden flex flex-col items-center justify-center self-center shadow-lg">
+         <div className="w-full md:w-[48%] aspect-square bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[1.2rem] sm:rounded-[2rem] p-3 sm:p-6 lg:p-12 relative overflow-hidden flex flex-col items-center justify-center self-center shadow-lg">
            {/* Static Premium Route Tracking Map Image */}
            <img 
              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80" 
@@ -141,13 +141,13 @@ export default function CoverageSimulation() {
              className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-luminosity" 
            />
            {/* Dark gradient overlay for premium look */}
-           <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/50 z-10 pointer-events-none" />
+           <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d] via-transparent to-[#0f2b5e]/50 z-10 pointer-events-none" />
            
            {/* Technical Grid Pattern Overlay */}
            <div className="absolute inset-0 opacity-10 z-10 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#0f2b5e 1px, transparent 1px), linear-gradient(90deg, #0f2b5e 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
            
            {/* Elegant overlay detail representing active transit paths */}
-           <div className="relative z-20 flex flex-col items-center gap-1.5 sm:gap-3 bg-zinc-900/90 border border-zinc-850 p-3 sm:p-6 rounded-xl sm:rounded-2xl max-w-[90%] text-center backdrop-blur-md shadow-2xl">
+           <div className="relative z-20 flex flex-col items-center gap-1.5 sm:gap-3 bg-[#0a1f4a]/90 border border-[#0f2b5e]/30 p-3 sm:p-6 rounded-xl sm:rounded-2xl max-w-[90%] text-center backdrop-blur-md shadow-2xl">
              <div className="w-7 h-7 sm:w-10 sm:h-10 bg-[#0f2b5e]/10 border border-[#0f2b5e]/30 rounded-lg sm:rounded-xl flex items-center justify-center text-[#0f2b5e]">
                <Navigation className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 animate-pulse" />
              </div>
@@ -159,7 +159,7 @@ export default function CoverageSimulation() {
            </div>
  
            {/* Floating Widget */}
-           <div className="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 flex items-center gap-1 sm:gap-2 bg-zinc-900/90 border border-zinc-800 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl z-20 shadow-lg">
+           <div className="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 flex items-center gap-1 sm:gap-2 bg-[#0a1f4a]/90 border border-[#0f2b5e]/30 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl z-20 shadow-lg">
               <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-450 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-red-505"></span>

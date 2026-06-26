@@ -12,9 +12,9 @@ interface FooterProps {
 
 export default function Footer({ setView }: FooterProps) {
   return (
-    <footer className="bg-zinc-950 text-white pt-24 pb-28 md:pb-24 px-6 md:px-12 relative overflow-hidden border-t border-zinc-900 text-left">
+    <footer className="bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] text-white pt-24 pb-28 md:pb-24 px-6 md:px-12 relative overflow-hidden border-t border-[#0f2b5e]/20 text-left">
       {/* Background Subtle Ambient Light Orb */}
-      <div className="absolute left-1/3 top-0 -translate-y-1/2 w-96 h-96 bg-[#0f2b5e]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute left-1/3 top-0 -translate-y-1/2 w-96 h-96 bg-[#6b9fff]/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12 mb-20">
@@ -63,7 +63,7 @@ export default function Footer({ setView }: FooterProps) {
               <input 
                 type="email" 
                 placeholder="Enter corporate email" 
-                className="w-full bg-zinc-900 border border-zinc-850 rounded-xl px-3.5 py-2 text-[10.5px] text-white placeholder-zinc-500 focus:outline-none focus:border-[#0f2b5e]/50 transition-colors font-sans"
+                className="w-full bg-[#0a1f4a] border border-[#0f2b5e]/30 rounded-xl px-3.5 py-2 text-[10.5px] text-white placeholder-zinc-500 focus:outline-none focus:border-[#0f2b5e]/50 transition-colors font-sans"
               />
               <button 
                 type="submit" 
@@ -77,7 +77,7 @@ export default function Footer({ setView }: FooterProps) {
         </div>
 
         {/* Coordinated Branch Info (Lagos, Benin, Abuja) */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10 pb-8 border-t border-zinc-900 text-left text-zinc-400 text-[10px] font-mono uppercase tracking-wider relative z-20">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10 pb-8 border-t border-[#0f2b5e]/20 text-left text-zinc-400 text-[10px] font-mono uppercase tracking-wider relative z-20">
           <div className="flex items-center gap-3">
             <MapPin size={12} className="text-[#0f2b5e] shrink-0" />
             <div>
@@ -103,16 +103,16 @@ export default function Footer({ setView }: FooterProps) {
         </div>
 
         {/* Footer Bottom copyright and icons */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-zinc-900 gap-6 relative z-20">
+        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-[#0f2b5e]/20 gap-6 relative z-20">
           <p className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest font-mono text-center md:text-left">
             &copy; {new Date().getFullYear()} Engraced Logistics. All Rights Reserved.
           </p>
           <div className="flex gap-3">
-             <div onClick={() => setView('home')} className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-850 flex items-center justify-center hover:bg-[#0f2b5e] hover:text-zinc-950 hover:border-[#0f2b5e]/30 transition-all duration-300 cursor-pointer text-zinc-400 shadow-sm" title="Overview Hub"><Globe size={13}/></div>
-             <div onClick={() => setView('about')} className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-850 flex items-center justify-center hover:bg-[#0f2b5e] hover:text-zinc-950 hover:border-[#0f2b5e]/30 transition-all duration-300 cursor-pointer text-zinc-400 shadow-sm" title="About Us">
-               <span className="font-mono text-[9px] font-bold">US</span>
+             <div onClick={() => setView('home')} className="w-8 h-8 rounded-full bg-[#0a1f4a] border border-[#0f2b5e]/30 flex items-center justify-center hover:bg-[#0f2b5e] hover:text-white hover:border-[#6b9fff]/30 transition-all duration-300 cursor-pointer text-zinc-400 shadow-sm" title="Overview Hub"><Globe size={13}/></div>
+             <div onClick={() => setView('about')} className="w-8 h-8 rounded-full bg-[#0a1f4a] border border-[#0f2b5e]/30 flex items-center justify-center hover:bg-[#0f2b5e] hover:text-white hover:border-[#6b9fff]/30 transition-all duration-300 cursor-pointer text-zinc-400 shadow-sm" title="About Us">
+                <span className="font-mono text-[9px] font-bold">US</span>
              </div>
-             <div onClick={() => setView('terms')} className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-850 flex items-center justify-center hover:bg-[#0f2b5e] hover:text-zinc-950 hover:border-[#0f2b5e]/30 transition-all duration-300 cursor-pointer text-zinc-400 shadow-sm" title="Terms"><span className="font-mono text-[9px] font-bold">TS</span></div>
+             <div onClick={() => setView('terms')} className="w-8 h-8 rounded-full bg-[#0a1f4a] border border-[#0f2b5e]/30 flex items-center justify-center hover:bg-[#0f2b5e] hover:text-white hover:border-[#6b9fff]/30 transition-all duration-300 cursor-pointer text-zinc-400 shadow-sm" title="Terms"><span className="font-mono text-[9px] font-bold">TS</span></div>
           </div>
         </div>
       </div>

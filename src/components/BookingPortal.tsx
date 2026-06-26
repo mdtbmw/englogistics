@@ -399,7 +399,7 @@ _This booking request has been authorized by the central desk and requires direc
                       onClick={() => setSecurityLevel(opt.level as any)}
                       className={`p-4 rounded-2xl border text-left transition-all flex flex-col justify-between min-h-[110px] md:min-h-[140px] cursor-pointer ${
                         securityLevel === opt.level 
-                          ? 'border-[#0f2b5e] bg-[#0f2b5e]/5 text-zinc-950 font-bold' 
+                          ? 'border-[#0f2b5e] bg-[#0f2b5e]/5 text-[#0f2b5e] font-bold' 
                           : 'border-zinc-200 bg-white hover:border-zinc-300'
                       }`}
                     >
@@ -419,7 +419,7 @@ _This booking request has been authorized by the central desk and requires direc
               <div className="pt-4">
                 <button 
                   type="submit"
-                  className="w-full bg-zinc-950 text-white font-bold text-xs py-4.5 rounded-xl hover:bg-[#0f2b5e] hover:text-zinc-950 transition-colors flex items-center justify-center gap-2 uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-zinc-200"
+                  className="w-full bg-[#0f2b5e] text-white font-bold text-xs py-4.5 rounded-xl hover:bg-[#071a3d] transition-colors flex items-center justify-center gap-2 uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0f2b5e]/20"
                 >
                   Confirm Booking <ArrowRight size={16} />
                 </button>
@@ -429,10 +429,10 @@ _This booking request has been authorized by the central desk and requires direc
 
             {/* Live Pricing Recalculator Invoice Card */}
             <div className="lg:col-span-5 space-y-6 w-full">
-              <div className="bg-zinc-950 text-white rounded-[2rem] border border-zinc-900 p-6 md:p-8 space-y-6 relative overflow-hidden shadow-xl">
+              <div className="bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] text-white rounded-[2rem] border border-[#0f2b5e]/30 p-6 md:p-8 space-y-6 relative overflow-hidden shadow-xl">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#0f2b5e]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                <div className="flex items-center justify-between border-b border-zinc-900 pb-4">
+                <div className="flex items-center justify-between border-b border-[#0f2b5e]/30 pb-4">
                   <div>
                     <span className="text-[8px] font-mono text-[#0f2b5e] uppercase tracking-[0.2em] block">Desk Verification</span>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-white mt-1">Reservation Statement</h3>
@@ -442,55 +442,55 @@ _This booking request has been authorized by the central desk and requires direc
                   </span>
                 </div>
 
-                <div className="flex flex-col gap-3.5 bg-zinc-900/40 p-4 border border-zinc-900/60 rounded-2xl">
+                <div className="flex flex-col gap-3.5 bg-[#0a1f4a]/60 p-4 border border-[#0f2b5e]/30 rounded-2xl">
                   <div className="flex items-center gap-4">
-                    <img src={selectedVehicle.image} className="w-20 h-14 object-cover rounded-xl border border-zinc-900 shrink-0" />
+                    <img src={selectedVehicle.image} className="w-20 h-14 object-cover rounded-xl border border-[#0f2b5e]/20 shrink-0" />
                     <div className="text-left flex-1 min-w-0">
                       <span className="text-[8px] font-bold text-zinc-500 uppercase font-mono block">Selected Vehicle Class</span>
                       <span className="text-xs font-semibold text-white uppercase block mt-0.5 truncate">{selectedVehicle.name}</span>
-                      <span className="text-[9px] text-[#0f2b5e] font-mono block mt-0.5 font-bold font-mono">
+                      <span className="text-[9px] text-[#6b9fff] font-mono block mt-0.5 font-bold font-mono">
                         Elite Transit Class
                       </span>
                     </div>
                   </div>
                   
                   {/* Dynamic Spec Badges in Invoice Card */}
-                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-zinc-900/40 text-[9px] font-mono">
-                    <div className="bg-zinc-950/60 rounded-lg p-2 border border-zinc-900 text-center">
-                      <span className="text-[7.5px] text-zinc-550 uppercase block">Pax Cap</span>
+                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-[#0f2b5e]/20 text-[9px] font-mono">
+                    <div className="bg-[#071a3d]/70 rounded-lg p-2 border border-[#0f2b5e]/30 text-center">
+                      <span className="text-[7.5px] text-zinc-400 uppercase block">Pax Cap</span>
                       <span className="text-zinc-300 font-bold block mt-0.5">{selectedVehicle.specs.pax.replace('Up to ', '')}</span>
                     </div>
-                    <div className="bg-zinc-950/60 rounded-lg p-2 border border-zinc-900 text-center">
-                      <span className="text-[7.5px] text-zinc-550 uppercase block">Luggage</span>
+                    <div className="bg-[#071a3d]/70 rounded-lg p-2 border border-[#0f2b5e]/30 text-center">
+                      <span className="text-[7.5px] text-zinc-400 uppercase block">Luggage</span>
                       <span className="text-zinc-300 font-bold block mt-0.5">{selectedVehicle.specs.luggage.split(' ')[0]}</span>
                     </div>
-                    <div className="bg-zinc-950/60 rounded-lg p-2 border border-zinc-900 text-center">
-                      <span className="text-[7.5px] text-zinc-550 uppercase block">Specs Type</span>
+                    <div className="bg-[#071a3d]/70 rounded-lg p-2 border border-[#0f2b5e]/30 text-center">
+                      <span className="text-[7.5px] text-zinc-400 uppercase block">Specs Type</span>
                       <span className="text-zinc-300 font-bold block mt-0.5 truncate">{selectedVehicle.specs.type.split(' ')[0]}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-3 pt-2 text-[11px] font-mono">
-                  <div className="flex justify-between items-center text-zinc-400 border-b border-zinc-900/60 pb-2.5">
+                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0f2b5e]/30 pb-2.5">
                     <span>Reservation Span:</span>
                     <span className="text-white font-sans font-semibold">{duration} continuous days</span>
                   </div>
-                  <div className="flex justify-between items-center text-zinc-400 border-b border-zinc-900/60 pb-2.5">
+                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0f2b5e]/30 pb-2.5">
                     <span>Route Coordinates:</span>
                     <span className="text-white font-sans font-semibold truncate max-w-[150px]">{pickupLoc.split(' (')[0]} ↔ {dropoffLoc.split(' (')[0]}</span>
                   </div>
-                  <div className="flex justify-between items-center text-zinc-400 border-b border-zinc-900/60 pb-2.5">
+                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0f2b5e]/30 pb-2.5">
                     <span>Operational Upgrade:</span>
                     <span className="text-white font-sans font-semibold capitalize">{securityLevel === 'standard' ? 'Standard Chauffeur' : securityLevel.replace('-', ' ')}</span>
                   </div>
-                  <div className="flex justify-between items-baseline pt-3 border-t border-zinc-900 text-sm font-sans font-bold">
+                  <div className="flex justify-between items-baseline pt-3 border-t border-[#0f2b5e]/30 text-sm font-sans font-bold">
                     <span className="text-zinc-300">RATE SPECIFICATION:</span>
-                    <span className="text-[#0f2b5e] text-xs font-mono uppercase">Custom Quote On-Demand</span>
+                    <span className="text-[#6b9fff] text-xs font-mono uppercase">Custom Quote On-Demand</span>
                   </div>
                 </div>
 
-                <div className="bg-zinc-900/25 p-3.5 border border-zinc-900/50 rounded-xl space-y-1.5 text-[10px] text-zinc-400 font-sans leading-relaxed">
+                <div className="bg-[#0a1f4a]/50 p-3.5 border border-[#0f2b5e]/30 rounded-xl space-y-1.5 text-[10px] text-zinc-400 font-sans leading-relaxed">
                    <div className="flex items-start gap-2">
                      <ShieldCheck size={12} className="text-[#0f2b5e] shrink-0 mt-0.5" />
                      <p>24/7 central desk telemetry and operations monitoring enabled upon confirmation.</p>
@@ -501,7 +501,7 @@ _This booking request has been authorized by the central desk and requires direc
                    </div>
                 </div>
 
-                <div className="border-t border-zinc-900 pt-4 mt-2">
+                <div className="border-t border-[#0f2b5e]/20 pt-4 mt-2">
                   <p className="text-[8.5px] font-mono text-zinc-500 uppercase tracking-wider leading-relaxed">
                     * Rates are custom calculated by the central protocol desk based on route safety audits, fuel indexes, and operational support.
                   </p>
@@ -519,7 +519,7 @@ _This booking request has been authorized by the central desk and requires direc
                       e.stopPropagation();
                       setIsDrawerOpen(true);
                     }}
-                    className="w-full bg-[#0f2b5e] text-zinc-950 font-bold text-xs py-4 rounded-xl flex items-center justify-center gap-2 uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0f2b5e]/15"
+                    className="w-full bg-[#0f2b5e] text-white font-bold text-xs py-4 rounded-xl flex items-center justify-center gap-2 uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0f2b5e]/30"
                   >
                     Fill Booking Details <ArrowRight size={14} />
                   </button>
@@ -570,7 +570,7 @@ _This booking request has been authorized by the central desk and requires direc
                 <button
                   type="button"
                   onClick={() => window.print()}
-                  className="bg-zinc-950 text-white text-[10px] font-bold px-4 py-2.5 rounded-xl uppercase tracking-wider hover:bg-[#0f2b5e] hover:text-zinc-950 transition-colors flex items-center gap-1.5 cursor-pointer"
+                  className="bg-[#0f2b5e] text-white text-[10px] font-bold px-4 py-2.5 rounded-xl uppercase tracking-wider hover:bg-[#071a3d] transition-colors flex items-center gap-1.5 cursor-pointer"
                 >
                   <Receipt size={14} /> Download
                 </button>
@@ -650,7 +650,7 @@ _This booking request has been authorized by the central desk and requires direc
               {setView && (
                 <button 
                   onClick={() => setView('home')}
-                  className="flex-1 bg-zinc-950 text-white text-[10px] font-bold py-3.5 rounded-xl text-center uppercase tracking-widest cursor-pointer hover:bg-[#0f2b5e] hover:text-zinc-950 transition-colors flex items-center justify-center gap-1.5 active:scale-95 transition-all"
+                  className="flex-1 bg-[#0f2b5e] text-white text-[10px] font-bold py-3.5 rounded-xl text-center uppercase tracking-widest cursor-pointer hover:bg-[#071a3d] transition-colors flex items-center justify-center gap-1.5 active:scale-95 transition-all"
                 >
                   Back to Home <ArrowRight size={12} />
                 </button>

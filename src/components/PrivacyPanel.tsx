@@ -41,10 +41,10 @@ export default function PrivacyPanel({ setView }: PrivacyPanelProps) {
     <div className="pt-32 md:pt-40 pb-16 px-4 md:px-8 max-w-7xl mx-auto w-full text-left animate-slide-up">
       
       {/* Header Section */}
-      <section className="mb-12 bg-zinc-950 rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden text-white shadow-2xl">
-        <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-[#0f2b5e]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <section className="mb-12 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden text-white shadow-2xl">
+        <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-[#6b9fff]/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="relative z-10 max-w-3xl">
-          <h2 className="text-[10px] font-bold text-[#0f2b5e] uppercase tracking-widest mb-3 font-mono">Operations Desk</h2>
+          <h2 className="text-[10px] font-bold text-[#6b9fff] uppercase tracking-widest mb-3 font-mono">Operations Desk</h2>
           <h1 className="text-3xl md:text-5xl font-medium tracking-tight mb-5 leading-tight">
             Privacy Policy
           </h1>
@@ -54,7 +54,7 @@ export default function PrivacyPanel({ setView }: PrivacyPanelProps) {
           <div className="flex gap-4">
             <button 
               onClick={() => setView('booking')}
-              className="bg-[#0f2b5e] text-zinc-950 text-[10px] font-bold px-6 py-3.5 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0f2b5e]/20"
+              className="bg-[#6b9fff] text-[#071a3d] text-[10px] font-bold px-6 py-3.5 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0f2b5e]/30"
             >
               Open Booking Desk
             </button>

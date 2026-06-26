@@ -61,10 +61,10 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
     <div className="pt-32 md:pt-40 pb-20 px-4 md:px-8 max-w-7xl mx-auto w-full text-left">
       
       {/* Hero Section */}
-      <section className="mb-20 bg-zinc-950 rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl">
-        <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#0f2b5e]/5 rounded-full blur-3xl pointer-events-none -translate-y-1/3 translate-x-1/3"></div>
+      <section className="mb-20 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl">
+        <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#6b9fff]/10 rounded-full blur-3xl pointer-events-none -translate-y-1/3 translate-x-1/3"></div>
         <div className="relative z-10 max-w-3xl">
-          <h2 className="text-[10px] font-bold text-[#0f2b5e] uppercase tracking-[0.25em] mb-4 font-mono">Corporate Profile</h2>
+          <h2 className="text-[10px] font-bold text-[#6b9fff] uppercase tracking-[0.25em] mb-4 font-mono">Corporate Profile</h2>
           <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 leading-[1.08]">
             Travel in Style.<br />Experience Excellence.
           </h1>
@@ -74,9 +74,9 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
           <div className="flex gap-4">
             <button 
               onClick={() => setView('booking')}
-              className="bg-[#0f2b5e] text-zinc-950 text-[10.5px] font-bold px-7 py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0f2b5e]/15 cursor-pointer"
+              className="bg-[#6b9fff] text-[#071a3d] text-[10.5px] font-bold px-7 py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0f2b5e]/30 cursor-pointer"
             >
-              Configure Secure Journey
+              Book a Ride
             </button>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
           </div>
           
           {/* Overlapping Detail Badge Card */}
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 lg:top-auto lg:bottom-[-24px] lg:left-[-32px] lg:translate-x-0 bg-zinc-950 border border-zinc-800 text-white rounded-2xl p-5 shadow-2xl flex items-center gap-3.5 max-w-[220px] text-left animate-pulse-slow z-20">
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 lg:top-auto lg:bottom-[-24px] lg:left-[-32px] lg:translate-x-0 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] border border-[#0f2b5e]/30 text-white rounded-2xl p-5 shadow-2xl flex items-center gap-3.5 max-w-[220px] text-left animate-pulse-slow z-20">
             <div className="w-10 h-10 bg-[#0f2b5e]/10 border border-[#0f2b5e]/20 rounded-xl flex items-center justify-center text-[#0f2b5e] shrink-0">
               <Award size={20} />
             </div>
@@ -269,17 +269,17 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
       </section>
 
       {/* Service Promise Banner (Creative & Illustrative) */}
-      <section className="bg-zinc-950 rounded-[2.5rem] p-8 md:p-16 text-center text-white relative overflow-hidden shadow-2xl border border-zinc-900">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(1,82,250,0.08),transparent_70%)] pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-[#0f2b5e]/5 rounded-full blur-3xl pointer-events-none"></div>
+      <section className="bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[2.5rem] p-8 md:p-16 text-center text-white relative overflow-hidden shadow-2xl border border-[#0f2b5e]/30">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(15,43,94,0.15),transparent_70%)] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-[#6b9fff]/10 rounded-full blur-3xl pointer-events-none"></div>
         
         <div className="relative z-10 max-w-2xl mx-auto space-y-6 flex flex-col items-center">
-          <div className="w-14 h-14 bg-[#0f2b5e]/10 border border-[#0f2b5e]/25 rounded-full flex items-center justify-center text-[#0f2b5e] p-3 shadow-lg">
+          <div className="w-14 h-14 bg-[#6b9fff]/15 border border-[#6b9fff]/30 rounded-full flex items-center justify-center text-[#6b9fff] p-3 shadow-lg">
             <Shield size={28} />
           </div>
           
           <div className="space-y-2">
-            <span className="text-[9px] font-mono text-[#0f2b5e] uppercase tracking-[0.25em] font-bold">Our Service Promise</span>
+            <span className="text-[9px] font-mono text-[#6b9fff] uppercase tracking-[0.25em] font-bold">Our Service Promise</span>
             <h3 className="text-2xl md:text-4xl font-semibold uppercase tracking-tight leading-tight">
               Driven by S.M.I.L.E.,<br />Defined by Excellence.
             </h3>
@@ -292,7 +292,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
           <div className="pt-4 flex flex-col sm:flex-row items-center gap-4.5 w-full justify-center">
             <button 
               onClick={() => setView('booking')}
-              className="w-full sm:w-auto bg-[#0f2b5e] text-zinc-950 text-[10px] font-bold px-8 py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0f2b5e]/15 cursor-pointer"
+              className="w-full sm:w-auto bg-[#6b9fff] text-[#071a3d] text-[10px] font-bold px-8 py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0f2b5e]/30 cursor-pointer"
             >
               Book a Ride
             </button>
