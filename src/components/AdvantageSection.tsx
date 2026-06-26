@@ -110,7 +110,7 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
           <div className="absolute left-0 top-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.02)_50%,transparent_75%)] bg-[length:200%_200%] animate-[gradient_4s_linear_infinite]"></div>
           
           <div className="relative z-10 w-[58%] md:w-3/5 pr-2 md:pr-4 text-left">
-            <h4 className="text-[8px] xs:text-[9.5px] font-bold text-[#0f2b5e] uppercase tracking-widest mb-1 font-mono">Utility Fleet</h4>
+            <h4 className="text-[8px] xs:text-[9.5px] font-bold text-[#6b9fff] uppercase tracking-widest mb-1 font-mono">Utility Fleet</h4>
             <h4 className="text-[10px] xs:text-xs md:text-sm font-bold text-white uppercase tracking-wide mb-1.5 md:mb-2.5">Toyota Hilux Utility Fleet</h4>
             <p className="text-[8px] xs:text-[9.5px] md:text-xs text-zinc-400 leading-normal md:leading-relaxed max-w-sm">
               Our fleet features the latest Toyota Hilux double-cabin utility trucks. Built for rugged performance and ultimate reliability for logistics operations and fleet support.

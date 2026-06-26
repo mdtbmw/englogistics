@@ -58,7 +58,7 @@ export default function CoverageSimulation() {
         {/* Monitoring Info */}
         <div className="w-full md:w-[52%] p-4 sm:p-6 lg:p-12 relative z-10 text-left flex flex-col justify-between">
            <div>
-             <span className="text-[7px] xs:text-[8.5px] font-mono text-[#0f2b5e] uppercase tracking-widest block mb-1 font-bold">Standard Regional Operations</span>
+             <span className="text-[7px] xs:text-[8.5px] font-mono text-zinc-500 uppercase tracking-widest block mb-1 font-bold">Standard Regional Operations</span>
              <h3 className="text-[10px] xs:text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium text-zinc-950 leading-tight mb-2 tracking-tight">
                Regional Protocol & Fleet Coverage Map
              </h3>
@@ -75,7 +75,7 @@ export default function CoverageSimulation() {
                  onClick={() => setActiveRegion(region)}
                  className={`text-[7px] xs:text-[8.5px] sm:text-[9.5px] font-bold py-1 sm:py-1.5 rounded-md sm:rounded-lg uppercase tracking-wider transition-colors cursor-pointer text-center truncate ${
                    activeRegion === region 
-                     ? 'bg-[#0f2b5e] text-zinc-950 shadow-md font-bold' 
+                     ? 'bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] text-white shadow-md font-bold' 
                      : 'bg-white border border-zinc-200 text-zinc-500 hover:text-zinc-950'
                  }`}
                >
@@ -148,11 +148,11 @@ export default function CoverageSimulation() {
            
            {/* Elegant overlay detail representing active transit paths */}
            <div className="relative z-20 flex flex-col items-center gap-1.5 sm:gap-3 bg-[#0a1f4a]/90 border border-[#0f2b5e]/30 p-3 sm:p-6 rounded-xl sm:rounded-2xl max-w-[90%] text-center backdrop-blur-md shadow-2xl">
-             <div className="w-7 h-7 sm:w-10 sm:h-10 bg-[#0f2b5e]/10 border border-[#0f2b5e]/30 rounded-lg sm:rounded-xl flex items-center justify-center text-[#0f2b5e]">
+             <div className="w-7 h-7 sm:w-10 sm:h-10 bg-[#6b9fff]/10 border border-[#6b9fff]/30 rounded-lg sm:rounded-xl flex items-center justify-center text-[#6b9fff]">
                <Navigation className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 animate-pulse" />
              </div>
              <div>
-               <span className="text-[7px] xs:text-[8px] sm:text-[9px] font-bold text-[#0f2b5e] uppercase tracking-widest font-mono block">GPS Protocol Active</span>
+               <span className="text-[7px] xs:text-[8px] sm:text-[9px] font-bold text-[#6b9fff] uppercase tracking-widest font-mono block">GPS Protocol Active</span>
                <span className="text-[8px] xs:text-[10px] sm:text-[11.5px] font-medium text-white block mt-0.5 sm:mt-1">Lagos • Abuja • Benin • PH</span>
                <span className="hidden xs:block text-[7.5px] xs:text-[8.5px] sm:text-[9px] text-zinc-500 block mt-0.5 sm:mt-1 font-mono">Real-Time Transit Logging</span>
              </div>

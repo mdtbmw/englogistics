@@ -24,7 +24,7 @@ export default function Footer({ setView }: FooterProps) {
             <div className="flex items-center gap-2.5 mb-6">
               <LogoIcon className="w-10 h-10" />
               <div className="flex items-baseline gap-1.5">
-                <span className="font-bold tracking-widest text-xs uppercase font-mono" style={{color:'#0f2b5e'}}>ENGRACED</span>
+                <span className="font-bold tracking-widest text-xs uppercase font-mono text-white">ENGRACED</span>
                 <span className="font-bold text-white tracking-widest text-xs uppercase font-mono">LOGISTICS</span>
               </div>
             </div>
@@ -38,9 +38,9 @@ export default function Footer({ setView }: FooterProps) {
           <div className="flex flex-col gap-4 text-left">
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest font-mono">Company Desk</span>
             <div className="flex flex-col gap-2.5">
-              <button onClick={() => setView('home')} className="text-[11px] text-zinc-400 hover:text-[#0f2b5e] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Overview Hub</button>
-              <button onClick={() => setView('about')} className="text-[11px] text-zinc-400 hover:text-[#0f2b5e] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">About Us</button>
-              <button onClick={() => setView('booking')} className="text-[11px] text-zinc-400 hover:text-[#0f2b5e] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Booking Desk</button>
+              <button onClick={() => setView('home')} className="text-[11px] text-zinc-400 hover:text-[#6b9fff] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Overview Hub</button>
+              <button onClick={() => setView('about')} className="text-[11px] text-zinc-400 hover:text-[#6b9fff] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">About Us</button>
+              <button onClick={() => setView('booking')} className="text-[11px] text-zinc-400 hover:text-[#6b9fff] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Booking Desk</button>
             </div>
           </div>
 
@@ -48,8 +48,8 @@ export default function Footer({ setView }: FooterProps) {
           <div className="flex flex-col gap-4 text-left">
             <span className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest font-mono">Legal Desk</span>
             <div className="flex flex-col gap-2.5">
-              <button onClick={() => setView('terms')} className="text-[11px] text-zinc-400 hover:text-[#0f2b5e] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Terms of Service</button>
-              <button onClick={() => setView('privacy')} className="text-[11px] text-zinc-400 hover:text-[#0f2b5e] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Privacy Policy</button>
+              <button onClick={() => setView('terms')} className="text-[11px] text-zinc-400 hover:text-[#6b9fff] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Terms of Service</button>
+              <button onClick={() => setView('privacy')} className="text-[11px] text-zinc-400 hover:text-[#6b9fff] cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Privacy Policy</button>
             </div>
           </div>
 
@@ -79,21 +79,21 @@ export default function Footer({ setView }: FooterProps) {
         {/* Coordinated Branch Info (Lagos, Benin, Abuja) */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10 pb-8 border-t border-[#0f2b5e]/20 text-left text-zinc-400 text-[10px] font-mono uppercase tracking-wider relative z-20">
           <div className="flex items-center gap-3">
-            <MapPin size={12} className="text-[#0f2b5e] shrink-0" />
+            <MapPin size={12} className="text-[#6b9fff] shrink-0" />
             <div>
               <span className="text-white font-bold block">HQ Benin Desk</span>
               17 Upper Adesuwa Road, GRA, Benin City
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <MapPin size={12} className="text-[#0f2b5e] shrink-0" />
+            <MapPin size={12} className="text-[#6b9fff] shrink-0" />
             <div>
               <span className="text-white font-bold block">Lagos Operations</span>
               Victoria Island, Lagos, Nigeria
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <Globe size={12} className="text-[#0f2b5e] shrink-0" />
+            <Globe size={12} className="text-[#6b9fff] shrink-0" />
             <div>
               <span className="text-white font-bold block">Operational Contact</span>
               info@engracedlogistics.com.ng<br />

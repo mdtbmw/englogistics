@@ -121,11 +121,11 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
               alt="Premium Toyota Prado (2025)" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/30 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d] via-[#071a3d]/40 to-transparent"></div>
             
             {/* Floating Information Overlay */}
             <div className="absolute bottom-6 left-6 right-6 text-left">
-              <span className="text-[9px] font-mono text-[#0f2b5e] uppercase tracking-widest font-bold block mb-1">Fleet Telemetry</span>
+              <span className="text-[9px] font-mono text-[#6b9fff] uppercase tracking-widest font-bold block mb-1">Fleet Telemetry</span>
               <span className="text-sm font-semibold text-white uppercase block">Nationwide Routing Desk</span>
               <span className="text-zinc-400 text-[10px] block mt-1">Benin Head Office • Lagos Protocol Desk</span>
             </div>
@@ -133,11 +133,11 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
           
           {/* Overlapping Detail Badge Card */}
           <div className="absolute top-4 left-1/2 -translate-x-1/2 lg:top-auto lg:bottom-[-24px] lg:left-[-32px] lg:translate-x-0 bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] border border-[#0f2b5e]/30 text-white rounded-2xl p-5 shadow-2xl flex items-center gap-3.5 max-w-[220px] text-left animate-pulse-slow z-20">
-            <div className="w-10 h-10 bg-[#0f2b5e]/10 border border-[#0f2b5e]/20 rounded-xl flex items-center justify-center text-[#0f2b5e] shrink-0">
+            <div className="w-10 h-10 bg-[#6b9fff]/10 border border-[#6b9fff]/20 rounded-xl flex items-center justify-center text-[#6b9fff] shrink-0">
               <Award size={20} />
             </div>
             <div>
-              <span className="text-[8.5px] font-mono text-[#0f2b5e] uppercase font-bold block">Certified SLA</span>
+              <span className="text-[8.5px] font-mono text-[#6b9fff] uppercase font-bold block">Certified SLA</span>
               <span className="text-xs font-medium uppercase tracking-tight block mt-0.5">Mobility Excellence</span>
             </div>
           </div>

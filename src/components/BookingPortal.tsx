@@ -434,10 +434,10 @@ _This booking request has been authorized by the central desk and requires direc
 
                 <div className="flex items-center justify-between border-b border-[#0f2b5e]/30 pb-4">
                   <div>
-                    <span className="text-[8px] font-mono text-[#0f2b5e] uppercase tracking-[0.2em] block">Desk Verification</span>
+                    <span className="text-[8px] font-mono text-[#6b9fff] uppercase tracking-[0.2em] block">Desk Verification</span>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-white mt-1">Reservation Statement</h3>
                   </div>
-                  <span className="text-[8px] font-mono bg-[#0f2b5e]/10 text-[#0f2b5e] border border-[#0f2b5e]/20 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                  <span className="text-[8px] font-mono bg-[#6b9fff]/10 text-[#6b9fff] border border-[#6b9fff]/20 px-2 py-0.5 rounded-md uppercase tracking-wider">
                     Authorized Summary
                   </span>
                 </div>
@@ -492,11 +492,11 @@ _This booking request has been authorized by the central desk and requires direc
 
                 <div className="bg-[#0a1f4a]/50 p-3.5 border border-[#0f2b5e]/30 rounded-xl space-y-1.5 text-[10px] text-zinc-400 font-sans leading-relaxed">
                    <div className="flex items-start gap-2">
-                     <ShieldCheck size={12} className="text-[#0f2b5e] shrink-0 mt-0.5" />
+                     <ShieldCheck size={12} className="text-[#6b9fff] shrink-0 mt-0.5" />
                      <p>24/7 central desk telemetry and operations monitoring enabled upon confirmation.</p>
                    </div>
                    <div className="flex items-start gap-2">
-                     <ShieldCheck size={12} className="text-[#0f2b5e] shrink-0 mt-0.5" />
+                     <ShieldCheck size={12} className="text-[#6b9fff] shrink-0 mt-0.5" />
                      <p>Escort logs and security details will be assigned within 15 minutes.</p>
                    </div>
                 </div>

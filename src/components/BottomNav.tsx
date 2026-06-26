@@ -29,7 +29,7 @@ export default function BottomNav({ currentView, setView }: BottomNavProps) {
             key={item.view}
             onClick={() => setView(item.view)}
             className={`p-2 flex flex-col items-center gap-1 active:scale-90 transition-transform cursor-pointer focus:outline-none ${
-              isActive ? 'text-[#0f2b5e]' : 'text-zinc-400 hover:text-white'
+              isActive ? 'text-[#6b9fff]' : 'text-zinc-400 hover:text-white'
             }`}
           >
             <Icon size={18} />

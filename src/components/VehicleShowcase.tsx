@@ -104,7 +104,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
         {/* Eyebrow and Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 text-left">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold font-mono tracking-widest uppercase bg-[#0f2b5e]/10 border border-[#0f2b5e]/30 text-[#0f2b5e] mb-3 shadow-[0_2px_10px_rgba(15,43,94,0.1)]">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold font-mono tracking-widest uppercase bg-[#6b9fff]/10 border border-[#6b9fff]/30 text-[#6b9fff] mb-3 shadow-[0_2px_10px_rgba(107,159,255,0.1)]">
               <Zap size={10} className="animate-pulse" /> Fleet Showroom
             </span>
             <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-white mb-3">
@@ -142,7 +142,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                     >
                       {/* Brand & Category Details */}
                       <div className="flex flex-col gap-1">
-                        <span className="text-[9px] font-bold font-mono text-[#0f2b5e] uppercase tracking-widest">
+                        <span className="text-[9px] font-bold font-mono text-[#6b9fff] uppercase tracking-widest">
                           {activeVehicle.category === 'suvs' ? 'SUV' : activeVehicle.category === 'luxury' ? 'Luxury' : 'Security'}
                         </span>
                         <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-white leading-none">
@@ -162,17 +162,17 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                       {!showSpecialFeatures ? (
                         <div className="grid grid-cols-3 gap-2.5">
                           <div className="bg-[#0a1f4a]/60 border border-[#0f2b5e]/20 rounded-xl p-3 flex flex-col gap-1 items-center">
-                            <Users size={14} className="text-[#0f2b5e]" />
+                            <Users size={14} className="text-[#6b9fff]" />
                             <span className="text-[7.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Pax Cap</span>
                             <span className="text-xs font-bold text-zinc-300">{activeVehicle.specs.pax.split(' ')[2] || '5'} Max</span>
                           </div>
                           <div className="bg-[#0a1f4a]/60 border border-[#0f2b5e]/20 rounded-xl p-3 flex flex-col gap-1 items-center">
-                            <Briefcase size={14} className="text-[#0f2b5e]" />
+                            <Briefcase size={14} className="text-[#6b9fff]" />
                             <span className="text-[7.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Luggage</span>
                             <span className="text-xs font-bold text-zinc-300">{activeVehicle.specs.luggage.split(' ')[0] || '4'} Bags</span>
                           </div>
                           <div className="bg-[#0a1f4a]/60 border border-[#0f2b5e]/20 rounded-xl p-3 flex flex-col gap-1 items-center">
-                            <Award size={14} className="text-[#0f2b5e]" />
+                            <Award size={14} className="text-[#6b9fff]" />
                             <span className="text-[7.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Class</span>
                             <span className="text-xs font-bold text-zinc-300 truncate w-full text-center">{activeVehicle.specs.type.split(' ')[0]}</span>
                           </div>
@@ -210,7 +210,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                     onClick={() => setShowSpecialFeatures(!showSpecialFeatures)}
                     className={`w-full py-2.5 rounded-xl text-[9px] font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer active:scale-98 flex items-center justify-center gap-2 ${
                       showSpecialFeatures 
-                        ? 'bg-[#0f2b5e]/10 text-[#0f2b5e] border-[#0f2b5e]/30' 
+                        ? 'bg-[#6b9fff]/10 text-[#6b9fff] border-[#6b9fff]/30' 
                         : 'bg-[#0a1f4a] hover:bg-[#0f2b5e] text-zinc-400 border-[#0f2b5e]/30 hover:text-white'
                     }`}
                   >
@@ -372,7 +372,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
 
                   {/* Compact Status Indicator row */}
                   <div className="bg-[#071a3d]/70 border border-[#0f2b5e]/20 rounded-xl p-2 flex items-center gap-1.5 mt-2 z-20">
-                    <ShieldCheck size={11} className="text-[#0f2b5e] shrink-0" />
+                    <ShieldCheck size={11} className="text-[#6b9fff] shrink-0" />
                     <span className="text-[8px] font-bold text-zinc-300 truncate text-left w-full">
                       {activeVehicle.id === 'toyota_hilux' ? 'Escort configuration ready' : activeVehicle.id === 'toyota_landcruiser' ? 'Armored protection option' : 'Premium executive class'}
                     </span>
@@ -425,7 +425,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
               
               {/* Category & Counter Badge */}
               <div className="flex justify-between items-center">
-                <span className="inline-block text-[9px] font-bold font-mono text-[#0f2b5e] uppercase tracking-widest bg-[#0f2b5e]/10 border border-[#0f2b5e]/20 px-2.5 py-0.5 rounded-md">
+                <span className="inline-block text-[9px] font-bold font-mono text-[#6b9fff] uppercase tracking-widest bg-[#6b9fff]/10 border border-[#6b9fff]/20 px-2.5 py-0.5 rounded-md">
                   {activeVehicle.category === 'suvs' ? 'SUV' : activeVehicle.category === 'luxury' ? 'Luxury' : 'Security'}
                 </span>
                 <span className="text-[10px] font-bold font-mono text-zinc-500 bg-[#0a1f4a]/80 px-2 py-0.5 rounded-md border border-[#0f2b5e]/20">
@@ -481,7 +481,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
               {/* Camera Angle Selector for Mobile */}
               <div className="flex flex-col gap-1.5">
                 <span className="text-[8px] font-bold text-zinc-500 uppercase tracking-widest font-mono flex items-center gap-1">
-                  <Camera size={10} className="text-[#0f2b5e]" /> View Angle
+                  <Camera size={10} className="text-[#6b9fff]" /> View Angle
                 </span>
                 <div className="flex gap-2 overflow-x-auto pb-1 hide-scrollbar">
                   {allImages.map((img, idx) => (
@@ -509,17 +509,17 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
               {/* Specifications Badges */}
               <div className="grid grid-cols-3 gap-2 py-1 border-t border-b border-[#0f2b5e]/20 my-1">
                 <div className="flex flex-col items-center justify-center p-2 bg-[#0a1f4a]/50 rounded-xl">
-                  <Users size={14} className="text-[#0f2b5e] mb-0.5" />
+                  <Users size={14} className="text-[#6b9fff] mb-0.5" />
                   <span className="text-[7px] text-zinc-500 font-mono uppercase tracking-widest">Seats</span>
                   <span className="text-xs font-bold text-zinc-300">{activeVehicle.specs.pax.split(' ')[2] || '5'} Max</span>
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 bg-[#0a1f4a]/50 rounded-xl">
-                  <Briefcase size={14} className="text-[#0f2b5e] mb-0.5" />
+                  <Briefcase size={14} className="text-[#6b9fff] mb-0.5" />
                   <span className="text-[7px] text-zinc-500 font-mono uppercase tracking-widest">Bags</span>
                   <span className="text-xs font-bold text-zinc-300">{activeVehicle.specs.luggage.split(' ')[0] || '4'} Pcs</span>
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 bg-[#0a1f4a]/50 rounded-xl">
-                  <Award size={14} className="text-[#0f2b5e] mb-0.5" />
+                  <Award size={14} className="text-[#6b9fff] mb-0.5" />
                   <span className="text-[7px] text-zinc-500 font-mono uppercase tracking-widest">Class</span>
                   <span className="text-xs font-bold text-zinc-300 truncate w-full text-center">{activeVehicle.specs.type.split(' ')[0]}</span>
                 </div>
@@ -531,7 +531,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                 <div className="flex flex-col gap-1.5">
                   {currentFeatures.amenities.map((amenity, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle2 size={12} className="text-[#0f2b5e] shrink-0" />
+                      <CheckCircle2 size={12} className="text-[#6b9fff] shrink-0" />
                       <span>{amenity}</span>
                     </div>
                   ))}
@@ -552,7 +552,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
 
           {/* Animated Swipe Helper Instructions for Mobile */}
           <div className="flex flex-col items-center gap-2 mt-2">
-            <div className="flex items-center gap-2.5 text-[10px] font-mono uppercase tracking-widest text-[#0f2b5e] font-bold bg-[#0a1f4a]/40 border border-[#0f2b5e]/20 px-4 py-2 rounded-full">
+            <div className="flex items-center gap-2.5 text-[10px] font-mono uppercase tracking-widest text-white font-bold bg-[#0f2b5e]/50 border border-[#0f2b5e]/40 px-4 py-2 rounded-full">
               <motion.span 
                 animate={{ x: [-4, 4, -4] }} 
                 transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

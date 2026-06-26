@@ -84,7 +84,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
                   transition={{ type: "spring", stiffness: 100, damping: 18, delay: 0.15 }}
                   className="mb-3 md:mb-4"
                 >
-                  <span className="text-[#0f2b5e] text-[10px] md:text-xs font-bold uppercase tracking-widest bg-[#0f2b5e]/15 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-[#0f2b5e]/35 shadow-[0_2px_10px_rgba(15,43,94,0.15)]">
+                  <span className="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest bg-[#0f2b5e]/60 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-[#0f2b5e]/50 shadow-[0_2px_10px_rgba(15,43,94,0.3)]">
                     {HERO_SLIDES[currentSlide].tagline}
                   </span>
                 </motion.div>
@@ -156,19 +156,19 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
         <div className="hidden lg:flex absolute top-1/2 right-12 -translate-y-1/2 z-30 w-36 h-36 items-center justify-center opacity-90 mix-blend-screen pointer-events-none">
           <svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 100 100">
             <path id="textPath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
-            <text fill="#0f2b5e" className="text-[10px] font-bold uppercase tracking-[0.25em]">
+            <text fill="#6b9fff" className="text-[10px] font-bold uppercase tracking-[0.25em]">
               <textPath href="#textPath" startOffset="0%">✦ 24/7 Logistics Support ✦ Premium Car Rentals </textPath>
             </text>
           </svg>
           <div className="w-14 h-14 bg-[#0a1f4a]/90 rounded-full backdrop-blur-md border border-[#0f2b5e]/30 flex items-center justify-center">
-            <ShieldCheck size={24} className="text-[#0f2b5e]" />
+            <ShieldCheck size={24} className="text-[#6b9fff]" />
           </div>
         </div>
 
         {/* Pagers / Progress Indicators */}
         <div className="absolute top-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-auto md:bottom-12 md:right-12 z-40 flex flex-row md:flex-col items-center md:items-end gap-3 bg-[#0a1f4a]/50 md:bg-transparent px-3 py-1.5 md:p-0 rounded-full backdrop-blur-sm md:backdrop-blur-none border border-white/10 md:border-none shadow-lg md:shadow-none">
           <div className="text-left md:text-right flex items-center md:block">
-            <span className="text-[#0f2b5e] text-[10px] md:text-xs font-bold font-mono">0{currentSlide + 1}</span>
+            <span className="text-[#6b9fff] text-[10px] md:text-xs font-bold font-mono">0{currentSlide + 1}</span>
             <span className="text-zinc-300 md:text-zinc-500 text-[9px] md:text-[10px] font-mono">/0{HERO_SLIDES.length}</span>
           </div>
           <div className="flex gap-1.5 md:gap-2">

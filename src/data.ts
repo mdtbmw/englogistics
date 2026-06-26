@@ -123,19 +123,6 @@ export const FLEET_DATA: FleetItem[] = [
     category: 'vip'
   },
   {
-    id: 'prado_2018',
-    name: 'Toyota Prado (2018)',
-    image: 'https://www.engracedlogistics.com.ng/storage/2019/02/prado-740x556.jpg',
-    images: [
-      'https://www.engracedlogistics.com.ng/storage/2019/02/prado-740x556.jpg',
-      'https://www.engracedlogistics.com.ng/storage/2019/02/prado.jpg'
-    ],
-    specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Executive 4x4 SUV' },
-    desc: 'The Toyota Prado (2018) offers a superb blend of off-road capability and on-road comfort, ideal for corporate transfers and interstate travels.',
-    pricePerDay: 100000,
-    category: 'suvs'
-  },
-  {
     id: 'corolla_2016',
     name: 'Toyota Corolla (2016)',
     image: 'https://www.engracedlogistics.com.ng/storage/2019/02/corolla-2016-740x556.jpg',
@@ -172,39 +159,6 @@ export const FLEET_DATA: FleetItem[] = [
     category: 'suvs'
   },
   {
-    id: 'corolla_2004',
-    name: 'Toyota Corolla (2004)',
-    image: 'https://www.engracedlogistics.com.ng/storage/2019/02/corolla-2004-740x556.jpg',
-    images: ['https://www.engracedlogistics.com.ng/storage/2019/02/corolla-2004-740x556.jpg'],
-    specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Standard Sedan' },
-    desc: 'An economical and sturdy choice for day-to-day runs and practical transport requirements, built with legendary durability.',
-    pricePerDay: 25000,
-    category: 'sedans'
-  },
-  {
-    id: 'camry_2004',
-    name: 'Toyota Camry (2004)',
-    image: 'https://www.engracedlogistics.com.ng/storage/2019/02/camry-2004-740x556.jpg',
-    images: ['https://www.engracedlogistics.com.ng/storage/2019/02/camry-2004-740x556.jpg'],
-    specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Standard Sedan' },
-    desc: 'Generous cabin spacing and robust engine performance make this Camry model a very reliable choice for city travel.',
-    pricePerDay: 30000,
-    category: 'sedans'
-  },
-  {
-    id: 'hilux_2019',
-    name: 'Toyota Hilux (2019)',
-    image: 'https://www.engracedlogistics.com.ng/storage/2019/02/hilux-740x556.jpg',
-    images: [
-      'https://www.engracedlogistics.com.ng/storage/2019/02/hilux-740x556.jpg',
-      'https://www.engracedlogistics.com.ng/storage/2019/02/hilux.jpg'
-    ],
-    specs: { pax: 'Up to 5 Passengers', luggage: '4 Medium Bags', type: 'Utility Escort Pickup' },
-    desc: 'Built for tough terrains and escort operations, this Toyota Hilux is equipped for convoy support and heavy protocol requirements.',
-    pricePerDay: 90000,
-    category: 'vip'
-  },
-  {
     id: 'hiace_bus',
     name: 'Toyota Hiace Bus',
     image: 'https://www.engracedlogistics.com.ng/storage/2019/02/bus-740x556.jpg',
@@ -236,16 +190,6 @@ export const FLEET_DATA: FleetItem[] = [
     desc: 'Spacious, highly comfortable, and smooth-driving, the Sienna is the ideal minivan choice for family transfers and business travels.',
     pricePerDay: 65000,
     category: 'vans'
-  },
-  {
-    id: 'cruiser_2019',
-    name: 'Toyota Land Cruiser (2019)',
-    image: 'https://www.engracedlogistics.com.ng/storage/2019/02/cruiser-740x556.jpg',
-    images: ['https://www.engracedlogistics.com.ng/storage/2019/02/cruiser-740x556.jpg'],
-    specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'VIP Convoy SUV' },
-    desc: 'Commanding presence, luxury cabin, and exceptional off-road performance, ideal for state protocol travels and VIP assignments.',
-    pricePerDay: 150000,
-    category: 'vip'
   },
   {
     id: 'lexus_gx',

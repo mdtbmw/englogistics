@@ -106,7 +106,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
 
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6 relative z-10 text-left">
           <div className="max-w-2xl">
-             <h2 className="text-[10px] font-bold text-[#0f2b5e] uppercase tracking-widest mb-2 font-mono">Our Fleet</h2>
+             <h2 className="text-[10px] font-bold text-[#6b9fff] uppercase tracking-widest mb-2 font-mono">Our Fleet</h2>
              <h3 className="text-2xl md:text-3.5xl font-medium text-white leading-none tracking-tight mb-4">Our Fleet</h3>
              <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
                 At <strong className="text-white">Engraced Logistics</strong>, we understand that the efficiency of your operations depends on the reliability of your fleet. That is why we maintain a carefully selected range of vehicles designed to deliver dependable transportation and logistics support for every business need.
@@ -118,7 +118,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
         </div>
 
         {/* Fleet Horizontal Pagers */}
-        <div className="grid grid-cols-2 md:flex md:flex-row md:flex-wrap w-full gap-2 md:gap-3 pb-6 border-b border-zinc-900 relative z-10">
+        <div className="grid grid-cols-2 md:flex md:flex-row md:flex-wrap w-full gap-2 md:gap-3 pb-6 border-b border-[#0f2b5e]/40 relative z-10">
           {categories.map((cat) => (
             <button
               key={cat.id}
@@ -130,7 +130,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
               }`}
             >
               <span className="text-[10px] md:text-[11.5px] font-bold uppercase tracking-widest pl-1 md:pl-2 font-sans truncate">{cat.name}</span>
-              {activeCategory === cat.id && <ArrowRight size={12} className="text-[#0f2b5e] shrink-0" />}
+              {activeCategory === cat.id && <ArrowRight size={12} className="text-[#6b9fff] shrink-0" />}
             </button>
           ))}
         </div>
@@ -148,7 +148,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                   className={`px-4 py-2 rounded-xl text-[9px] font-bold uppercase tracking-widest transition-all duration-300 border cursor-pointer active:scale-95 ${
                     selectedVehicle.id === vehicle.id
                       ? 'bg-[#6b9fff] text-[#071a3d] border-[#6b9fff] font-bold shadow-md shadow-[#0f2b5e]/10'
-                      : 'bg-[#071a3d] text-zinc-300 border-[#0f2b5e]/20 hover:text-white hover:border-[#0f2b5e]/50'
+                      : 'bg-[#071a3d] text-zinc-300 border-transparent hover:text-white hover:bg-[#0f2b5e]/20'
                   }`}
                 >
                   {vehicle.name.split(' (')[0]}
@@ -170,7 +170,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                 <div className="relative w-full">
                   <motion.div variants={imageReveal} className="relative w-full h-52 md:h-72 rounded-2xl overflow-hidden mb-4 shadow-inner group">
                      <img src={activeImage} alt={selectedVehicle.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
-                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/45 to-transparent"></div>
+                     <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d] via-[#071a3d]/60 to-transparent"></div>
                      <div className="absolute top-4 left-4 bg-[#6b9fff] text-[#071a3d] font-bold font-mono text-[9px] px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-lg">
                        Premium Fleet
                      </div>
@@ -198,7 +198,7 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                   <motion.div variants={childFadeUp} className="max-w-xl">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
                         <h4 className="text-xl font-medium text-white">{selectedVehicle.name}</h4>
-                        <span className="text-[10px] font-mono text-[#0f2b5e] uppercase font-bold px-2 py-0.5 border border-[#0f2b5e]/30 rounded bg-[#0f2b5e]/5">
+                        <span className="text-[10px] font-mono text-[#6b9fff] uppercase font-bold px-2 py-0.5 border border-[#6b9fff]/30 rounded bg-[#6b9fff]/10">
                           Verified
                         </span>
                       </div>
@@ -217,17 +217,17 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                     className="grid grid-cols-2 gap-4 md:flex md:flex-row md:flex-nowrap self-stretch lg:self-auto justify-start lg:justify-end w-full md:w-auto"
                   >
                     <motion.div variants={specBadgeReveal} className="col-span-2 md:w-auto bg-[#071a3d] border border-[#0f2b5e]/30 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
-                      <Users size={16} className="text-[#0f2b5e]" />
+                      <Users size={16} className="text-[#6b9fff]" />
                       <span className="text-[8.5px] font-bold text-zinc-400 uppercase tracking-widest font-mono">Pax Cap</span>
                       <span className="text-xs font-bold text-zinc-200 uppercase font-sans text-center">{selectedVehicle.specs.pax}</span>
                     </motion.div>
                     <motion.div variants={specBadgeReveal} className="col-span-1 md:flex-initial bg-[#071a3d] border border-[#0f2b5e]/30 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
-                      <Briefcase size={16} className="text-[#0f2b5e]" />
+                      <Briefcase size={16} className="text-[#6b9fff]" />
                       <span className="text-[8.5px] font-bold text-zinc-400 uppercase tracking-widest font-mono">Luggage</span>
                       <span className="text-xs font-bold text-zinc-200 uppercase font-sans text-center">{selectedVehicle.specs.luggage}</span>
                     </motion.div>
                     <motion.div variants={specBadgeReveal} className="col-span-1 md:flex-initial bg-[#071a3d] border border-[#0f2b5e]/30 rounded-2xl p-4 flex flex-col gap-1.5 items-center min-w-[85px] shadow-lg">
-                      <Award size={16} className="text-[#0f2b5e]" />
+                      <Award size={16} className="text-[#6b9fff]" />
                       <span className="text-[8.5px] font-bold text-zinc-400 uppercase tracking-widest font-mono">Specs Type</span>
                       <span className="text-xs font-bold text-zinc-200 uppercase font-sans text-center">{selectedVehicle.specs.type}</span>
                     </motion.div>
