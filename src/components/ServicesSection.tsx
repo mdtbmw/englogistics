@@ -84,7 +84,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
         className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6"
       >
         <div>
-          <h2 className="text-[10px] font-bold text-[#0f2b5e] uppercase tracking-widest mb-2 font-mono">Operations Portfolio</h2>
+          <h2 className="text-[12px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Operations Portfolio</h2>
           <h3 className="text-2xl md:text-3.5xl font-medium text-zinc-950 leading-tight tracking-tight">
             Comprehensive<br/>Mobility Architecture
           </h3>
@@ -112,16 +112,16 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                 onClick={() => setActiveTab(category.id)}
                 className={`flex items-center gap-2 md:gap-3 p-2.5 md:p-3.5 md:pr-6 rounded-xl md:rounded-2xl text-left transition-all duration-300 cursor-pointer active:scale-95 border ${
                   isActive 
-                    ? 'bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] text-white shadow-lg border-[#0f2b5e]/40 font-bold' 
+                    ? 'bg-gradient-to-br from-[#0F0F8B] to-[#080870] text-white shadow-lg border-[#0F0F8B]/40 font-bold' 
                     : 'bg-white border border-zinc-100 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-50'
                 }`}
               >
                 <div className={`p-1.5 md:p-2 rounded-lg md:rounded-xl transition-colors shrink-0 ${
-                  isActive ? 'bg-[#0f2b5e] text-white' : 'bg-zinc-100 text-zinc-500'
+                  isActive ? 'bg-[#0F0F8B] text-white' : 'bg-zinc-100 text-zinc-500'
                 }`}>
                   <Icon size={14} />
                 </div>
-                <span className="text-[9.5px] md:text-[11px] font-bold uppercase tracking-widest font-sans truncate">{category.title}</span>
+                <span className="text-[11.5px] md:text-[11px] font-bold uppercase tracking-widest font-sans truncate">{category.title}</span>
               </button>
             );
           })}
@@ -129,8 +129,8 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
 
         {/* Content Box */}
         <div className="w-full">
-          <div className="bg-gradient-to-br from-[#fafcff] to-[#f0f5ff] border border-[#0f2b5e]/8 rounded-[2rem] p-6 lg:p-12 min-h-[420px] lg:min-h-[380px] flex flex-col justify-between shadow-lg relative overflow-hidden group">
-            <div className="absolute -right-24 -top-24 w-80 h-80 bg-[#0f2b5e]/5 rounded-full blur-3xl group-hover:bg-[#0f2b5e]/8 transition-colors duration-700 pointer-events-none"></div>
+          <div className="bg-gradient-to-br from-[#fafcff] to-[#f0f5ff] border border-[#0F0F8B]/8 rounded-[2rem] p-6 lg:p-12 min-h-[420px] lg:min-h-[380px] flex flex-col justify-between shadow-lg relative overflow-hidden group">
+            <div className="absolute -right-24 -top-24 w-80 h-80 bg-[#0F0F8B]/5 rounded-full blur-3xl group-hover:bg-[#0F0F8B]/8 transition-colors duration-700 pointer-events-none"></div>
 
             <AnimatePresence mode="wait">
               {SERVICE_CATEGORIES.map((category) => {
@@ -146,14 +146,14 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                   >
                     <div>
                       <div className="flex items-center gap-4 mb-8">
-                        <div className="w-12 h-12 bg-zinc-50 border border-zinc-100 rounded-2xl flex items-center justify-center text-[#0f2b5e] shadow-sm">
+                        <div className="w-12 h-12 bg-zinc-50 border border-zinc-100 rounded-2xl flex items-center justify-center text-[#0F0F8B] shadow-sm">
                           <Icon size={20} />
                         </div>
                         <div>
                           <h4 className="text-base font-bold text-zinc-950 uppercase tracking-widest font-mono">
                             {category.title}
                           </h4>
-                          <span className="text-[9px] font-mono text-[#0f2b5e] uppercase tracking-wider">Strategic Sector Operations</span>
+                          <span className="text-[11px] font-mono text-[#0F0F8B] uppercase tracking-wider">Strategic Sector Operations</span>
                         </div>
                       </div>
                       
@@ -168,15 +168,15 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                             <motion.div 
                               variants={cardVariants}
                               key={idx} 
-                              className="bg-white border border-[#0f2b5e]/8 rounded-2xl p-5 hover:border-[#0f2b5e]/20 hover:bg-white hover:shadow-md transition-all duration-300 group/item flex flex-col justify-between gap-5 text-left"
+                              className="bg-white border border-[#0F0F8B]/8 rounded-2xl p-5 hover:border-[#0F0F8B]/20 hover:bg-white hover:shadow-md transition-all duration-300 group/item flex flex-col justify-between gap-5 text-left"
                             >
                               <div className="flex flex-col gap-3.5">
                                 <div>
                                   <div className="flex items-center gap-2 mb-2">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-[#0f2b5e] shadow-[0_0_8px_#0f2b5e] transition-transform group-hover/item:scale-135"></div>
+                                    <div className="w-1.5 h-1.5 rounded-full bg-[#0F0F8B] shadow-[0_0_8px_#0F0F8B] transition-transform group-hover/item:scale-135"></div>
                                     <h5 className="text-[11px] font-bold text-zinc-900 uppercase tracking-widest">{item.name}</h5>
                                   </div>
-                                  <p className="text-[10.5px] text-zinc-500 leading-relaxed font-sans">
+                                  <p className="text-[12.5px] text-zinc-500 leading-relaxed font-sans">
                                     {item.desc}
                                   </p>
                                 </div>
@@ -184,8 +184,8 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                                 {/* Features List */}
                                 <div className="flex flex-col gap-1.5 pt-1">
                                   {features.map((feature, fIdx) => (
-                                    <div key={fIdx} className="flex items-center gap-2 text-[9.5px] text-zinc-600 font-sans">
-                                      <svg className="w-3 h-3 text-[#0f2b5e] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                    <div key={fIdx} className="flex items-center gap-2 text-[11.5px] text-zinc-600 font-sans">
+                                      <svg className="w-3 h-3 text-[#0F0F8B] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                       </svg>
                                       <span>{feature}</span>
@@ -196,7 +196,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                               
                               <div className="flex flex-col gap-3.5">
                                 {/* Details Grid */}
-                                <div className="grid grid-cols-2 gap-y-2.5 gap-x-4 pt-3 border-t border-zinc-200/60 font-mono text-[8.5px] text-zinc-400">
+                                <div className="grid grid-cols-2 gap-y-2.5 gap-x-4 pt-3 border-t border-zinc-200/60 font-mono text-[10.5px] text-zinc-400">
                                   <div>
                                     <span className="text-zinc-500 block uppercase font-bold">Service SLA</span>
                                     <span className="text-zinc-700 font-medium font-sans mt-0.5 block">{details.sla}</span>
@@ -207,7 +207,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                                   </div>
                                   <div>
                                     <span className="text-zinc-500 block uppercase font-bold">Rates Benchmark</span>
-                                    <span className="text-[#0f2b5e] font-bold font-sans mt-0.5 block">{details.pricing}</span>
+                                    <span className="text-[#0F0F8B] font-bold font-sans mt-0.5 block">{details.pricing}</span>
                                   </div>
                                   <div>
                                     <span className="text-zinc-500 block uppercase font-bold">Active Coverage</span>
@@ -217,7 +217,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
 
                                 <button 
                                   onClick={() => setView('booking')}
-                                  className="w-full py-2 bg-[#0f2b5e] text-white rounded-xl text-[9px] font-bold uppercase tracking-widest hover:bg-[#071a3d] transition-all duration-300 cursor-pointer active:scale-[0.98] flex items-center justify-center gap-1.5"
+                                  className="w-full py-2 bg-[#0F0F8B] text-white rounded-xl text-[11px] font-bold uppercase tracking-widest hover:bg-[#080870] transition-all duration-300 cursor-pointer active:scale-[0.98] flex items-center justify-center gap-1.5"
                                 >
                                   Book Now
                                   <ArrowRight size={10} />
@@ -230,10 +230,10 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                     </div>
                     
                     <div className="mt-10 pt-6 border-t border-zinc-50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                       <p className="text-[10px] text-zinc-400 font-mono uppercase">Requires 24-48 hours advance booking</p>
+                       <p className="text-[12px] text-zinc-400 font-mono uppercase">Requires 24-48 hours advance booking</p>
                        <button 
                          onClick={() => setView('booking')}
-                         className="text-[#0f2b5e] text-[10.5px] font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all active:scale-95 cursor-pointer hover:text-zinc-950"
+                         className="text-[#0F0F8B] text-[12.5px] font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all active:scale-95 cursor-pointer hover:text-zinc-950"
                        >
                          Request Service <ArrowRight size={14} />
                        </button>

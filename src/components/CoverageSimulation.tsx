@@ -58,11 +58,11 @@ export default function CoverageSimulation() {
         {/* Monitoring Info */}
         <div className="w-full md:w-[52%] p-4 sm:p-6 lg:p-12 relative z-10 text-left flex flex-col justify-between">
            <div>
-             <span className="text-[7px] xs:text-[8.5px] font-mono text-zinc-500 uppercase tracking-widest block mb-1 font-bold">Standard Regional Operations</span>
-             <h3 className="text-[10px] xs:text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium text-zinc-950 leading-tight mb-2 tracking-tight">
+             <span className="text-[9px] xs:text-[10.5px] font-mono text-zinc-500 uppercase tracking-widest block mb-1 font-bold">Standard Regional Operations</span>
+             <h3 className="text-[12px] xs:text-sm sm:text-lg md:text-2xl lg:text-3xl font-medium text-zinc-950 leading-tight mb-2 tracking-tight">
                Regional Protocol & Fleet Coverage Map
              </h3>
-             <p className="hidden xs:block text-[8px] xs:text-[9.5px] sm:text-xs md:text-sm text-zinc-500 leading-normal mb-3 md:mb-8 max-w-sm">
+             <p className="hidden xs:block text-[10px] xs:text-[11.5px] sm:text-xs md:text-sm text-zinc-500 leading-normal mb-3 md:mb-8 max-w-sm">
                Every vehicle in our luxury transport fleet is equipped with industry-standard GPS, reliable communications, and automated geofence logs coordinate-mapped back to our central desk.
              </p>
            </div>
@@ -73,9 +73,9 @@ export default function CoverageSimulation() {
                <button
                  key={region}
                  onClick={() => setActiveRegion(region)}
-                 className={`text-[7px] xs:text-[8.5px] sm:text-[9.5px] font-bold py-1 sm:py-1.5 rounded-md sm:rounded-lg uppercase tracking-wider transition-colors cursor-pointer text-center truncate ${
+                 className={`text-[9px] xs:text-[10.5px] sm:text-[11.5px] font-bold py-1 sm:py-1.5 rounded-md sm:rounded-lg uppercase tracking-wider transition-colors cursor-pointer text-center truncate ${
                    activeRegion === region 
-                     ? 'bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] text-white shadow-md font-bold' 
+                     ? 'bg-gradient-to-br from-[#0F0F8B] to-[#080870] text-white shadow-md font-bold' 
                      : 'bg-white border border-zinc-200 text-zinc-500 hover:text-zinc-950'
                  }`}
                >
@@ -96,33 +96,33 @@ export default function CoverageSimulation() {
                   className="space-y-2 sm:space-y-4 text-left w-full"
                 >
                   <div className="flex flex-col xs:flex-row items-start xs:items-center justify-between border-b border-zinc-100 pb-1.5 sm:pb-2 gap-0.5">
-                    <span className="text-[7.5px] xs:text-[9.5px] sm:text-[10px] font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-1 sm:gap-2">
-                      <Cpu size={10} className="text-[#0f2b5e] animate-pulse shrink-0" />
+                    <span className="text-[9.5px] xs:text-[11.5px] sm:text-[12px] font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-1 sm:gap-2">
+                      <Cpu size={10} className="text-[#0F0F8B] animate-pulse shrink-0" />
                       {regionDetails[activeRegion].name}
                     </span>
-                    <span className="text-[6.5px] xs:text-[8px] sm:text-[9px] font-mono text-zinc-400 truncate max-w-full">{regionDetails[activeRegion].coordinates}</span>
+                    <span className="text-[6.5px] xs:text-[10px] sm:text-[11px] font-mono text-zinc-400 truncate max-w-full">{regionDetails[activeRegion].coordinates}</span>
                   </div>
                   
                   <div className="grid grid-cols-1 xs:grid-cols-2 gap-1.5 sm:gap-4">
                     <div>
-                       <span className="text-[7px] xs:text-[8.5px] sm:text-[9px] text-zinc-400 block font-mono">ACTIVE DEPLOYMENTS</span>
-                       <span className="text-[7.5px] xs:text-[10px] sm:text-xs font-bold text-zinc-800 uppercase font-sans">{regionDetails[activeRegion].convoyCounts}</span>
+                       <span className="text-[9px] xs:text-[10.5px] sm:text-[11px] text-zinc-400 block font-mono">ACTIVE DEPLOYMENTS</span>
+                       <span className="text-[9.5px] xs:text-[12px] sm:text-xs font-bold text-zinc-800 uppercase font-sans">{regionDetails[activeRegion].convoyCounts}</span>
                     </div>
                     <div>
-                       <span className="text-[7px] xs:text-[8.5px] sm:text-[9px] text-zinc-400 block font-mono">SUPPORT CREW</span>
-                       <span className="text-[7.5px] xs:text-[10px] sm:text-xs font-bold text-zinc-800 uppercase font-sans">{regionDetails[activeRegion].activeCrews}</span>
+                       <span className="text-[9px] xs:text-[10.5px] sm:text-[11px] text-zinc-400 block font-mono">SUPPORT CREW</span>
+                       <span className="text-[9.5px] xs:text-[12px] sm:text-xs font-bold text-zinc-800 uppercase font-sans">{regionDetails[activeRegion].activeCrews}</span>
                     </div>
                     <div className="col-span-1 xs:col-span-2">
-                       <span className="text-[7px] xs:text-[8.5px] sm:text-[9px] text-zinc-400 block font-mono">DESK STATUS ASSESSMENT</span>
-                       <span className="text-[7.5px] xs:text-[10px] sm:text-xs font-bold text-[#0f2b5e] uppercase font-sans">{regionDetails[activeRegion].threatLevel}</span>
+                       <span className="text-[9px] xs:text-[10.5px] sm:text-[11px] text-zinc-400 block font-mono">DESK STATUS ASSESSMENT</span>
+                       <span className="text-[9.5px] xs:text-[12px] sm:text-xs font-bold text-[#0F0F8B] uppercase font-sans">{regionDetails[activeRegion].threatLevel}</span>
                     </div>
                   </div>
       
                   <div className="hidden sm:block bg-zinc-50 p-2.5 rounded-lg border border-zinc-100">
-                    <span className="text-[8.5px] font-bold text-zinc-400 block uppercase tracking-widest mb-1">Operations Log</span>
+                    <span className="text-[10.5px] font-bold text-zinc-400 block uppercase tracking-widest mb-1">Operations Log</span>
                     {regionDetails[activeRegion].history.map((hist, i) => (
-                      <p key={i} className="text-[10px] text-zinc-500 font-mono flex items-center gap-1.5 mt-0.5">
-                        <span className="w-1 h-1 rounded-full bg-[#0f2b5e] shrink-0" />
+                      <p key={i} className="text-[12px] text-zinc-500 font-mono flex items-center gap-1.5 mt-0.5">
+                        <span className="w-1 h-1 rounded-full bg-[#0F0F8B] shrink-0" />
                         {hist}
                       </p>
                     ))}
@@ -133,7 +133,7 @@ export default function CoverageSimulation() {
           </div>
  
          {/* RADAR CANVAS SCREEN (MAP IMAGE CARD) */}
-         <div className="w-full md:w-[48%] aspect-square bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] rounded-[1.2rem] sm:rounded-[2rem] p-3 sm:p-6 lg:p-12 relative overflow-hidden flex flex-col items-center justify-center self-center shadow-lg">
+         <div className="w-full md:w-[48%] aspect-square bg-gradient-to-br from-[#0F0F8B] to-[#080870] rounded-[1.2rem] sm:rounded-[2rem] p-3 sm:p-6 lg:p-12 relative overflow-hidden flex flex-col items-center justify-center self-center shadow-lg">
            {/* Static Premium Route Tracking Map Image */}
            <img 
              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80" 
@@ -141,30 +141,30 @@ export default function CoverageSimulation() {
              className="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-luminosity" 
            />
            {/* Dark gradient overlay for premium look */}
-           <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d] via-transparent to-[#0f2b5e]/50 z-10 pointer-events-none" />
+           <div className="absolute inset-0 bg-gradient-to-t from-[#080870] via-transparent to-[#0F0F8B]/50 z-10 pointer-events-none" />
            
            {/* Technical Grid Pattern Overlay */}
-           <div className="absolute inset-0 opacity-10 z-10 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#0f2b5e 1px, transparent 1px), linear-gradient(90deg, #0f2b5e 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+           <div className="absolute inset-0 opacity-10 z-10 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#0F0F8B 1px, transparent 1px), linear-gradient(90deg, #0F0F8B 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
            
            {/* Elegant overlay detail representing active transit paths */}
-           <div className="relative z-20 flex flex-col items-center gap-1.5 sm:gap-3 bg-[#0a1f4a]/90 border border-[#0f2b5e]/30 p-3 sm:p-6 rounded-xl sm:rounded-2xl max-w-[90%] text-center backdrop-blur-md shadow-2xl">
-             <div className="w-7 h-7 sm:w-10 sm:h-10 bg-[#6b9fff]/10 border border-[#6b9fff]/30 rounded-lg sm:rounded-xl flex items-center justify-center text-[#6b9fff]">
+           <div className="relative z-20 flex flex-col items-center gap-1.5 sm:gap-3 bg-[#0A0A78]/90 border border-[#0F0F8B]/30 p-3 sm:p-6 rounded-xl sm:rounded-2xl max-w-[90%] text-center backdrop-blur-md shadow-2xl">
+             <div className="w-7 h-7 sm:w-10 sm:h-10 bg-[#0000FD]/10 border border-[#0000FD]/30 rounded-lg sm:rounded-xl flex items-center justify-center text-[#0000FD]">
                <Navigation className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 animate-pulse" />
              </div>
              <div>
-               <span className="text-[7px] xs:text-[8px] sm:text-[9px] font-bold text-[#6b9fff] uppercase tracking-widest font-mono block">GPS Protocol Active</span>
-               <span className="text-[8px] xs:text-[10px] sm:text-[11.5px] font-medium text-white block mt-0.5 sm:mt-1">Lagos • Abuja • Benin • PH</span>
-               <span className="hidden xs:block text-[7.5px] xs:text-[8.5px] sm:text-[9px] text-zinc-500 block mt-0.5 sm:mt-1 font-mono">Real-Time Transit Logging</span>
+               <span className="text-[9px] xs:text-[10px] sm:text-[11px] font-bold text-[#0000FD] uppercase tracking-widest font-mono block">GPS Protocol Active</span>
+               <span className="text-[10px] xs:text-[12px] sm:text-[11.5px] font-medium text-white block mt-0.5 sm:mt-1">Lagos • Abuja • Benin • PH</span>
+               <span className="hidden xs:block text-[9.5px] xs:text-[10.5px] sm:text-[11px] text-zinc-500 block mt-0.5 sm:mt-1 font-mono">Real-Time Transit Logging</span>
              </div>
            </div>
  
            {/* Floating Widget */}
-           <div className="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 flex items-center gap-1 sm:gap-2 bg-[#0a1f4a]/90 border border-[#0f2b5e]/30 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl z-20 shadow-lg">
+           <div className="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 flex items-center gap-1 sm:gap-2 bg-[#0A0A78]/90 border border-[#0F0F8B]/30 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl z-20 shadow-lg">
               <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-450 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-red-505"></span>
               </span>
-              <span className="text-[6.5px] xs:text-[7.5px] sm:text-[8.5px] font-bold text-zinc-300 uppercase tracking-widest font-mono">36 States Covered Securely</span>
+              <span className="text-[6.5px] xs:text-[9.5px] sm:text-[10.5px] font-bold text-zinc-300 uppercase tracking-widest font-mono">36 States Covered Securely</span>
            </div>
           </div>
        </motion.div>

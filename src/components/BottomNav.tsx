@@ -20,7 +20,7 @@ export default function BottomNav({ currentView, setView }: BottomNavProps) {
   ];
 
   return (
-    <div className="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-sm bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] backdrop-blur-xl border border-[#0f2b5e]/30 rounded-2xl p-2.5 flex justify-around items-center z-50 shadow-2xl">
+    <div className="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-sm bg-gradient-to-br from-[#0F0F8B] to-[#080870] backdrop-blur-xl border border-[#0F0F8B]/30 rounded-2xl p-2.5 flex justify-around items-center z-50 shadow-2xl">
       {menu.map((item) => {
         const Icon = item.icon;
         const isActive = currentView === item.view;
@@ -29,11 +29,11 @@ export default function BottomNav({ currentView, setView }: BottomNavProps) {
             key={item.view}
             onClick={() => setView(item.view)}
             className={`p-2 flex flex-col items-center gap-1 active:scale-90 transition-transform cursor-pointer focus:outline-none ${
-              isActive ? 'text-[#6b9fff]' : 'text-zinc-400 hover:text-white'
+              isActive ? 'text-[#0000FD]' : 'text-zinc-400 hover:text-white'
             }`}
           >
             <Icon size={18} />
-            <span className="text-[8px] font-bold uppercase tracking-widest">{item.label}</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest">{item.label}</span>
           </button>
         );
       })}

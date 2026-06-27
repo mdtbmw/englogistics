@@ -71,7 +71,7 @@ const GlobalStyles = () => (
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #0f2b5e;
+        background: #0F0F8B;
       }
       .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
@@ -82,15 +82,15 @@ const GlobalStyles = () => (
         border-radius: 8px;
       }
       .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #0f2b5e;
+        background: #0F0F8B;
         border-radius: 8px;
       }
       .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #0a1f4a;
+        background: #0A0A78;
       }
       .custom-scrollbar {
         scrollbar-width: thin;
-        scrollbar-color: #0f2b5e rgba(24, 24, 27, 0.4);
+        scrollbar-color: #0F0F8B rgba(24, 24, 27, 0.4);
       }
     }
     body {
@@ -126,7 +126,7 @@ const GlobalStyles = () => (
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      background-color: #0f2b5e;
+      background-color: #0F0F8B;
       animation: pulse-ring 2.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
     }
     @keyframes radar-sweep {
@@ -168,7 +168,7 @@ export default function App() {
   return (
     <>
       <GlobalStyles />
-      <div className="min-h-screen bg-white font-sans text-zinc-900 selection:bg-[#0f2b5e] selection:text-white smooth-scroll flex flex-col justify-between">
+      <div className="min-h-screen bg-white font-sans text-zinc-900 selection:bg-[#0F0F8B] selection:text-white smooth-scroll flex flex-col justify-between">
         
         {/* Persistent Premium Navbar */}
         <Navbar currentView={view} setView={setView} />

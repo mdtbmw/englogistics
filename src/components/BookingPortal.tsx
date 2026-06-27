@@ -147,7 +147,7 @@ _This booking request has been authorized by the central desk and requires direc
       <div className="text-center mb-8 md:mb-12 flex flex-col items-center gap-2">
         <LogoIcon className="w-12 h-12 mx-auto mb-1" />
         <div>
-          <span className="text-[9px] font-mono text-[#0f2b5e] uppercase tracking-widest block mb-1">Booking Desk</span>
+          <span className="text-[11px] font-mono text-[#0F0F8B] uppercase tracking-widest block mb-1">Booking Desk</span>
           <h1 className="text-3xl md:text-4xl font-medium text-zinc-950 tracking-tight">Book a Vehicle</h1>
         </div>
         <p className="text-zinc-500 text-xs md:text-sm max-w-sm mx-auto mt-2">
@@ -191,7 +191,7 @@ _This booking request has been authorized by the central desk and requires direc
               
               <div className="flex justify-between items-center border-b border-zinc-100 pb-3">
                 <h3 className="text-sm font-bold text-zinc-900 uppercase tracking-widest flex items-center gap-2">
-                  <Receipt size={16} className="text-[#0f2b5e]" />
+                  <Receipt size={16} className="text-[#0F0F8B]" />
                   1. Booking Details
                 </h3>
                 <button 
@@ -201,7 +201,7 @@ _This booking request has been authorized by the central desk and requires direc
                     e.stopPropagation();
                     setIsDrawerOpen(false);
                   }}
-                  className="lg:hidden text-xs font-bold text-[#0f2b5e] uppercase tracking-wider cursor-pointer"
+                  className="lg:hidden text-xs font-bold text-[#0F0F8B] uppercase tracking-wider cursor-pointer"
                 >
                   Done
                 </button>
@@ -211,15 +211,15 @@ _This booking request has been authorized by the central desk and requires direc
               <div className="bg-zinc-50 border border-zinc-150 rounded-2xl p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-3.5 mt-2">
                 <div className="flex items-center gap-3 text-left">
                   <div className="relative flex h-2 w-2 shrink-0">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0f2b5e] opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0f2b5e]"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0F0F8B] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0F0F8B]"></span>
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-zinc-900 uppercase tracking-widest font-mono block">Secure Booking</span>
-                    <span className="text-[9.5px] text-zinc-500 font-sans block mt-0.5">Your information is safe with us</span>
+                    <span className="text-[12px] font-bold text-zinc-900 uppercase tracking-widest font-mono block">Secure Booking</span>
+                    <span className="text-[11.5px] text-zinc-500 font-sans block mt-0.5">Your information is safe with us</span>
                   </div>
                 </div>
-                <div className="bg-zinc-100 text-zinc-700 text-[8.5px] font-bold font-mono px-2.5 py-1 rounded border border-zinc-200 uppercase tracking-wider shrink-0">
+                <div className="bg-zinc-100 text-zinc-700 text-[10.5px] font-bold font-mono px-2.5 py-1 rounded border border-zinc-200 uppercase tracking-wider shrink-0">
                   Secured Desk
                 </div>
               </div>
@@ -233,7 +233,7 @@ _This booking request has been authorized by the central desk and requires direc
               {/* Client Contacts */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Client Name</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Client Name</label>
                   <div className="relative">
                     <User size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" />
                     <input 
@@ -242,13 +242,13 @@ _This booking request has been authorized by the central desk and requires direc
                       placeholder="e.g. Aliko Bello" 
                       value={clientName} 
                       onChange={e => setClientName(e.target.value)}
-                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0F0F8B] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Secure Email</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Secure Email</label>
                   <div className="relative">
                     <Mail size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" />
                     <input 
@@ -257,13 +257,13 @@ _This booking request has been authorized by the central desk and requires direc
                       placeholder="corporate@domain.com" 
                       value={clientEmail} 
                       onChange={e => setClientEmail(e.target.value)}
-                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0F0F8B] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Direct Secure Phone</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Direct Secure Phone</label>
                   <div className="relative">
                     <Phone size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" />
                     <input 
@@ -272,7 +272,7 @@ _This booking request has been authorized by the central desk and requires direc
                       placeholder="+234 810 000..." 
                       value={clientPhone} 
                       onChange={e => setClientPhone(e.target.value)}
-                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all placeholder:text-zinc-400"
+                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0F0F8B] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all placeholder:text-zinc-400"
                     />
                   </div>
                 </div>
@@ -281,7 +281,7 @@ _This booking request has been authorized by the central desk and requires direc
               {/* Config Options */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Escort</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Escort</label>
                   <CustomDropdown
                     options={[
                       { value: 'chauffeur', label: 'Chauffeur Service', description: 'Professional driver for your trip.' },
@@ -293,7 +293,7 @@ _This booking request has been authorized by the central desk and requires direc
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Vehicle Selection</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Vehicle Selection</label>
                   <CustomDropdown
                     options={FLEET_DATA.map(f => ({
                       value: f.id,
@@ -312,7 +312,7 @@ _This booking request has been authorized by the central desk and requires direc
               {/* Transit Coordinates */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Departure</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Departure</label>
                   <div className="relative">
                     <MapPin size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" />
                     <input 
@@ -320,13 +320,13 @@ _This booking request has been authorized by the central desk and requires direc
                       required 
                       value={pickupLoc} 
                       onChange={e => setPickupLoc(e.target.value)}
-                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all"
+                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0F0F8B] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Destination</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Destination</label>
                   <div className="relative">
                     <MapPin size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" />
                     <input 
@@ -334,7 +334,7 @@ _This booking request has been authorized by the central desk and requires direc
                       required 
                       value={dropoffLoc} 
                       onChange={e => setDropoffLoc(e.target.value)}
-                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all"
+                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0F0F8B] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all"
                     />
                   </div>
                 </div>
@@ -343,7 +343,7 @@ _This booking request has been authorized by the central desk and requires direc
               {/* Calendars & Duration */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Date</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Date</label>
                   <div className="relative">
                     <Calendar size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" />
                     <input 
@@ -351,13 +351,13 @@ _This booking request has been authorized by the central desk and requires direc
                       required 
                       value={pickupDate} 
                       onChange={e => setPickupDate(e.target.value)}
-                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all"
+                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0F0F8B] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Departure Time</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">Departure Time</label>
                   <div className="relative">
                     <Clock size={14} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400" />
                     <input 
@@ -365,13 +365,13 @@ _This booking request has been authorized by the central desk and requires direc
                       required 
                       value={pickupTime} 
                       onChange={e => setPickupTime(e.target.value)}
-                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all"
+                      className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0F0F8B] focus:bg-white rounded-xl py-3 pl-10 pr-4 text-xs font-medium text-zinc-800 outline-none transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">No. of Days</label>
+                  <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">No. of Days</label>
                   <input 
                     type="number" 
                     required 
@@ -379,14 +379,14 @@ _This booking request has been authorized by the central desk and requires direc
                     max={60} 
                     value={duration} 
                     onChange={e => setDuration(Math.max(1, parseInt(e.target.value) || 1))}
-                    className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0f2b5e] focus:bg-white rounded-xl py-3 px-4 text-xs font-medium text-zinc-800 outline-none transition-all"
+                    className="w-full bg-zinc-50 border border-zinc-200 focus:border-[#0F0F8B] focus:bg-white rounded-xl py-3 px-4 text-xs font-medium text-zinc-800 outline-none transition-all"
                   />
                 </div>
               </div>
 
               {/* Premium Escort & Comfort Upgrades */}
               <div className="flex flex-col gap-3 pt-2">
-                <label className="text-[9px] font-bold text-zinc-500 uppercase tracking-wider font-mono">UPGRADES</label>
+                <label className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider font-mono">UPGRADES</label>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   {[
                     { level: 'standard', title: 'Standard', surcharge: 'Standard', desc: 'Professional chauffeur service.' },
@@ -399,15 +399,15 @@ _This booking request has been authorized by the central desk and requires direc
                       onClick={() => setSecurityLevel(opt.level as any)}
                       className={`p-4 rounded-2xl border text-left transition-all flex flex-col justify-between min-h-[110px] md:min-h-[140px] cursor-pointer ${
                         securityLevel === opt.level 
-                          ? 'border-[#0f2b5e] bg-[#0f2b5e]/5 text-[#0f2b5e] font-bold' 
+                          ? 'border-[#0F0F8B] bg-[#0F0F8B]/5 text-[#0F0F8B] font-bold' 
                           : 'border-zinc-200 bg-white hover:border-zinc-300'
                       }`}
                     >
                       <div>
-                        <span className="text-[10px] font-bold uppercase tracking-wide block">{opt.title}</span>
-                        <span className="text-[9px] text-[#0f2b5e] font-mono block mt-1">{opt.surcharge}</span>
+                        <span className="text-[12px] font-bold uppercase tracking-wide block">{opt.title}</span>
+                        <span className="text-[11px] text-[#0F0F8B] font-mono block mt-1">{opt.surcharge}</span>
                       </div>
-                      <p className="text-[9.5px] text-zinc-500 font-medium leading-relaxed font-sans mt-2 md:mt-3">
+                      <p className="text-[11.5px] text-zinc-500 font-medium leading-relaxed font-sans mt-2 md:mt-3">
                         {opt.desc}
                       </p>
                     </button>
@@ -419,7 +419,7 @@ _This booking request has been authorized by the central desk and requires direc
               <div className="pt-4">
                 <button 
                   type="submit"
-                  className="w-full bg-[#0f2b5e] text-white font-bold text-xs py-4.5 rounded-xl hover:bg-[#071a3d] transition-colors flex items-center justify-center gap-2 uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0f2b5e]/20"
+                  className="w-full bg-[#0F0F8B] text-white font-bold text-xs py-4.5 rounded-xl hover:bg-[#080870] transition-colors flex items-center justify-center gap-2 uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0F0F8B]/20"
                 >
                   Confirm Booking <ArrowRight size={16} />
                 </button>
@@ -429,80 +429,80 @@ _This booking request has been authorized by the central desk and requires direc
 
             {/* Live Pricing Recalculator Invoice Card */}
             <div className="lg:col-span-5 space-y-6 w-full">
-              <div className="bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] text-white rounded-[2rem] border border-[#0f2b5e]/30 p-6 md:p-8 space-y-6 relative overflow-hidden shadow-xl">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#0f2b5e]/10 rounded-full blur-3xl pointer-events-none"></div>
+              <div className="bg-gradient-to-br from-[#0F0F8B] to-[#080870] text-white rounded-[2rem] border border-[#0F0F8B]/30 p-6 md:p-8 space-y-6 relative overflow-hidden shadow-xl">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#0F0F8B]/10 rounded-full blur-3xl pointer-events-none"></div>
 
-                <div className="flex items-center justify-between border-b border-[#0f2b5e]/30 pb-4">
+                <div className="flex items-center justify-between border-b border-[#0F0F8B]/30 pb-4">
                   <div>
-                    <span className="text-[8px] font-mono text-[#6b9fff] uppercase tracking-[0.2em] block">Desk Verification</span>
+                    <span className="text-[10px] font-mono text-[#0000FD] uppercase tracking-[0.2em] block">Desk Verification</span>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-white mt-1">Reservation Statement</h3>
                   </div>
-                  <span className="text-[8px] font-mono bg-[#6b9fff]/10 text-[#6b9fff] border border-[#6b9fff]/20 px-2 py-0.5 rounded-md uppercase tracking-wider">
+                  <span className="text-[10px] font-mono bg-[#0000FD]/10 text-[#0000FD] border border-[#0000FD]/20 px-2 py-0.5 rounded-md uppercase tracking-wider">
                     Authorized Summary
                   </span>
                 </div>
 
-                <div className="flex flex-col gap-3.5 bg-[#0a1f4a]/60 p-4 border border-[#0f2b5e]/30 rounded-2xl">
+                <div className="flex flex-col gap-3.5 bg-[#0A0A78]/60 p-4 border border-[#0F0F8B]/30 rounded-2xl">
                   <div className="flex items-center gap-4">
-                    <img src={selectedVehicle.image} alt={selectedVehicle.name} className="w-20 h-14 object-cover rounded-xl border border-[#0f2b5e]/20 shrink-0" />
+                    <img src={selectedVehicle.image} alt={selectedVehicle.name} className="w-20 h-14 object-cover rounded-xl border border-[#0F0F8B]/20 shrink-0" />
                     <div className="text-left flex-1 min-w-0">
-                      <span className="text-[8px] font-bold text-zinc-500 uppercase font-mono block">Selected Vehicle Class</span>
+                      <span className="text-[10px] font-bold text-zinc-500 uppercase font-mono block">Selected Vehicle Class</span>
                       <span className="text-xs font-semibold text-white uppercase block mt-0.5 truncate">{selectedVehicle.name}</span>
-                      <span className="text-[9px] text-[#6b9fff] font-mono block mt-0.5 font-bold font-mono">
+                      <span className="text-[11px] text-[#0000FD] font-mono block mt-0.5 font-bold font-mono">
                         Elite Transit Class
                       </span>
                     </div>
                   </div>
                   
                   {/* Dynamic Spec Badges in Invoice Card */}
-                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-[#0f2b5e]/20 text-[9px] font-mono">
-                    <div className="bg-[#071a3d]/70 rounded-lg p-2 border border-[#0f2b5e]/30 text-center">
-                      <span className="text-[7.5px] text-zinc-400 uppercase block">Pax Cap</span>
+                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-[#0F0F8B]/20 text-[11px] font-mono">
+                    <div className="bg-[#080870]/70 rounded-lg p-2 border border-[#0F0F8B]/30 text-center">
+                      <span className="text-[9.5px] text-zinc-400 uppercase block">Pax Cap</span>
                       <span className="text-zinc-300 font-bold block mt-0.5">{selectedVehicle.specs.pax.replace('Up to ', '')}</span>
                     </div>
-                    <div className="bg-[#071a3d]/70 rounded-lg p-2 border border-[#0f2b5e]/30 text-center">
-                      <span className="text-[7.5px] text-zinc-400 uppercase block">Luggage</span>
+                    <div className="bg-[#080870]/70 rounded-lg p-2 border border-[#0F0F8B]/30 text-center">
+                      <span className="text-[9.5px] text-zinc-400 uppercase block">Luggage</span>
                       <span className="text-zinc-300 font-bold block mt-0.5">{selectedVehicle.specs.luggage.split(' ')[0]}</span>
                     </div>
-                    <div className="bg-[#071a3d]/70 rounded-lg p-2 border border-[#0f2b5e]/30 text-center">
-                      <span className="text-[7.5px] text-zinc-400 uppercase block">Specs Type</span>
+                    <div className="bg-[#080870]/70 rounded-lg p-2 border border-[#0F0F8B]/30 text-center">
+                      <span className="text-[9.5px] text-zinc-400 uppercase block">Specs Type</span>
                       <span className="text-zinc-300 font-bold block mt-0.5 truncate">{selectedVehicle.specs.type.split(' ')[0]}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-3 pt-2 text-[11px] font-mono">
-                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0f2b5e]/30 pb-2.5">
+                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0F0F8B]/30 pb-2.5">
                     <span>Reservation Span:</span>
                     <span className="text-white font-sans font-semibold">{duration} continuous days</span>
                   </div>
-                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0f2b5e]/30 pb-2.5">
+                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0F0F8B]/30 pb-2.5">
                     <span>Route Coordinates:</span>
                     <span className="text-white font-sans font-semibold truncate max-w-[150px]">{pickupLoc.split(' (')[0]} ↔ {dropoffLoc.split(' (')[0]}</span>
                   </div>
-                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0f2b5e]/30 pb-2.5">
+                  <div className="flex justify-between items-center text-zinc-400 border-b border-[#0F0F8B]/30 pb-2.5">
                     <span>Operational Upgrade:</span>
                     <span className="text-white font-sans font-semibold capitalize">{securityLevel === 'standard' ? 'Standard Chauffeur' : securityLevel.replace('-', ' ')}</span>
                   </div>
-                  <div className="flex justify-between items-baseline pt-3 border-t border-[#0f2b5e]/30 text-sm font-sans font-bold">
+                  <div className="flex justify-between items-baseline pt-3 border-t border-[#0F0F8B]/30 text-sm font-sans font-bold">
                     <span className="text-zinc-300">RATE SPECIFICATION:</span>
-                    <span className="text-[#6b9fff] text-xs font-mono uppercase">Custom Quote On-Demand</span>
+                    <span className="text-[#0000FD] text-xs font-mono uppercase">Custom Quote On-Demand</span>
                   </div>
                 </div>
 
-                <div className="bg-[#0a1f4a]/50 p-3.5 border border-[#0f2b5e]/30 rounded-xl space-y-1.5 text-[10px] text-zinc-400 font-sans leading-relaxed">
+                <div className="bg-[#0A0A78]/50 p-3.5 border border-[#0F0F8B]/30 rounded-xl space-y-1.5 text-[12px] text-zinc-400 font-sans leading-relaxed">
                    <div className="flex items-start gap-2">
-                     <ShieldCheck size={12} className="text-[#6b9fff] shrink-0 mt-0.5" />
+                     <ShieldCheck size={12} className="text-[#0000FD] shrink-0 mt-0.5" />
                      <p>24/7 central desk telemetry and operations monitoring enabled upon confirmation.</p>
                    </div>
                    <div className="flex items-start gap-2">
-                     <ShieldCheck size={12} className="text-[#6b9fff] shrink-0 mt-0.5" />
+                     <ShieldCheck size={12} className="text-[#0000FD] shrink-0 mt-0.5" />
                      <p>Escort logs and security details will be assigned within 15 minutes.</p>
                    </div>
                 </div>
 
-                <div className="border-t border-[#0f2b5e]/20 pt-4 mt-2">
-                  <p className="text-[8.5px] font-mono text-zinc-500 uppercase tracking-wider leading-relaxed">
+                <div className="border-t border-[#0F0F8B]/20 pt-4 mt-2">
+                  <p className="text-[10.5px] font-mono text-zinc-500 uppercase tracking-wider leading-relaxed">
                     * Rates are custom calculated by the central protocol desk based on route safety audits, fuel indexes, and operational support.
                   </p>
                 </div>
@@ -519,7 +519,7 @@ _This booking request has been authorized by the central desk and requires direc
                       e.stopPropagation();
                       setIsDrawerOpen(true);
                     }}
-                    className="w-full bg-[#0f2b5e] text-white font-bold text-xs py-4 rounded-xl flex items-center justify-center gap-2 uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0f2b5e]/30"
+                    className="w-full bg-[#0F0F8B] text-white font-bold text-xs py-4 rounded-xl flex items-center justify-center gap-2 uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0F0F8B]/30"
                   >
                     Fill Booking Details <ArrowRight size={14} />
                   </button>
@@ -565,19 +565,19 @@ _This booking request has been authorized by the central desk and requires direc
 
             {/* Action Row at Top of Receipt Card (no-print) */}
             <div className="flex flex-row justify-between items-center bg-zinc-50 border border-zinc-150 p-4.5 rounded-2xl no-print gap-3">
-              <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest font-mono hidden sm:inline">Protocol Desk</span>
+              <span className="text-[11px] font-bold text-zinc-500 uppercase tracking-widest font-mono hidden sm:inline">Protocol Desk</span>
               <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
                 <button
                   type="button"
                   onClick={() => window.print()}
-                  className="bg-[#0f2b5e] text-white text-[10px] font-bold px-4 py-2.5 rounded-xl uppercase tracking-wider hover:bg-[#071a3d] transition-colors flex items-center gap-1.5 cursor-pointer"
+                  className="bg-[#0F0F8B] text-white text-[12px] font-bold px-4 py-2.5 rounded-xl uppercase tracking-wider hover:bg-[#080870] transition-colors flex items-center gap-1.5 cursor-pointer"
                 >
                   <Receipt size={14} /> Download
                 </button>
                 <button
                   type="button"
                   onClick={handleWhatsAppShare}
-                  className="bg-green-600 text-white text-[10px] font-bold px-4.5 py-2.5 rounded-xl uppercase tracking-wider hover:bg-green-700 transition-colors flex items-center gap-1.5 cursor-pointer shadow-md shadow-green-650/15"
+                  className="bg-green-600 text-white text-[12px] font-bold px-4.5 py-2.5 rounded-xl uppercase tracking-wider hover:bg-green-700 transition-colors flex items-center gap-1.5 cursor-pointer shadow-md shadow-green-650/15"
                 >
                   <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.488 1.978 14.021 1.043 11.4 1.045 5.966 1.045 1.54 5.416 1.536 10.846c-.001 1.698.446 3.354 1.3 4.8l-.995 3.637 3.737-.98l.009.007c1.393.829 2.99 1.265 4.5 1.267zm10.743-7.516c-.297-.149-1.758-.868-2.031-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -589,11 +589,11 @@ _This booking request has been authorized by the central desk and requires direc
 
             {/* Header Stamp */}
             <div className="flex flex-col items-center text-center gap-3">
-              <div className="w-16 h-16 bg-[#0f2b5e]/10 border border-[#0f2b5e]/30 rounded-full flex items-center justify-center text-[#0f2b5e] shadow-lg p-3 animate-bounce">
+              <div className="w-16 h-16 bg-[#0F0F8B]/10 border border-[#0F0F8B]/30 rounded-full flex items-center justify-center text-[#0F0F8B] shadow-lg p-3 animate-bounce">
 <LogoIcon className="w-16 h-16" />
               </div>
               <div>
-                <span className="text-[#0f2b5e] text-[10px] font-bold font-mono uppercase tracking-[0.25em] block">Booking Confirmed</span>
+                <span className="text-[#0F0F8B] text-[12px] font-bold font-mono uppercase tracking-[0.25em] block">Booking Confirmed</span>
                 <h3 className="text-xl md:text-2xl font-semibold text-zinc-950 uppercase tracking-tight mt-1">Booking Receipt</h3>
                 <span className="text-zinc-400 text-xs font-mono block mt-1">Booking ID: {receiptNumber}</span>
               </div>
@@ -606,30 +606,30 @@ _This booking request has been authorized by the central desk and requires direc
                   <div key={i} className="bg-zinc-900" style={{ width: `${bar}px` }}></div>
                 ))}
               </div>
-              <span className="text-[8.5px] font-mono text-zinc-500 uppercase tracking-widest mt-2">{receiptNumber} - ENG TRAVELS LOG</span>
+              <span className="text-[10.5px] font-mono text-zinc-500 uppercase tracking-widest mt-2">{receiptNumber} - ENG TRAVELS LOG</span>
             </div>
 
             {/* Confirmation details review */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-y border-zinc-100 py-6 text-xs font-sans">
               <div>
-                 <span className="text-[9.5px] text-zinc-400 font-mono block uppercase">Client</span>
+                 <span className="text-[11.5px] text-zinc-400 font-mono block uppercase">Client</span>
                  <span className="font-bold text-zinc-900 block mt-1">{clientName}</span>
                  <span className="text-zinc-500 block mt-0.5">{clientEmail}</span>
                  <span className="text-zinc-500 block">{clientPhone}</span>
               </div>
               <div>
-                 <span className="text-[9.5px] text-zinc-400 font-mono block uppercase">Vehicle</span>
-                 <span className="font-bold text-[#0f2b5e] block mt-1 uppercase">{selectedVehicle.name}</span>
+                 <span className="text-[11.5px] text-zinc-400 font-mono block uppercase">Vehicle</span>
+                 <span className="font-bold text-[#0F0F8B] block mt-1 uppercase">{selectedVehicle.name}</span>
                  <span className="text-zinc-500 block mt-0.5 uppercase">Service Upgrade: {securityLevel}</span>
                  <span className="text-zinc-500 block">Span: {duration} days</span>
               </div>
               <div>
-                 <span className="text-[9.5px] text-zinc-400 font-mono block uppercase">Departure</span>
+                 <span className="text-[11.5px] text-zinc-400 font-mono block uppercase">Departure</span>
                  <span className="font-bold text-zinc-800 block mt-1">{pickupLoc}</span>
                  <span className="text-zinc-500 block mt-0.5">Date: {pickupDate} @ {pickupTime}</span>
               </div>
               <div>
-                 <span className="text-[9.5px] text-zinc-400 font-mono block uppercase">Destination</span>
+                 <span className="text-[11.5px] text-zinc-400 font-mono block uppercase">Destination</span>
                  <span className="font-bold text-zinc-800 block mt-1">{dropoffLoc}</span>
                  <span className="text-zinc-500 block mt-0.5 font-sans">Pending Desk confirmation</span>
               </div>
@@ -643,14 +643,14 @@ _This booking request has been authorized by the central desk and requires direc
             <div className="flex flex-col sm:flex-row gap-3 no-print">
               <button 
                 onClick={handleReset}
-                className="flex-1 bg-zinc-100 text-zinc-700 text-[10px] font-bold py-3.5 rounded-xl text-center uppercase tracking-widest cursor-pointer hover:bg-zinc-200 active:scale-95 transition-all"
+                className="flex-1 bg-zinc-100 text-zinc-700 text-[12px] font-bold py-3.5 rounded-xl text-center uppercase tracking-widest cursor-pointer hover:bg-zinc-200 active:scale-95 transition-all"
               >
                 Book Again
               </button>
               {setView && (
                 <button 
                   onClick={() => setView('home')}
-                  className="flex-1 bg-[#0f2b5e] text-white text-[10px] font-bold py-3.5 rounded-xl text-center uppercase tracking-widest cursor-pointer hover:bg-[#071a3d] transition-colors flex items-center justify-center gap-1.5 active:scale-95 transition-all"
+                  className="flex-1 bg-[#0F0F8B] text-white text-[12px] font-bold py-3.5 rounded-xl text-center uppercase tracking-widest cursor-pointer hover:bg-[#080870] transition-colors flex items-center justify-center gap-1.5 active:scale-95 transition-all"
                 >
                   Back to Home <ArrowRight size={12} />
                 </button>

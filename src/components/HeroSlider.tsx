@@ -42,7 +42,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
 
   return (
     <header id="hero" className="pt-24 pb-4 md:pt-28 md:pb-6 px-4 md:px-8 w-full max-w-[100vw] overflow-hidden flex justify-center">
-      <div className="relative w-full max-w-7xl h-[60vh] xs:h-[65vh] md:h-[75vh] min-h-[420px] md:min-h-[500px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#0f2b5e] to-[#071a3d] shadow-2xl group">
+      <div className="relative w-full max-w-7xl h-[60vh] xs:h-[65vh] md:h-[75vh] min-h-[420px] md:min-h-[500px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#0F0F8B] to-[#080870] shadow-2xl group">
         
         {/* Slides */}
         <AnimatePresence mode="wait">
@@ -66,7 +66,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
             }}
           >
             {/* Darker elegant overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d] via-[#0f2b5e]/50 to-[#0f2b5e]/25 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080870] via-[#0F0F8B]/50 to-[#0F0F8B]/25 z-10" />
             <motion.img 
               src={HERO_SLIDES[currentSlide].image} 
               alt={HERO_SLIDES[currentSlide].title} 
@@ -84,7 +84,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
                   transition={{ type: "spring", stiffness: 100, damping: 18, delay: 0.15 }}
                   className="mb-3 md:mb-4"
                 >
-                  <span className="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest bg-[#0f2b5e]/60 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-[#0f2b5e]/50 shadow-[0_2px_10px_rgba(15,43,94,0.3)]">
+                  <span className="text-white text-[12px] md:text-xs font-bold uppercase tracking-widest bg-[#0F0F8B]/60 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-[#0F0F8B]/50 shadow-[0_2px_10px_rgba(15,15,139,0.3)]">
                     {HERO_SLIDES[currentSlide].tagline}
                   </span>
                 </motion.div>
@@ -106,7 +106,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
                 >
                   <button 
                     onClick={() => setView('booking')}
-                    className="flex-1 sm:flex-none bg-[#0f2b5e] text-white text-[9px] xs:text-[10px] md:text-xs font-bold px-3 py-3 md:px-8 md:py-4 rounded-xl hover:bg-white transition-all duration-300 flex items-center justify-center gap-1.5 xs:gap-2.5 uppercase tracking-widest active:scale-95 shadow-[0_4px_20px_rgba(15,43,94,0.35)] cursor-pointer whitespace-nowrap"
+                    className="flex-1 sm:flex-none bg-[#0F0F8B] text-white text-[11px] xs:text-[12px] md:text-xs font-bold px-3 py-3 md:px-8 md:py-4 rounded-xl hover:bg-white transition-all duration-300 flex items-center justify-center gap-1.5 xs:gap-2.5 uppercase tracking-widest active:scale-95 shadow-[0_4px_20px_rgba(15,15,139,0.35)] cursor-pointer whitespace-nowrap"
                   >
                     Book a Ride <ArrowRight size={12} className="shrink-0" />
                   </button>
@@ -117,7 +117,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
                         document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
                       }, 100);
                     }}
-                    className="flex-1 sm:flex-none bg-white/10 text-white backdrop-blur-md border border-white/20 text-[9px] xs:text-[10px] md:text-xs font-bold px-3 py-3 md:px-8 md:py-4 rounded-xl hover:bg-white/20 transition-all uppercase tracking-widest justify-center flex items-center active:scale-95 cursor-pointer whitespace-nowrap"
+                    className="flex-1 sm:flex-none bg-white/10 text-white backdrop-blur-md border border-white/20 text-[11px] xs:text-[12px] md:text-xs font-bold px-3 py-3 md:px-8 md:py-4 rounded-xl hover:bg-white/20 transition-all uppercase tracking-widest justify-center flex items-center active:scale-95 cursor-pointer whitespace-nowrap"
                   >
                     View Our Fleet
                   </button>
@@ -128,13 +128,13 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
         </AnimatePresence>
 
         {/* Operational Control Desk Module (Floating widget) */}
-        <div className="hidden md:flex absolute top-8 right-8 z-40 bg-[#0a1f4a]/90 backdrop-blur-xl border border-[#0f2b5e]/30 rounded-2xl p-4 flex-col gap-2 shadow-2xl w-full max-w-[320px]">
-          <div className="flex items-center justify-between border-b border-[#0f2b5e]/30 pb-2">
-            <span className="text-[9.5px] font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-1.5">
+        <div className="hidden md:flex absolute top-8 right-8 z-40 bg-[#0A0A78]/90 backdrop-blur-xl border border-[#0F0F8B]/30 rounded-2xl p-4 flex-col gap-2 shadow-2xl w-full max-w-[320px]">
+          <div className="flex items-center justify-between border-b border-[#0F0F8B]/30 pb-2">
+            <span className="text-[11.5px] font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
               Live Operations Control
             </span>
-            <div className="relative w-2 h-2 rounded-full bg-[#0f2b5e] animate-pulse-ring"></div>
+            <div className="relative w-2 h-2 rounded-full bg-[#0F0F8B] animate-pulse-ring"></div>
           </div>
           <div className="relative h-10 overflow-hidden w-full">
             <AnimatePresence mode="wait">
@@ -156,20 +156,20 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
         <div className="hidden lg:flex absolute top-1/2 right-12 -translate-y-1/2 z-30 w-36 h-36 items-center justify-center opacity-90 mix-blend-screen pointer-events-none">
           <svg className="absolute inset-0 w-full h-full animate-spin-slow" viewBox="0 0 100 100">
             <path id="textPath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
-            <text fill="#6b9fff" className="text-[10px] font-bold uppercase tracking-[0.25em]">
+            <text fill="#0000FD" className="text-[12px] font-bold uppercase tracking-[0.25em]">
               <textPath href="#textPath" startOffset="0%">✦ 24/7 Logistics Support ✦ Premium Car Rentals </textPath>
             </text>
           </svg>
-          <div className="w-14 h-14 bg-[#0a1f4a]/90 rounded-full backdrop-blur-md border border-[#0f2b5e]/30 flex items-center justify-center">
-            <ShieldCheck size={24} className="text-[#6b9fff]" />
+          <div className="w-14 h-14 bg-[#0A0A78]/90 rounded-full backdrop-blur-md border border-[#0F0F8B]/30 flex items-center justify-center">
+            <ShieldCheck size={24} className="text-[#0000FD]" />
           </div>
         </div>
 
         {/* Pagers / Progress Indicators */}
-        <div className="absolute top-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-auto md:bottom-12 md:right-12 z-40 flex flex-row md:flex-col items-center md:items-end gap-3 bg-[#0a1f4a]/50 md:bg-transparent px-3 py-1.5 md:p-0 rounded-full backdrop-blur-sm md:backdrop-blur-none border border-white/10 md:border-none shadow-lg md:shadow-none">
+        <div className="absolute top-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-auto md:bottom-12 md:right-12 z-40 flex flex-row md:flex-col items-center md:items-end gap-3 bg-[#0A0A78]/50 md:bg-transparent px-3 py-1.5 md:p-0 rounded-full backdrop-blur-sm md:backdrop-blur-none border border-white/10 md:border-none shadow-lg md:shadow-none">
           <div className="text-left md:text-right flex items-center md:block">
-            <span className="text-[#6b9fff] text-[10px] md:text-xs font-bold font-mono">0{currentSlide + 1}</span>
-            <span className="text-zinc-300 md:text-zinc-500 text-[9px] md:text-[10px] font-mono">/0{HERO_SLIDES.length}</span>
+            <span className="text-[#0000FD] text-[12px] md:text-xs font-bold font-mono">0{currentSlide + 1}</span>
+            <span className="text-zinc-300 md:text-zinc-500 text-[11px] md:text-[12px] font-mono">/0{HERO_SLIDES.length}</span>
           </div>
           <div className="flex gap-1.5 md:gap-2">
             {HERO_SLIDES.map((_, index) => (
@@ -179,7 +179,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
                 onClick={() => setCurrentSlide(index)}
               >
                 <div 
-                  className={`h-full bg-[#0f2b5e] transition-all duration-300 ${
+                  className={`h-full bg-[#0F0F8B] transition-all duration-300 ${
                     index === currentSlide ? 'w-full' : 'w-0'
                   }`}
                 />
