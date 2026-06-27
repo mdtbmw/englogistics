@@ -383,7 +383,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                 {/* App Bottom Quick Booking CTA (Compact height, no pricing) */}
                 <div className="p-3.5 bg-[#080870] border-t border-[#0F0F8B]/20 flex justify-between items-center relative z-20">
                   <div className="flex flex-col text-left">
-                    <span className="text-[6.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Status</span>
+                    <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Status</span>
                     <span className="text-[11px] font-bold text-emerald-400 flex items-center gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Available
                     </span>

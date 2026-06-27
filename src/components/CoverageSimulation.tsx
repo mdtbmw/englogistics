@@ -100,7 +100,7 @@ export default function CoverageSimulation() {
                       <Cpu size={10} className="text-[#0F0F8B] animate-pulse shrink-0" />
                       {regionDetails[activeRegion].name}
                     </span>
-                    <span className="text-[6.5px] xs:text-[10px] sm:text-[11px] font-mono text-zinc-400 truncate max-w-full">{regionDetails[activeRegion].coordinates}</span>
+                    <span className="text-[9px] xs:text-[10px] sm:text-[11px] font-mono text-zinc-400 truncate max-w-full">{regionDetails[activeRegion].coordinates}</span>
                   </div>
                   
                   <div className="grid grid-cols-1 xs:grid-cols-2 gap-1.5 sm:gap-4">
@@ -164,7 +164,7 @@ export default function CoverageSimulation() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-450 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-red-505"></span>
               </span>
-              <span className="text-[6.5px] xs:text-[9.5px] sm:text-[10.5px] font-bold text-zinc-300 uppercase tracking-widest font-mono">36 States Covered Securely</span>
+              <span className="text-[9px] xs:text-[9.5px] sm:text-[10.5px] font-bold text-zinc-300 uppercase tracking-widest font-mono">36 States Covered Securely</span>
            </div>
           </div>
        </motion.div>
