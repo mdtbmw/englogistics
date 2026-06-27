@@ -14,7 +14,7 @@ export default function RouteMarquee() {
       <div className="animate-marquee flex items-center gap-10">
         {DESTINATIONS.map((dest, i) => (
           <div key={i} className="flex items-center gap-10 shrink-0">
-            <span className="text-[14.5px] font-bold text-zinc-500 uppercase tracking-[0.2em] font-mono">
+            <span className="text-[16.5px] font-bold text-zinc-500 uppercase tracking-[0.2em] font-mono">
               {dest}
             </span>
             <span className="text-[#0F0F8B] text-sm">✦</span>

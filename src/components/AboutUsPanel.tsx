@@ -64,17 +64,17 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
       <section id="about-hero" className="mb-20 bg-gradient-to-br from-[#0F0F8B] to-[#080870] rounded-[2.5rem] p-8 md:p-16 relative overflow-hidden text-white shadow-2xl">
         <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#0000FD]/10 rounded-full blur-3xl pointer-events-none -translate-y-1/3 translate-x-1/3"></div>
         <div className="relative z-10 max-w-3xl">
-          <h2 className="text-[14px] font-bold text-[#0000FD] uppercase tracking-[0.25em] mb-4 font-mono">Corporate Profile</h2>
+          <h2 className="text-[16px] font-bold text-[#0000FD] uppercase tracking-[0.25em] mb-4 font-mono">Corporate Profile</h2>
           <h1 className="text-4xl md:text-6xl font-medium tracking-tight mb-6 leading-[1.08]">
             Travel in Style.<br />Experience Excellence.
           </h1>
-          <p className="text-zinc-400 text-xs md:text-sm leading-relaxed mb-8 max-w-2xl font-sans">
+          <p className="text-white text-xs md:text-sm leading-relaxed mb-8 max-w-2xl font-sans">
             Redefining premium travel and executive mobility with a pre-vetted fleet, pre-calculated route security, and an exceptional customer-first culture designed for corporate enterprises, VIP delegates, and private clients.
           </p>
           <div className="flex gap-4">
             <button 
               onClick={() => setView('booking')}
-              className="bg-[#0000FD] text-[#080870] text-[14.5px] font-bold px-7 py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0F0F8B]/30 cursor-pointer"
+              className="bg-[#0000FD] text-[#080870] text-[16.5px] font-bold px-7 py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0F0F8B]/30 cursor-pointer"
             >
               Book a Ride
             </button>
@@ -88,13 +88,13 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
         {/* Narrative Description */}
         <div className="lg:col-span-7 space-y-6 text-left">
           <div className="space-y-2">
-            <h2 className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-widest font-mono">Our Narrative</h2>
+            <h2 className="text-[16px] font-bold text-[#0F0F8B] uppercase tracking-widest font-mono">Our Narrative</h2>
             <h3 className="text-3xl md:text-4.5xl font-medium text-zinc-950 tracking-tight leading-tight">
               Redefining Executive Travel With A Customer-First Culture
             </h3>
           </div>
           
-          <div className="text-zinc-650 text-xs md:text-[13.5px] leading-relaxed space-y-4 font-sans">
+          <div className="text-zinc-650 text-xs md:text-[15.5px] leading-relaxed space-y-4 font-sans">
             <p>
               <strong className="text-zinc-900 font-semibold">Engraced Logistics</strong> is a premium car rental and logistics company committed to delivering safe, reliable, and professional mobility services across Nigeria. We exist to redefine the standards of transportation by combining exceptional service delivery, modern fleet solutions, and a customer-first approach that places comfort, safety, and satisfaction at the center of every journey.
             </p>
@@ -125,9 +125,9 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
             
             {/* Floating Information Overlay */}
             <div className="absolute bottom-6 left-6 right-6 text-left">
-              <span className="text-[13px] font-mono text-[#0000FD] uppercase tracking-widest font-bold block mb-1">Fleet Telemetry</span>
+              <span className="text-[15px] font-mono text-[#0000FD] uppercase tracking-widest font-bold block mb-1">Fleet Telemetry</span>
               <span className="text-sm font-semibold text-white uppercase block">Nationwide Routing Desk</span>
-              <span className="text-zinc-400 text-[14px] block mt-1">Benin Head Office • Lagos Protocol Desk</span>
+              <span className="text-white text-[16px] block mt-1">Benin Head Office • Lagos Protocol Desk</span>
             </div>
           </div>
           
@@ -137,7 +137,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
               <Award size={20} />
             </div>
             <div>
-              <span className="text-[12.5px] font-mono text-[#0000FD] uppercase font-bold block">Certified SLA</span>
+              <span className="text-[14.5px] font-mono text-[#0000FD] uppercase font-bold block">Certified SLA</span>
               <span className="text-xs font-medium uppercase tracking-tight block mt-0.5">Mobility Excellence</span>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
       {/* Standout Mission & Vision Section */}
       <section className="mb-24">
         <div className="text-center max-w-xl mx-auto mb-12">
-          <h2 className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-[0.2em] mb-2 font-mono">Our Mandate</h2>
+          <h2 className="text-[16px] font-bold text-[#0F0F8B] uppercase tracking-[0.2em] mb-2 font-mono">Our Mandate</h2>
           <h3 className="text-2xl md:text-3.5xl font-medium text-zinc-950 tracking-tight">Purpose & Destination</h3>
           <p className="text-zinc-500 text-xs md:text-sm mt-2">
             Clear directives defining our operational methods, client outcomes, and long-term industry commitment.
@@ -175,11 +175,11 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
                 </span>
               </div>
               <div className="space-y-3">
-                <span className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-[0.2em] font-mono block">Our Mission</span>
+                <span className="text-[16px] font-bold text-[#0F0F8B] uppercase tracking-[0.2em] font-mono block">Our Mission</span>
                 <h4 className="text-lg font-semibold text-zinc-900 tracking-tight leading-snug font-sans">
                   Precision execution and client-centric mobility.
                 </h4>
-                <p className="text-[13px] text-zinc-600 leading-relaxed font-sans">
+                <p className="text-[15px] text-zinc-600 leading-relaxed font-sans">
                   To provide safe, reliable, and premium transportation solutions that exceed customer expectations through professionalism, innovation, operational excellence, and exceptional service delivery.
                 </p>
               </div>
@@ -204,11 +204,11 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
                 </span>
               </div>
               <div className="space-y-3">
-                <span className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-[0.2em] font-mono block">Our Vision</span>
+                <span className="text-[16px] font-bold text-[#0F0F8B] uppercase tracking-[0.2em] font-mono block">Our Vision</span>
                 <h4 className="text-lg font-semibold text-zinc-900 tracking-tight leading-snug font-sans">
                   Setting the benchmark for gold-standard transit.
                 </h4>
-                <p className="text-[13px] text-zinc-600 leading-relaxed font-sans">
+                <p className="text-[15px] text-zinc-600 leading-relaxed font-sans">
                   To become Nigeria's preferred transportation and mobility solutions provider, setting the benchmark for safety, professionalism, customer satisfaction, and service excellence across the transportation industry.
                 </p>
               </div>
@@ -221,7 +221,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
       {/* Core Values: S.M.I.L.E */}
       <section className="mb-24">
         <div className="mb-12 text-left">
-          <h2 className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Our Foundation</h2>
+          <h2 className="text-[16px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Our Foundation</h2>
           <h3 className="text-2xl md:text-3.5xl font-medium text-zinc-950 tracking-tight">Driven by S.M.I.L.E.</h3>
           <p className="text-zinc-500 text-xs md:text-sm max-w-lg mt-2">
             Our operational culture is built upon five foundational pillars that guide every protocol deployment, road audit, and client journey.
@@ -238,8 +238,8 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
                   </div>
                   <span className="text-3xl font-black text-zinc-100 font-mono tracking-widest group-hover:text-[#0F0F8B]/20 transition-colors">{v.letter}</span>
                 </div>
-                <h4 className="text-[13.5px] font-bold text-zinc-950 uppercase tracking-widest mb-3 font-sans">{v.name}</h4>
-                <p className="text-[13px] text-zinc-550 leading-relaxed font-sans">{v.desc}</p>
+                <h4 className="text-[15.5px] font-bold text-zinc-950 uppercase tracking-widest mb-3 font-sans">{v.name}</h4>
+                <p className="text-[15px] text-zinc-550 leading-relaxed font-sans">{v.desc}</p>
               </div>
             </div>
           ))}
@@ -249,7 +249,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
       {/* Why Choose Us Section */}
       <section className="bg-zinc-50 border border-zinc-100 rounded-[2.5rem] p-8 md:p-14 mb-24">
         <div className="mb-12 text-left">
-          <h2 className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Operational Excellence</h2>
+          <h2 className="text-[16px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Operational Excellence</h2>
           <h3 className="text-2xl md:text-3.5xl font-medium text-zinc-950 tracking-tight">Why Choose Engraced Logistics?</h3>
           <p className="text-zinc-500 text-xs md:text-sm mt-2 max-w-xl">
             At Engraced Logistics, we do not simply provide vehicles—we provide dependable mobility solutions tailored to meet the needs of individuals, families, businesses, government institutions, and corporate clients.
@@ -262,7 +262,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
               <div className="w-5 h-5 rounded-full bg-white border border-zinc-200 flex items-center justify-center text-[#0F0F8B] shrink-0 shadow-sm mt-0.5">
                 <CheckCircle size={11} className="fill-[#0F0F8B]/5" />
               </div>
-              <span className="text-[13.5px] text-zinc-700 font-medium font-sans leading-relaxed">{r}</span>
+              <span className="text-[15.5px] text-zinc-700 font-medium font-sans leading-relaxed">{r}</span>
             </div>
           ))}
         </div>
@@ -279,24 +279,24 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
           </div>
           
           <div className="space-y-2">
-            <span className="text-[13px] font-mono text-[#0000FD] uppercase tracking-[0.25em] font-bold">Our Service Promise</span>
+            <span className="text-[15px] font-mono text-[#0000FD] uppercase tracking-[0.25em] font-bold">Our Service Promise</span>
             <h3 className="text-2xl md:text-4xl font-semibold uppercase tracking-tight leading-tight">
               Driven by S.M.I.L.E.,<br />Defined by Excellence.
             </h3>
           </div>
           
-          <p className="text-zinc-400 text-xs md:text-sm leading-relaxed max-w-lg">
+          <p className="text-white text-xs md:text-sm leading-relaxed max-w-lg">
             At Engraced Logistics, we are committed to delivering every journey with professionalism, safety, comfort, reliability, and excellence. We strive to exceed expectations, build lasting relationships, and create transportation experiences that keep our clients coming back.
           </p>
           
           <div className="pt-4 flex flex-col sm:flex-row items-center gap-4.5 w-full justify-center">
             <button 
               onClick={() => setView('booking')}
-              className="w-full sm:w-auto bg-[#0000FD] text-[#080870] text-[14px] font-bold px-8 py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0F0F8B]/30 cursor-pointer"
+              className="w-full sm:w-auto bg-[#0000FD] text-[#080870] text-[16px] font-bold px-8 py-4 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 shadow-lg shadow-[#0F0F8B]/30 cursor-pointer"
             >
               Book a Ride
             </button>
-            <span className="text-[14px] font-bold text-zinc-500 uppercase tracking-widest font-mono block sm:inline">
+            <span className="text-[16px] font-bold text-white/70 uppercase tracking-widest font-mono block sm:inline">
               ENG-PROTOCOL-SLA-VERIFIED
             </span>
           </div>

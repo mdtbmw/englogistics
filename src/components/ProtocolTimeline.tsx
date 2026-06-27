@@ -42,7 +42,7 @@ export default function ProtocolTimeline() {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="mb-12 text-center"
       >
-         <h2 className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Operations Pipeline</h2>
+         <h2 className="text-[16px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Operations Pipeline</h2>
          <h3 className="text-2xl md:text-3.5xl font-medium text-zinc-950 tracking-tight">Our Standard Service Process</h3>
          <p className="text-zinc-500 text-xs md:text-sm max-w-sm mx-auto mt-2">
            Our five-step clearance methodology ensures zero margin of error on transit missions.
@@ -74,7 +74,7 @@ export default function ProtocolTimeline() {
                </div>
                <div>
                  <h4 className="text-xs font-bold text-zinc-950 uppercase tracking-widest mb-1.5">{step.title}</h4>
-                 <p className="text-[13px] text-zinc-500 leading-relaxed font-sans">{step.desc}</p>
+                 <p className="text-[15px] text-zinc-500 leading-relaxed font-sans">{step.desc}</p>
                </div>
             </div>
           </motion.div>

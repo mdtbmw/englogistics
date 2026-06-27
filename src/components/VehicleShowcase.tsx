@@ -104,13 +104,13 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
         {/* Eyebrow and Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 text-left">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[14px] font-bold font-mono tracking-widest uppercase bg-[#0000FD]/10 border border-[#0000FD]/30 text-[#0000FD] mb-3 shadow-[0_2px_10px_rgba(0,0,253,0.15)]">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[16px] font-bold font-mono tracking-widest uppercase bg-[#0000FD]/10 border border-[#0000FD]/30 text-[#0000FD] mb-3 shadow-[0_2px_10px_rgba(0,0,253,0.15)]">
               <Zap size={10} className="animate-pulse" /> Fleet Showroom
             </span>
             <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-white mb-3">
               Explore Our Fleet
             </h2>
-            <p className="text-zinc-400 text-xs leading-relaxed">
+            <p className="text-white/70 text-xs leading-relaxed">
                Browse our selection of well-maintained vehicles for rent.
             </p>
           </div>
@@ -142,7 +142,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                     >
                       {/* Brand & Category Details */}
                       <div className="flex flex-col gap-1">
-                        <span className="text-[13px] font-bold font-mono text-[#0000FD] uppercase tracking-widest">
+                        <span className="text-[15px] font-bold font-mono text-[#0000FD] uppercase tracking-widest">
                           {activeVehicle.category === 'suvs' ? 'SUV' : activeVehicle.category === 'luxury' ? 'Luxury' : 'Security'}
                         </span>
                         <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-white leading-none">
@@ -151,7 +151,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                       </div>
 
                       {/* Description */}
-                      <p className="text-zinc-400 text-xs leading-relaxed">
+                      <p className="text-white/70 text-xs leading-relaxed">
                         {showSpecialFeatures 
                           ? `Specialized safety options and safety features configured for the ${activeVehicle.name}. Specially prepared for executive travels, airport transport services, and secured interstate routes.`
                           : activeVehicle.desc
@@ -163,36 +163,36 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                         <div className="grid grid-cols-3 gap-2.5">
                           <div className="bg-[#0A0A78]/60 border border-[#0F0F8B]/20 rounded-xl p-3 flex flex-col gap-1 items-center">
                             <Users size={14} className="text-[#0000FD]" />
-                            <span className="text-[11.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Pax Cap</span>
-                            <span className="text-xs font-bold text-zinc-300">{activeVehicle.specs.pax.split(' ')[2] || '5'} Max</span>
+                            <span className="text-[13.5px] font-bold text-white/70 uppercase tracking-widest font-mono">Pax Cap</span>
+                            <span className="text-xs font-bold text-white">{activeVehicle.specs.pax.split(' ')[2] || '5'} Max</span>
                           </div>
                           <div className="bg-[#0A0A78]/60 border border-[#0F0F8B]/20 rounded-xl p-3 flex flex-col gap-1 items-center">
                             <Briefcase size={14} className="text-[#0000FD]" />
-                            <span className="text-[11.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Luggage</span>
-                            <span className="text-xs font-bold text-zinc-300">{activeVehicle.specs.luggage.split(' ')[0] || '4'} Bags</span>
+                            <span className="text-[13.5px] font-bold text-white/70 uppercase tracking-widest font-mono">Luggage</span>
+                            <span className="text-xs font-bold text-white">{activeVehicle.specs.luggage.split(' ')[0] || '4'} Bags</span>
                           </div>
                           <div className="bg-[#0A0A78]/60 border border-[#0F0F8B]/20 rounded-xl p-3 flex flex-col gap-1 items-center">
                             <Award size={14} className="text-[#0000FD]" />
-                            <span className="text-[11.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Class</span>
-                            <span className="text-xs font-bold text-zinc-300 truncate w-full text-center">{activeVehicle.specs.type.split(' ')[0]}</span>
+                            <span className="text-[13.5px] font-bold text-white/70 uppercase tracking-widest font-mono">Class</span>
+                            <span className="text-xs font-bold text-white truncate w-full text-center">{activeVehicle.specs.type.split(' ')[0]}</span>
                           </div>
                         </div>
                       ) : (
                         <div className="flex flex-col gap-2.5 bg-[#0A0A78]/40 border border-[#0F0F8B]/20 rounded-xl p-3.5 text-xs">
                           <div className="flex justify-between border-b border-[#0F0F8B]/20 pb-1.5">
-                            <span className="text-zinc-500 font-mono text-[12.5px] uppercase">Security Level</span>
-                            <span className="text-zinc-300 font-medium">{currentFeatures.security}</span>
+                            <span className="text-white/70 font-mono text-[14.5px] uppercase">Security Level</span>
+                            <span className="text-white font-medium">{currentFeatures.security}</span>
                           </div>
                           <div className="flex justify-between border-b border-[#0F0F8B]/20 pb-1.5">
-                            <span className="text-zinc-500 font-mono text-[12.5px] uppercase">Safety Features</span>
-                            <span className="text-zinc-300 font-medium">{currentFeatures.safety}</span>
+                            <span className="text-white/70 font-mono text-[14.5px] uppercase">Safety Features</span>
+                            <span className="text-white font-medium">{currentFeatures.safety}</span>
                           </div>
                           <div className="flex justify-between border-b border-[#0F0F8B]/20 pb-1.5">
-                            <span className="text-zinc-500 font-mono text-[12.5px] uppercase">Performance</span>
-                            <span className="text-zinc-300 font-medium">{currentFeatures.performance}</span>
+                            <span className="text-white/70 font-mono text-[14.5px] uppercase">Performance</span>
+                            <span className="text-white font-medium">{currentFeatures.performance}</span>
                           </div>
                           <div className="flex justify-between pb-0">
-                            <span className="text-zinc-500 font-mono text-[12.5px] uppercase">Service Status</span>
+                            <span className="text-white/70 font-mono text-[14.5px] uppercase">Service Status</span>
                             <span className="text-emerald-400 font-bold flex items-center gap-1">
                               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                               {currentFeatures.status}
@@ -208,10 +208,10 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                   {/* Features Toggle Button */}
                   <button 
                     onClick={() => setShowSpecialFeatures(!showSpecialFeatures)}
-                    className={`w-full py-2.5 rounded-xl text-[13px] font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer active:scale-98 flex items-center justify-center gap-2 ${
+                    className={`w-full py-2.5 rounded-xl text-[15px] font-bold uppercase tracking-wider transition-all duration-300 border cursor-pointer active:scale-98 flex items-center justify-center gap-2 ${
                       showSpecialFeatures 
                         ? 'bg-[#0000FD]/10 text-[#0000FD] border-[#0000FD]/30' 
-                        : 'bg-[#0A0A78] hover:bg-[#0F0F8B] text-zinc-400 border-[#0F0F8B]/30 hover:text-white'
+                        : 'bg-[#0A0A78] hover:bg-[#0F0F8B] text-white/70 border-[#0F0F8B]/30 hover:text-white'
                     }`}
                   >
                     <Info size={12} />
@@ -221,8 +221,8 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                   {/* Booking Call to Action (No Pricing!) */}
                   <div className="border-t border-[#0F0F8B]/20 pt-4 flex items-center justify-between">
                     <div className="flex flex-col text-left">
-                      <span className="text-[11.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Deployment</span>
-                      <span className="text-xs font-bold text-zinc-300">Ready nationwide</span>
+                      <span className="text-[13.5px] font-bold text-white/70 uppercase tracking-widest font-mono">Deployment</span>
+                      <span className="text-xs font-bold text-white">Ready nationwide</span>
                     </div>
                     <button 
                       onClick={handleReserve}
@@ -240,7 +240,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
             <div className="flex items-center gap-3 mt-1">
               <button 
                 onClick={handlePrev}
-                className="w-10 h-10 rounded-xl bg-[#0A0A78] border border-[#0F0F8B]/30 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-[#0F0F8B] hover:border-[#0F0F8B]/50 transition-all cursor-pointer active:scale-95 shadow-md"
+                className="w-10 h-10 rounded-xl bg-[#0A0A78] border border-[#0F0F8B]/30 flex items-center justify-center text-white/70 hover:text-white hover:bg-[#0F0F8B] hover:border-[#0F0F8B]/50 transition-all cursor-pointer active:scale-95 shadow-md"
               >
                 <ChevronLeft size={16} />
               </button>
@@ -257,7 +257,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
               </div>
               <button 
                 onClick={handleNext}
-                className="w-10 h-10 rounded-xl bg-[#0A0A78] border border-[#0F0F8B]/30 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-[#0F0F8B] hover:border-[#0F0F8B]/50 transition-all cursor-pointer active:scale-95 shadow-md"
+                className="w-10 h-10 rounded-xl bg-[#0A0A78] border border-[#0F0F8B]/30 flex items-center justify-center text-white/70 hover:text-white hover:bg-[#0F0F8B] hover:border-[#0F0F8B]/50 transition-all cursor-pointer active:scale-95 shadow-md"
               >
                 <ChevronRight size={16} />
               </button>
@@ -278,7 +278,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
               <div className="w-full h-full rounded-[2.15rem] bg-[#0A0A78] overflow-hidden relative shadow-[inset_0_1px_1px_rgba(255,255,255,0.15)] flex flex-col justify-between select-none">
                 
                 {/* Phone Header Bezel & Status Bar (Compact notch) */}
-                <div className="pt-3 pb-1.5 px-5 bg-[#080870] border-b border-[#0F0F8B]/20 flex justify-between items-center text-[13px] font-mono font-bold text-zinc-500 relative z-30">
+                <div className="pt-3 pb-1.5 px-5 bg-[#080870] border-b border-[#0F0F8B]/20 flex justify-between items-center text-[15px] font-mono font-bold text-white/70 relative z-30">
                   <span>08:13</span>
                   <div className="w-20 h-4.5 rounded-full bg-[#080870] absolute left-1/2 -translate-x-1/2 top-2 flex justify-center items-center pointer-events-none">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#0A0A78] absolute right-3"></div>
@@ -286,7 +286,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                   <div className="flex items-center gap-1">
                     <Signal size={9} />
                     <Wifi size={9} />
-                    <Battery size={11} className="rotate-0 text-zinc-500" />
+                    <Battery size={11} className="rotate-0 text-white/70" />
                   </div>
                 </div>
 
@@ -296,10 +296,10 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                   {/* Small App Navigation Header */}
                   <div className="flex justify-between items-center mb-1 z-20">
                     <div className="flex flex-col text-left">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-500 font-mono">Operations</span>
-                      <span className="text-[14px] font-bold text-white leading-none">Active Unit</span>
+                      <span className="text-[13px] font-bold uppercase tracking-wider text-white/70 font-mono">Operations</span>
+                      <span className="text-[16px] font-bold text-white leading-none">Active Unit</span>
                     </div>
-                    <span className="text-[12px] font-bold font-mono px-2 py-0.5 border border-[#0F0F8B]/30 rounded-md text-zinc-400 bg-[#080870]/80">
+                    <span className="text-[14px] font-bold font-mono px-2 py-0.5 border border-[#0F0F8B]/30 rounded-md text-white/70 bg-[#080870]/80">
                       {activeIndex + 1} / {FLEET_DATA.length}
                     </span>
                   </div>
@@ -349,7 +349,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
 
                   {/* Camera Angles - Compact thumbnails */}
                   <div className="flex flex-col gap-1 z-20">
-                    <span className="text-[11.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono text-left block">
+                    <span className="text-[13.5px] font-bold text-white/70 uppercase tracking-widest font-mono text-left block">
                       Camera Angles
                     </span>
 
@@ -373,7 +373,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                   {/* Compact Status Indicator row */}
                   <div className="bg-[#080870]/70 border border-[#0F0F8B]/20 rounded-xl p-2 flex items-center gap-1.5 mt-2 z-20">
                     <ShieldCheck size={11} className="text-[#0000FD] shrink-0" />
-                    <span className="text-[12px] font-bold text-zinc-300 truncate text-left w-full">
+                    <span className="text-[14px] font-bold text-white truncate text-left w-full">
                       {activeVehicle.id === 'toyota_hilux' ? 'Escort configuration ready' : activeVehicle.id === 'toyota_landcruiser' ? 'Armored protection option' : 'Premium executive class'}
                     </span>
                   </div>
@@ -383,14 +383,14 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
                 {/* App Bottom Quick Booking CTA (Compact height, no pricing) */}
                 <div className="p-3.5 bg-[#080870] border-t border-[#0F0F8B]/20 flex justify-between items-center relative z-20">
                   <div className="flex flex-col text-left">
-                    <span className="text-[11px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Status</span>
-                    <span className="text-[13px] font-bold text-emerald-400 flex items-center gap-1">
+                    <span className="text-[13px] font-bold text-white/70 uppercase tracking-widest font-mono">Status</span>
+                    <span className="text-[15px] font-bold text-emerald-400 flex items-center gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Available
                     </span>
                   </div>
                   <button 
                     onClick={handleReserve}
-                    className="bg-[#0000FD] hover:bg-white text-[#080870] text-[12.5px] font-bold px-3 py-2 rounded-lg uppercase tracking-widest transition-all active:scale-95 cursor-pointer flex items-center gap-1 shadow-md shadow-[#0F0F8B]/30"
+                    className="bg-[#0000FD] hover:bg-white text-[#080870] text-[14.5px] font-bold px-3 py-2 rounded-lg uppercase tracking-widest transition-all active:scale-95 cursor-pointer flex items-center gap-1 shadow-md shadow-[#0F0F8B]/30"
                   >
                     Book <ArrowRight size={8} />
                   </button>
@@ -425,10 +425,10 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
               
               {/* Category & Counter Badge */}
               <div className="flex justify-between items-center">
-                <span className="inline-block text-[13px] font-bold font-mono text-[#0000FD] uppercase tracking-widest bg-[#0000FD]/10 border border-[#0000FD]/20 px-2.5 py-0.5 rounded-md">
+                <span className="inline-block text-[15px] font-bold font-mono text-[#0000FD] uppercase tracking-widest bg-[#0000FD]/10 border border-[#0000FD]/20 px-2.5 py-0.5 rounded-md">
                   {activeVehicle.category === 'suvs' ? 'SUV' : activeVehicle.category === 'luxury' ? 'Luxury' : 'Security'}
                 </span>
-                <span className="text-[14px] font-bold font-mono text-zinc-500 bg-[#0A0A78]/80 px-2 py-0.5 rounded-md border border-[#0F0F8B]/20">
+                <span className="text-[16px] font-bold font-mono text-white/70 bg-[#0A0A78]/80 px-2 py-0.5 rounded-md border border-[#0F0F8B]/20">
                   {activeIndex + 1} / {FLEET_DATA.length}
                 </span>
               </div>
@@ -480,7 +480,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
 
               {/* Camera Angle Selector for Mobile */}
               <div className="flex flex-col gap-1.5">
-                <span className="text-[12px] font-bold text-zinc-500 uppercase tracking-widest font-mono flex items-center gap-1">
+                <span className="text-[14px] font-bold text-white/70 uppercase tracking-widest font-mono flex items-center gap-1">
                   <Camera size={10} className="text-[#0000FD]" /> View Angle
                 </span>
                 <div className="flex gap-2 overflow-x-auto pb-1 hide-scrollbar">
@@ -503,31 +503,31 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
               {/* Title & Description */}
               <div className="flex flex-col gap-1">
                 <h3 className="text-xl font-bold text-white">{activeVehicle.name}</h3>
-                <p className="text-zinc-400 text-xs leading-relaxed">{activeVehicle.desc}</p>
+                <p className="text-white/70 text-xs leading-relaxed">{activeVehicle.desc}</p>
               </div>
 
               {/* Specifications Badges */}
               <div className="grid grid-cols-3 gap-2 py-1 border-t border-b border-[#0F0F8B]/20 my-1">
                 <div className="flex flex-col items-center justify-center p-2 bg-[#0A0A78]/50 rounded-xl">
                   <Users size={14} className="text-[#0000FD] mb-0.5" />
-                  <span className="text-[11px] text-zinc-500 font-mono uppercase tracking-widest">Seats</span>
-                  <span className="text-xs font-bold text-zinc-300">{activeVehicle.specs.pax.split(' ')[2] || '5'} Max</span>
+                  <span className="text-[13px] text-white/70 font-mono uppercase tracking-widest">Seats</span>
+                  <span className="text-xs font-bold text-white">{activeVehicle.specs.pax.split(' ')[2] || '5'} Max</span>
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 bg-[#0A0A78]/50 rounded-xl">
                   <Briefcase size={14} className="text-[#0000FD] mb-0.5" />
-                  <span className="text-[11px] text-zinc-500 font-mono uppercase tracking-widest">Bags</span>
-                  <span className="text-xs font-bold text-zinc-300">{activeVehicle.specs.luggage.split(' ')[0] || '4'} Pcs</span>
+                  <span className="text-[13px] text-white/70 font-mono uppercase tracking-widest">Bags</span>
+                  <span className="text-xs font-bold text-white">{activeVehicle.specs.luggage.split(' ')[0] || '4'} Pcs</span>
                 </div>
                 <div className="flex flex-col items-center justify-center p-2 bg-[#0A0A78]/50 rounded-xl">
                   <Award size={14} className="text-[#0000FD] mb-0.5" />
-                  <span className="text-[11px] text-zinc-500 font-mono uppercase tracking-widest">Class</span>
-                  <span className="text-xs font-bold text-zinc-300 truncate w-full text-center">{activeVehicle.specs.type.split(' ')[0]}</span>
+                  <span className="text-[13px] text-white/70 font-mono uppercase tracking-widest">Class</span>
+                  <span className="text-xs font-bold text-white truncate w-full text-center">{activeVehicle.specs.type.split(' ')[0]}</span>
                 </div>
               </div>
 
               {/* Amenities Checklist */}
-              <div className="flex flex-col gap-2 bg-[#0A0A78]/40 border border-[#0F0F8B]/20 rounded-xl p-3 text-xs text-zinc-400">
-                <span className="text-[12.5px] font-bold text-zinc-500 uppercase tracking-widest font-mono">Features</span>
+              <div className="flex flex-col gap-2 bg-[#0A0A78]/40 border border-[#0F0F8B]/20 rounded-xl p-3 text-xs text-white/70">
+                <span className="text-[14.5px] font-bold text-white/70 uppercase tracking-widest font-mono">Features</span>
                 <div className="flex flex-col gap-1.5">
                   {currentFeatures.amenities.map((amenity, idx) => (
                     <div key={idx} className="flex items-center gap-2">
@@ -552,7 +552,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
 
           {/* Animated Swipe Helper Instructions for Mobile */}
           <div className="flex flex-col items-center gap-2 mt-2">
-            <div className="flex items-center gap-2.5 text-[14px] font-mono uppercase tracking-widest text-white font-bold bg-[#0F0F8B]/50 border border-[#0F0F8B]/40 px-4 py-2 rounded-full">
+            <div className="flex items-center gap-2.5 text-[16px] font-mono uppercase tracking-widest text-white font-bold bg-[#0F0F8B]/50 border border-[#0F0F8B]/40 px-4 py-2 rounded-full">
               <motion.span 
                 animate={{ x: [-4, 4, -4] }} 
                 transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

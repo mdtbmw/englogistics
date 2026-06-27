@@ -84,7 +84,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
         className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6"
       >
         <div>
-          <h2 className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Operations Portfolio</h2>
+          <h2 className="text-[16px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Operations Portfolio</h2>
           <h3 className="text-2xl md:text-3.5xl font-medium text-zinc-950 leading-tight tracking-tight">
             Comprehensive<br/>Mobility Architecture
           </h3>
@@ -121,7 +121,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                 }`}>
                   <Icon size={14} />
                 </div>
-                <span className="text-[13.5px] md:text-[13px] font-bold uppercase tracking-widest font-sans truncate">{category.title}</span>
+                <span className="text-[15.5px] md:text-[15px] font-bold uppercase tracking-widest font-sans truncate">{category.title}</span>
               </button>
             );
           })}
@@ -153,7 +153,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                           <h4 className="text-base font-bold text-zinc-950 uppercase tracking-widest font-mono">
                             {category.title}
                           </h4>
-                          <span className="text-[13px] font-mono text-[#0F0F8B] uppercase tracking-wider">Strategic Sector Operations</span>
+                          <span className="text-[15px] font-mono text-[#0F0F8B] uppercase tracking-wider">Strategic Sector Operations</span>
                         </div>
                       </div>
                       
@@ -174,9 +174,9 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                                 <div>
                                   <div className="flex items-center gap-2 mb-2">
                                     <div className="w-1.5 h-1.5 rounded-full bg-[#0F0F8B] shadow-[0_0_8px_#0F0F8B] transition-transform group-hover/item:scale-135"></div>
-                                    <h5 className="text-[13px] font-bold text-zinc-900 uppercase tracking-widest">{item.name}</h5>
+                                    <h5 className="text-[15px] font-bold text-zinc-900 uppercase tracking-widest">{item.name}</h5>
                                   </div>
-                                  <p className="text-[14.5px] text-zinc-500 leading-relaxed font-sans">
+                                  <p className="text-[16.5px] text-zinc-500 leading-relaxed font-sans">
                                     {item.desc}
                                   </p>
                                 </div>
@@ -184,7 +184,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                                 {/* Features List */}
                                 <div className="flex flex-col gap-1.5 pt-1">
                                   {features.map((feature, fIdx) => (
-                                    <div key={fIdx} className="flex items-center gap-2 text-[13.5px] text-zinc-600 font-sans">
+                                    <div key={fIdx} className="flex items-center gap-2 text-[15.5px] text-zinc-600 font-sans">
                                       <svg className="w-3 h-3 text-[#0F0F8B] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                       </svg>
@@ -196,7 +196,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                               
                               <div className="flex flex-col gap-3.5">
                                 {/* Details Grid */}
-                                <div className="grid grid-cols-2 gap-y-2.5 gap-x-4 pt-3 border-t border-zinc-200/60 font-mono text-[12.5px] text-zinc-400">
+                                <div className="grid grid-cols-2 gap-y-2.5 gap-x-4 pt-3 border-t border-zinc-200/60 font-mono text-[14.5px] text-zinc-400">
                                   <div>
                                     <span className="text-zinc-500 block uppercase font-bold">Service SLA</span>
                                     <span className="text-zinc-700 font-medium font-sans mt-0.5 block">{details.sla}</span>
@@ -217,7 +217,7 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
 
                                 <button 
                                   onClick={() => setView('booking')}
-                                  className="w-full py-2 bg-[#0F0F8B] text-white rounded-xl text-[13px] font-bold uppercase tracking-widest hover:bg-[#080870] transition-all duration-300 cursor-pointer active:scale-[0.98] flex items-center justify-center gap-1.5"
+                                  className="w-full py-2 bg-[#0F0F8B] text-white rounded-xl text-[15px] font-bold uppercase tracking-widest hover:bg-[#080870] transition-all duration-300 cursor-pointer active:scale-[0.98] flex items-center justify-center gap-1.5"
                                 >
                                   Book Now
                                   <ArrowRight size={10} />
@@ -230,10 +230,10 @@ export default function ServicesSection({ setView }: ServicesSectionProps) {
                     </div>
                     
                     <div className="mt-10 pt-6 border-t border-zinc-50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                       <p className="text-[14px] text-zinc-400 font-mono uppercase">Requires 24-48 hours advance booking</p>
+                       <p className="text-[16px] text-zinc-400 font-mono uppercase">Requires 24-48 hours advance booking</p>
                        <button 
                          onClick={() => setView('booking')}
-                         className="text-[#0F0F8B] text-[14.5px] font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all active:scale-95 cursor-pointer hover:text-zinc-950"
+                         className="text-[#0F0F8B] text-[16.5px] font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all active:scale-95 cursor-pointer hover:text-zinc-950"
                        >
                          Request Service <ArrowRight size={14} />
                        </button>

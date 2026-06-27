@@ -49,11 +49,11 @@ export default function MetricsSection() {
         <div className="absolute top-0 right-0 w-[45rem] h-[45rem] bg-[#0F0F8B]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
         
         <div className="w-full lg:w-1/3 relative z-10 text-left">
-          <span className="text-[13px] font-mono text-[#0000FD] uppercase tracking-widest block mb-2">Operational Integrity</span>
+          <span className="text-[15px] font-mono text-[#0000FD] uppercase tracking-widest block mb-2">Operational Integrity</span>
           <h3 className="text-white text-2xl lg:text-3xl font-medium leading-[1.15] mb-4 tracking-tight">
             Certified Excellence in Motion. Nationwide.
           </h3>
-          <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
+          <p className="text-white text-xs md:text-sm leading-relaxed">
             From the bustling economic highways of Lagos to VIP convoys in Abuja and executive transfers in Benin City, we set the benchmark for state-of-the-art secure travel and logistics services in Nigeria.
           </p>
         </div>
@@ -71,10 +71,10 @@ export default function MetricsSection() {
                 {metric.value}
               </span>
               <div>
-                <span className="text-white text-[14.5px] font-bold uppercase tracking-wider block font-sans">
+                <span className="text-white text-[16.5px] font-bold uppercase tracking-wider block font-sans">
                   {metric.label}
                 </span>
-                <span className="text-zinc-500 text-[13px] block font-mono">
+                <span className="text-white text-[15px] block font-mono">
                   {metric.sub}
                 </span>
               </div>

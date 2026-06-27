@@ -89,7 +89,7 @@ export default function CustomDropdown({
                 >
                   <span className="text-xs">{option.label}</span>
                   {option.description && (
-                    <span className={`text-[13.5px] font-sans font-medium ${
+                    <span className={`text-[15.5px] font-sans font-medium ${
                       isSelected ? 'text-[#0F0F8B]' : 'text-zinc-400'
                     }`}>
                       {option.description}
