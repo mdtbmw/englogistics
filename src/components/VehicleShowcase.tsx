@@ -104,7 +104,7 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
         {/* Eyebrow and Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 text-left">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-bold font-mono tracking-widest uppercase bg-[#0000FD]/10 border border-[#0000FD]/30 text-[#0000FD] mb-3 shadow-[0_2px_10px_rgba(107,159,255,0.1)]">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-bold font-mono tracking-widest uppercase bg-[#0000FD]/10 border border-[#0000FD]/30 text-[#0000FD] mb-3 shadow-[0_2px_10px_rgba(0,0,253,0.15)]">
               <Zap size={10} className="animate-pulse" /> Fleet Showroom
             </span>
             <h2 className="text-2xl md:text-4xl font-semibold tracking-tight text-white mb-3">
