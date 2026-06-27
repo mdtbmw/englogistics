@@ -63,7 +63,7 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
               <Shield className="w-3.5 h-3.5 md:w-4.5 md:h-4.5" />
             </div>
             <h4 className="text-[16px] xs:text-xs md:text-sm font-bold text-zinc-950 uppercase tracking-wide mb-1 md:mb-2">Professional Chauffeur & Logistics Support</h4>
-            <p className="text-[14px] xs:text-[15.5px] md:text-xs lg:text-sm text-white leading-normal md:leading-relaxed">
+            <p className="text-[14px] xs:text-[15.5px] md:text-xs lg:text-sm text-zinc-600 leading-normal md:leading-relaxed">
               The best logistics company in Benin City for car hire, chauffeur service, and fleet management. We deploy certified professional chauffeurs, maintain a modern fleet of well-serviced vehicles, and provide reliable logistics coordination across Nigeria.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
           </div>
           <div>
             <h4 className="text-sm font-bold text-zinc-950 uppercase tracking-wide mb-2">24/7 Journey Monitoring</h4>
-            <p className="text-xs text-white leading-relaxed">Constant telemetry surveillance, regional route hazard analysis, and seamless client communication channels.</p>
+            <p className="text-xs text-zinc-600 leading-relaxed">Constant telemetry surveillance, regional route hazard analysis, and seamless client communication channels.</p>
           </div>
         </motion.div>
 
@@ -98,7 +98,7 @@ export default function AdvantageSection({ setView }: AdvantageSectionProps) {
           </div>
           <div>
             <h4 className="text-sm font-bold text-zinc-950 uppercase tracking-wide mb-2">Rapid Fleet Deployments</h4>
-            <p className="text-xs text-white leading-relaxed">Guaranteed hot-swappable vehicle replacements within urban centers and active mobile repair engineers.</p>
+            <p className="text-xs text-zinc-600 leading-relaxed">Guaranteed hot-swappable vehicle replacements within urban centers and active mobile repair engineers.</p>
           </div>
         </motion.div>
 
