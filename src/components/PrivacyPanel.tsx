@@ -44,7 +44,7 @@ export default function PrivacyPanel({ setView }: PrivacyPanelProps) {
       <section id="privacy-hero" className="mb-12 bg-gradient-to-br from-[#0F0F8B] to-[#080870] rounded-[2.5rem] p-8 md:p-14 relative overflow-hidden text-white shadow-2xl">
         <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-[#0000FD]/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="relative z-10 max-w-3xl">
-          <h2 className="text-[12px] font-bold text-[#0000FD] uppercase tracking-widest mb-3 font-mono">Operations Desk</h2>
+          <h2 className="text-[14px] font-bold text-[#0000FD] uppercase tracking-widest mb-3 font-mono">Operations Desk</h2>
           <h1 className="text-3xl md:text-5xl font-medium tracking-tight mb-5 leading-tight">
             Privacy Policy
           </h1>
@@ -54,7 +54,7 @@ export default function PrivacyPanel({ setView }: PrivacyPanelProps) {
           <div className="flex gap-4">
             <button 
               onClick={() => setView('booking')}
-              className="bg-[#0000FD] text-[#080870] text-[12px] font-bold px-6 py-3.5 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0F0F8B]/30"
+              className="bg-[#0000FD] text-[#080870] text-[14px] font-bold px-6 py-3.5 rounded-xl hover:bg-white transition-all uppercase tracking-widest active:scale-95 cursor-pointer shadow-lg shadow-[#0F0F8B]/30"
             >
               Open Booking Desk
             </button>
@@ -65,7 +65,7 @@ export default function PrivacyPanel({ setView }: PrivacyPanelProps) {
       {/* Sections Grid */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
         <div className="lg:col-span-4 text-left">
-          <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-widest block mb-2 font-mono">Policy Overview</span>
+          <span className="text-[13px] font-bold text-zinc-400 uppercase tracking-widest block mb-2 font-mono">Policy Overview</span>
           <h3 className="text-xl md:text-2xl font-medium text-zinc-950 tracking-tight leading-tight mb-4">
             Security End-to-End
           </h3>
@@ -83,7 +83,7 @@ export default function PrivacyPanel({ setView }: PrivacyPanelProps) {
               <span className="text-2xl font-bold font-mono text-[#0F0F8B] leading-none">{sec.num}</span>
               <div>
                 <h4 className="text-sm font-bold text-zinc-950 uppercase tracking-wider mb-2 font-sans">{sec.title}</h4>
-                <p className="text-[11.5px] text-zinc-500 leading-relaxed font-sans">{sec.content}</p>
+                <p className="text-[13.5px] text-zinc-500 leading-relaxed font-sans">{sec.content}</p>
               </div>
             </div>
           ))}

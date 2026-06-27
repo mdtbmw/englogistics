@@ -83,13 +83,13 @@ export default function CustomDropdown({
                   }}
                   className={`w-full text-left px-3.5 py-2.5 rounded-xl transition-all flex flex-col gap-0.5 select-none cursor-pointer ${
                     isSelected 
-                      ? 'bg-[#0F0F8B]/10 text-zinc-950 font-bold' 
+                      ? 'bg-[#0000FD]/10 text-[#0000FD] font-bold' 
                       : 'text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950'
                   }`}
                 >
                   <span className="text-xs">{option.label}</span>
                   {option.description && (
-                    <span className={`text-[11.5px] font-sans font-medium ${
+                    <span className={`text-[13.5px] font-sans font-medium ${
                       isSelected ? 'text-[#0F0F8B]' : 'text-zinc-400'
                     }`}>
                       {option.description}

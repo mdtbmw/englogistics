@@ -33,7 +33,7 @@ export default function BottomNav({ currentView, setView }: BottomNavProps) {
             }`}
           >
             <Icon size={18} />
-            <span className="text-[10px] font-bold uppercase tracking-widest">{item.label}</span>
+            <span className="text-[12px] font-bold uppercase tracking-widest">{item.label}</span>
           </button>
         );
       })}

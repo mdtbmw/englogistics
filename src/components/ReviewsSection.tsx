@@ -52,7 +52,7 @@ export default function ReviewsSection() {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="text-center mb-12"
       >
-        <h2 className="text-[12px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Testimonials</h2>
+        <h2 className="text-[14px] font-bold text-[#0F0F8B] uppercase tracking-widest mb-2 font-mono">Testimonials</h2>
         <h3 className="text-2xl md:text-3.5xl font-medium text-zinc-950 tracking-tight">What Our Clients Say</h3>
         <p className="text-zinc-500 text-xs md:text-sm max-w-lg mx-auto mt-3">
           Real feedback from our valued clients across Nigeria.
@@ -82,7 +82,7 @@ export default function ReviewsSection() {
                 </p>
                 <div>
                   <p className="text-[#0F0F8B] font-bold text-sm font-sans">{reviews[current].name}</p>
-                  <p className="text-zinc-400 text-[12px] font-mono mt-1">{reviews[current].date}</p>
+                  <p className="text-zinc-400 text-[14px] font-mono mt-1">{reviews[current].date}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
