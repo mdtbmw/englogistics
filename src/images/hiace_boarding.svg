@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <!-- White Background -->
+  <rect width="600" height="400" fill="#ffffff" />
+  
+  <!-- Hand-drawn Pencil Sketch Background Elements -->
+  <g stroke="#71717a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.4">
+    <path d="M 400 300 L 400 120 L 520 120 L 520 300" stroke-dasharray="3,3" />
+    <path d="M 10 300 L 590 300" />
+  </g>
+  
+  <!-- Realistic Vehicle Subject & Boarding Passengers (Toyota Hiace Bus) -->
+  <g id="vehicle">
+    <!-- Shadow under bus -->
+    <ellipse cx="300" cy="305" rx="220" ry="15" fill="rgba(0,0,0,0.15)" filter="blur(8px)" />
+    
+    <!-- White / Silver Body Gradients for Hiace Bus -->
+    <defs>
+      <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="60%" stop-color="#f4f4f5" />
+        <stop offset="100%" stop-color="#d4d4d8" />
+      </linearGradient>
+      <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#1e293b" />
+        <stop offset="100%" stop-color="#020617" />
+      </linearGradient>
+    </defs>
+
+    <!-- Wheels -->
+    <g transform="translate(170, 275)">
+      <circle cx="0" cy="0" r="34" fill="#18181b" />
+      <circle cx="0" cy="0" r="22" fill="#71717a" stroke="#d4d4d8" stroke-width="1.5" />
+    </g>
+    <g transform="translate(430, 275)">
+      <circle cx="0" cy="0" r="34" fill="#18181b" />
+      <circle cx="0" cy="0" r="22" fill="#71717a" stroke="#d4d4d8" stroke-width="1.5" />
+    </g>
+
+    <!-- Bus Silhouette Side Profile -->
+    <path d="M 80 275
+             L 80 155
+             C 80 145, 100 135, 120 135
+             L 480 135
+             C 500 135, 520 145, 520 180
+             L 520 275
+             Z" fill="url(#bodyGrad)" stroke="#a1a1aa" stroke-width="1" />
+             
+    <!-- Driver Window & Rear Windows -->
+    <path d="M 90 145 L 140 145 L 140 190 L 90 190 Z" fill="url(#glassGrad)" />
+    <path d="M 330 145 L 410 145 L 410 190 L 330 190 Z" fill="url(#glassGrad)" />
+    <path d="M 420 145 L 500 145 L 490 190 L 420 190 Z" fill="url(#glassGrad)" />
+
+    <!-- Open Sliding Door Space (revealing interior) -->
+    <rect x="150" y="142" width="170" height="130" fill="#020617" rx="5" />
+    <path d="M 160 210 L 195 210 L 195 240 L 160 240 Z M 210 210 L 245 210 L 245 240 L 210 240 Z" fill="#334155" />
+
+    <!-- Driver/Chauffeur Standing and Greeting (Black person, Navy Suit) -->
+    <g id="chauffeur" transform="translate(160, 160)">
+      <!-- Head (Black Skin Color: #451a03) -->
+      <circle cx="0" cy="12" r="8" fill="#451a03" />
+      <path d="M -8 24 C -8 24, -4 22, 0 24 C 4 22, 8 24, 8 40 L 5 80 L -5 80 Z" fill="#050548" />
+      <path d="M -3 80 L -5 110 M 3 80 L 5 110" stroke="#050548" stroke-width="5" />
+    </g>
+
+    <!-- Corporate worker 1 boarding with luggage (Black person, Blue Blazer & Pants) -->
+    <g id="worker1" transform="translate(260, 160)">
+      <!-- Head (Black Skin Color: #5f3e2d) -->
+      <circle cx="0" cy="12" r="8" fill="#5f3e2d" />
+      <path d="M -8 24 C -8 24, -4 22, 0 24 C 4 22, 8 24, 8 40 L 5 80 L -5 80 Z" fill="#1e3a8a" />
+      <path d="M -3 80 L -8 110 M 3 80 L 6 112" stroke="#5f3e2d" stroke-width="5" />
+      <!-- Suitcase -->
+      <rect x="10" y="70" width="14" height="24" fill="#0c0a09" rx="2" />
+      <line x1="17" y1="70" x2="17" y2="55" stroke="#475569" stroke-width="2.5" />
+    </g>
+
+    <!-- Corporate worker 2 following (Black woman, Orange Top & Skirt) -->
+    <g id="worker2" transform="translate(305, 175)">
+      <!-- Head (Black Skin Color: #3b2314) -->
+      <circle cx="0" cy="12" r="8" fill="#3b2314" />
+      <path d="M -8 24 C -8 24, -4 22, 0 24 C 4 22, 8 24, 8 40 L 5 80 L -5 80 Z" fill="#ea580c" />
+      <path d="M -3 80 L -6 100 M 3 80 L 6 100" stroke="#3b2314" stroke-width="5" />
+    </g>
+
+    <!-- Open Sliding Door Wing (slid backwards) -->
+    <rect x="320" y="142" width="120" height="130" fill="url(#bodyGrad)" stroke="#a1a1aa" stroke-width="1.5" rx="5" />
+    <path d="M 330 148 L 410 148 L 410 190 L 330 190 Z" fill="url(#glassGrad)" />
+  </g>
+</svg>

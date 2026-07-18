@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <!-- White Background -->
+  <rect width="600" height="400" fill="#ffffff" />
+  
+  <!-- Hand-drawn Pencil Sketch Background Elements -->
+  <g stroke="#71717a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.4">
+    <path d="M 400 300 L 400 120 L 520 120 L 520 300" stroke-dasharray="3,3" />
+    <path d="M 10 300 L 590 300" />
+  </g>
+  
+  <!-- Realistic Vehicle Subject & Boarding People (Toyota Corolla 2016) -->
+  <g id="vehicle">
+    <!-- Shadow under car -->
+    <ellipse cx="300" cy="305" rx="200" ry="15" fill="rgba(0,0,0,0.15)" filter="blur(8px)" />
+    
+    <defs>
+      <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f4f4f5" />
+        <stop offset="50%" stop-color="#d4d4d8" />
+        <stop offset="100%" stop-color="#71717a" />
+      </linearGradient>
+      <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#1e293b" />
+        <stop offset="100%" stop-color="#020617" />
+      </linearGradient>
+    </defs>
+
+    <!-- Wheels -->
+    <g transform="translate(190, 280)">
+      <circle cx="0" cy="0" r="32" fill="#18181b" />
+      <circle cx="0" cy="0" r="20" fill="#71717a" stroke="#a1a1aa" stroke-width="2" />
+    </g>
+    <g transform="translate(410, 280)">
+      <circle cx="0" cy="0" r="32" fill="#18181b" />
+      <circle cx="0" cy="0" r="20" fill="#71717a" stroke="#a1a1aa" stroke-width="2" />
+    </g>
+
+    <!-- Car Silhouette Side Profile -->
+    <path d="M 100 280
+             C 100 270, 110 260, 130 250
+             L 140 230
+             C 145 220, 160 215, 175 210
+             L 210 175
+             C 230 160, 260 155, 320 155
+             C 380 155, 410 165, 430 185
+             L 470 220
+             C 490 230, 500 245, 500 280
+             Z" fill="url(#bodyGrad)" stroke="#a1a1aa" stroke-width="1" />
+             
+    <!-- Rear Door Window -->
+    <path d="M 330 180 L 380 180 C 390 180, 400 190, 405 210 L 330 210 Z" fill="url(#glassGrad)" />
+
+    <!-- Open Front Door Space -->
+    <path d="M 215 180 L 265 180 L 265 275 L 210 275 Z" fill="#0f172a" stroke="#020617" />
+
+    <!-- Chauffeur Standing and Holding the Door Open (Black person, Navy Suit) -->
+    <g id="chauffeur" transform="translate(195, 160)">
+      <!-- Head (Black Skin Color) -->
+      <circle cx="0" cy="15" r="9" fill="#451a03" />
+      <!-- Cap -->
+      <path d="M -9 12 L 9 12 L 12 7 L -4 7 Z" fill="#050548" />
+      <!-- Chauffeur Suit (navy blue: #050548) -->
+      <path d="M -10 26 C -10 26, -5 24, 0 26 C 5 24, 10 26, 10 42 L 6 95 L -6 95 Z" fill="#050548" />
+      <!-- White shirt / black tie -->
+      <path d="M -2 26 L 0 32 L 2 26 Z" fill="#ffffff" />
+      <path d="M -1 30 L 0 45 L 1 30 Z" fill="#000000" />
+      <!-- Legs -->
+      <path d="M -4 95 L -6 125 M 4 95 L 6 125" stroke="#050548" stroke-width="6" />
+      <!-- Hand welcoming passenger -->
+      <path d="M 9 32 Q 22 35 15 48" stroke="#451a03" stroke-width="4.5" fill="none" stroke-linecap="round" />
+    </g>
+
+    <!-- Passenger Boarding the Car (Black person, Navy Blue Suit/Business Suit) -->
+    <g id="passenger" transform="translate(255, 172)">
+      <!-- Head (Black Skin Color) -->
+      <circle cx="0" cy="15" r="9" fill="#5f3e2d" />
+      <!-- Torso / Dress (Navy blue business suit) -->
+      <path d="M -9 26 C -9 26, -4 24, 0 26 C 4 24, 9 26, 9 40 L 7 85 L -7 85 Z" fill="#1e3a8a" />
+      <path d="M -4 85 L -10 110 M 4 85 L 6 112" stroke="#1e3a8a" stroke-width="6" />
+    </g>
+
+    <!-- Open Passenger Door (Hinged at the front, opening outwards/forward) -->
+    <path d="M 265 180 L 290 170 L 290 265 L 265 275 Z" fill="url(#bodyGrad)" stroke="#71717a" stroke-width="1.5" />
+    <path d="M 265 180 L 290 170 L 285 215 L 265 215 Z" fill="url(#glassGrad)" />
+  </g>
+</svg>

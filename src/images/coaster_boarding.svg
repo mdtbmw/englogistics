@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <!-- White Background -->
+  <rect width="600" height="400" fill="#ffffff" />
+  
+  <!-- Hand-drawn Pencil Sketch Background Elements -->
+  <g stroke="#71717a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.4">
+    <!-- Sketchy event hall / wedding canopy in the background -->
+    <path d="M 50 300 Q 150 200 300 200 M 300 200 L 300 300" stroke-dasharray="3,3" />
+    <path d="M 10 300 L 590 300" />
+  </g>
+  
+  <!-- Realistic Vehicle Subject & Boarding Passengers (Toyota Coaster Bus) -->
+  <g id="vehicle">
+    <!-- Shadow under bus -->
+    <ellipse cx="300" cy="305" rx="230" ry="15" fill="rgba(0,0,0,0.15)" filter="blur(8px)" />
+    
+    <!-- Metallic Silver/Champagne Gradients for Coaster Bus -->
+    <defs>
+      <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f5f5f4" />
+        <stop offset="60%" stop-color="#e7e5e4" />
+        <stop offset="100%" stop-color="#a8a29e" />
+      </linearGradient>
+      <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#1c1917" />
+        <stop offset="100%" stop-color="#44403c" />
+      </linearGradient>
+    </defs>
+
+    <!-- Wheels -->
+    <g transform="translate(170, 275)">
+      <circle cx="0" cy="0" r="35" fill="#1c1917" />
+      <circle cx="0" cy="0" r="22" fill="#78716c" stroke="#d6d3d1" stroke-width="1.5" />
+    </g>
+    <g transform="translate(430, 275)">
+      <circle cx="0" cy="0" r="35" fill="#1c1917" />
+      <circle cx="0" cy="0" r="22" fill="#78716c" stroke="#d6d3d1" stroke-width="1.5" />
+    </g>
+
+    <!-- Bus Silhouette Side Profile -->
+    <path d="M 60 275
+             L 60 145
+             C 60 135, 80 120, 100 120
+             L 500 120
+             C 520 120, 540 135, 540 170
+             L 540 275
+             Z" fill="url(#bodyGrad)" stroke="#a8a29e" stroke-width="1" />
+             
+    <!-- Long Panoramic Side Windows of Coaster Bus -->
+    <path d="M 70 130 L 140 130 L 140 185 L 70 185 Z" fill="url(#glassGrad)" />
+    <path d="M 240 130 L 320 130 L 320 185 L 240 185 Z" fill="url(#glassGrad)" />
+    <path d="M 330 130 L 410 130 L 410 185 L 330 185 Z" fill="url(#glassGrad)" />
+    <path d="M 420 130 L 500 130 L 490 185 L 420 185 Z" fill="url(#glassGrad)" />
+
+    <!-- Open Double Door Passenger Entryway -->
+    <rect x="150" y="125" width="80" height="150" fill="#1c1917" rx="3" />
+    <!-- Entry Steps -->
+    <rect x="155" y="240" width="70" height="8" fill="#44403c" />
+    <rect x="158" y="252" width="64" height="8" fill="#44403c" />
+
+    <!-- Chauffeur Standing and welcoming (Black person, Navy Suit) -->
+    <g id="chauffeur" transform="translate(130, 160)">
+      <!-- Head (Black Skin Color: #451a03) -->
+      <circle cx="0" cy="12" r="8" fill="#451a03" />
+      <path d="M -8 24 C -8 24, -4 22, 0 24 C 4 22, 8 24, 8 40 L 5 80 L -5 80 Z" fill="#050548" />
+      <path d="M -3 80 L -5 110 M 3 80 L 5 110" stroke="#050548" stroke-width="5" />
+    </g>
+
+    <!-- Passengers Boarding (Black people, varied elegant dresses/suits) -->
+    <!-- Passenger 1 (Black woman, Burgundy Dress) -->
+    <g id="passenger1" transform="translate(180, 155)">
+      <!-- Head (Black Skin Color: #5f3e2d) -->
+      <circle cx="0" cy="12" r="8" fill="#5f3e2d" />
+      <path d="M -8 24 C -8 24, -4 22, 0 24 C 4 22, 8 24, 8 40 L 5 80 L -5 80 Z" fill="#881337" />
+      <path d="M -3 80 L -8 105 M 3 80 L 6 105" stroke="#5f3e2d" stroke-width="5" />
+    </g>
+
+    <!-- Passenger 2 (Black man, Blue Blazer) -->
+    <g id="passenger2" transform="translate(215, 170)">
+      <!-- Head (Black Skin Color: #3b2314) -->
+      <circle cx="0" cy="12" r="8" fill="#3b2314" />
+      <path d="M -8 24 C -8 24, -4 22, 0 24 C 4 22, 8 24, 8 40 L 5 80 L -5 80 Z" fill="#1d4ed8" />
+      <path d="M -3 80 L -6 100 M 3 80 L 6 100" stroke="#3b2314" stroke-width="5" />
+    </g>
+
+    <!-- Folding Doors open on the sides of the entryway -->
+    <rect x="146" y="125" width="8" height="150" fill="url(#bodyGrad)" stroke="#a8a29e" stroke-width="1" />
+    <rect x="226" y="125" width="8" height="150" fill="url(#bodyGrad)" stroke="#a8a29e" stroke-width="1" />
+  </g>
+</svg>
