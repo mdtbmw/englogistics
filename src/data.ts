@@ -9,48 +9,48 @@ import { FleetItem, ServiceCategory } from './types';
 import pradoFront from './images/prado_front.jpg';
 import pradoBack from './images/prado_back.jpg';
 import pradoSide from './images/prado_side.jpg';
-import pradoBoarding from './images/prado_boarding.jpg';
+import pradoBoarding from './images/prado_boarding_v2.jpg';
 
 import lcFront from './images/lc_front.jpg';
 import lcBack from './images/lc_back.jpg';
 import lcSide from './images/lc_side.jpg';
-import lcBoarding from './images/lc_boarding.jpg';
+import lcBoarding from './images/lc_boarding_v2.jpg';
 
 import hiluxFront from './images/hilux_front.jpg';
 import hiluxBack from './images/hilux_back.jpg';
 import hiluxSide from './images/hilux_side.jpg';
-import hiluxBoarding from './images/hilux_boarding.jpg';
+import hiluxBoarding from './images/hilux_boarding_v2.jpg';
 
-// Import SVGs for Corolla, Camry, Hiace, Coaster, Sienna, Lexus GX
-import corollaFront from './images/corolla_front.svg';
-import corollaBack from './images/corolla_back.svg';
-import corollaSide from './images/corolla_side.svg';
-import corollaBoarding from './images/corolla_boarding.svg';
+// Import JPEGs for Corolla, Camry, Hiace, Coaster, Sienna, Lexus GX
+import corollaFront from './images/corolla_front.jpg';
+import corollaBack from './images/corolla_back.jpg';
+import corollaSide from './images/corolla_side.jpg';
+import corollaBoarding from './images/corolla_boarding.jpg';
 
-import camryFront from './images/camry_front.svg';
-import camryBack from './images/camry_back.svg';
-import camrySide from './images/camry_side.svg';
-import camryBoarding from './images/camry_boarding.svg';
+import camryFront from './images/camry_front.jpg';
+import camryBack from './images/camry_back.jpg';
+import camrySide from './images/camry_side.jpg';
+import camryBoarding from './images/camry_boarding.jpg';
 
-import hiaceFront from './images/hiace_front.svg';
-import hiaceBack from './images/hiace_back.svg';
-import hiaceSide from './images/hiace_side.svg';
-import hiaceBoarding from './images/hiace_boarding.svg';
+import hiaceFront from './images/hiace_front.jpg';
+import hiaceBack from './images/hiace_back.jpg';
+import hiaceSide from './images/hiace_side.jpg';
+import hiaceBoarding from './images/hiace_boarding.jpg';
 
-import coasterFront from './images/coaster_front.svg';
-import coasterBack from './images/coaster_back.svg';
-import coasterSide from './images/coaster_side.svg';
-import coasterBoarding from './images/coaster_boarding.svg';
+import coasterFront from './images/coaster_front.jpg';
+import coasterBack from './images/coaster_back.jpg';
+import coasterSide from './images/coaster_side.jpg';
+import coasterBoarding from './images/coaster_boarding.jpg';
 
-import siennaFront from './images/sienna_front.svg';
-import siennaBack from './images/sienna_back.svg';
-import siennaSide from './images/sienna_side.svg';
-import siennaBoarding from './images/sienna_boarding.svg';
+import siennaFront from './images/sienna_front.jpg';
+import siennaBack from './images/sienna_back.jpg';
+import siennaSide from './images/sienna_side.jpg';
+import siennaBoarding from './images/sienna_boarding.jpg';
 
-import lexusFront from './images/lexus_gx_front.svg';
-import lexusBack from './images/lexus_gx_back.svg';
-import lexusSide from './images/lexus_gx_side.svg';
-import lexusBoarding from './images/lexus_gx_boarding.svg';
+import lexusFront from './images/lexus_front.jpg';
+import lexusBack from './images/lexus_back.jpg';
+import lexusSide from './images/lexus_side.jpg';
+import lexusBoarding from './images/lexus_boarding.jpg';
 
 export const HERO_SLIDES = [
   {
