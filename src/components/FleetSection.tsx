@@ -173,9 +173,9 @@ export default function FleetSection({ setView, setSelectedFleetId }: FleetSecti
                 className="h-full flex flex-col justify-between"
               >
                 <div className="relative w-full">
-                  <motion.div variants={imageReveal} className="relative w-full h-52 md:h-72 rounded-2xl overflow-hidden mb-4 shadow-inner group">
+                  <motion.div variants={imageReveal} className="relative w-full aspect-[3/2] rounded-2xl overflow-hidden mb-4 shadow-inner group">
                      <img src={activeImage} alt={selectedVehicle.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
-                     <div className="absolute inset-0 bg-gradient-to-t from-[#030330] via-[#030330]/60 to-transparent"></div>
+                     <div className="absolute inset-0 bg-gradient-to-t from-[#030330]/20 to-transparent pointer-events-none"></div>
                       <div className="absolute top-4 left-4 bg-[#050548] text-white font-bold font-mono text-[15px] px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-lg">
                        Premium Fleet
                      </div>

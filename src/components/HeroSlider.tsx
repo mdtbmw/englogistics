@@ -41,7 +41,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
   }, []);
 
   return (
-    <header id="hero" className="pt-24 pb-4 md:pt-28 md:pb-6 px-4 md:px-8 w-full max-w-[100vw] overflow-hidden flex justify-center">
+    <header id="hero" className="pt-32 pb-4 md:pt-40 md:pb-6 px-4 md:px-8 w-full max-w-[100vw] overflow-hidden flex justify-center">
       <div className="relative w-full max-w-7xl h-[60vh] xs:h-[65vh] md:h-[75vh] min-h-[420px] md:min-h-[500px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-gradient-to-br from-[#050548] to-[#030330] shadow-2xl group">
         
         {/* Slides */}

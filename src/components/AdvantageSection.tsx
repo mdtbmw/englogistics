@@ -5,8 +5,8 @@
 
 import { Shield, Clock, Zap, ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
-import hiluxSide from '../images/2023-hilux-hybrid sideview.jpg';
-import lcAngle from '../images/2024-Toyota-Land-Cruiser angle view.jpg';
+import hiluxSide from '../images/hilux_side.jpg';
+import lcAngle from '../images/lc_front.jpg';
 
 interface AdvantageSectionProps {
   setView: (view: string) => void;
