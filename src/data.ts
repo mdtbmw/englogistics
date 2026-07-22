@@ -128,7 +128,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
 export const FLEET_DATA: FleetItem[] = [
   {
     id: 'toyota_prado_2014',
-    name: 'Toyota Prado',
+    name: 'Toyota Prado (2014)',
     image: pradoFront,
     images: [pradoFront, pradoBack, pradoSide, pradoBoarding],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Classic 4x4 SUV' },
@@ -169,7 +169,7 @@ export const FLEET_DATA: FleetItem[] = [
   },
   {
     id: 'toyota_landcruiser_2015',
-    name: 'Toyota Land Cruiser',
+    name: 'Toyota Land Cruiser (2015)',
     image: lcFront,
     images: [lcFront, lcBack, lcSide, lcBoarding],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'VIP Convoy SUV' },
@@ -209,7 +209,7 @@ export const FLEET_DATA: FleetItem[] = [
   },
   {
     id: 'toyota_hilux_2015',
-    name: 'Toyota Hilux',
+    name: 'Toyota Hilux (2015)',
     image: hiluxFront,
     images: [hiluxFront, hiluxBack, hiluxSide, hiluxBoarding],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Medium Bags', type: 'Escort Pickup' },
@@ -248,7 +248,7 @@ export const FLEET_DATA: FleetItem[] = [
   },
   {
     id: 'corolla_2010',
-    name: 'Toyota Corolla',
+    name: 'Toyota Corolla (2010)',
     image: corollaFront,
     images: [corollaFront, corollaBack, corollaSide, corollaBoarding],
     specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Comfort Sedan' },
@@ -288,7 +288,7 @@ export const FLEET_DATA: FleetItem[] = [
   },
   {
     id: 'camry_2008',
-    name: 'Toyota Camry',
+    name: 'Toyota Camry (2008)',
     image: camryFront,
     images: [camryFront, camryBack, camrySide, camryBoarding],
     specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Premium Sedan' },
@@ -328,7 +328,7 @@ export const FLEET_DATA: FleetItem[] = [
   },
   {
     id: 'hiace_bus_2012',
-    name: 'Toyota Hiace Bus',
+    name: 'Toyota Hiace Bus (2012 Hummer Model)',
     image: hiaceFront,
     images: [hiaceFront, hiaceBack, hiaceSide, hiaceBoarding],
     specs: { pax: 'Up to 14 Passengers', luggage: '8 Medium Bags', type: 'Commuter Bus' },
@@ -366,7 +366,7 @@ export const FLEET_DATA: FleetItem[] = [
   },
   {
     id: 'coaster_bus_2012',
-    name: 'Toyota Coaster Bus',
+    name: 'Toyota Coaster Bus (2012)',
     image: coasterFront,
     images: [coasterFront, coasterBack, coasterSide, coasterBoarding],
     specs: { pax: 'Up to 28 Passengers', luggage: '15 Large Bags', type: 'Group Transit Coach' },
@@ -406,7 +406,7 @@ export const FLEET_DATA: FleetItem[] = [
   },
   {
     id: 'toyota_sienna_2010',
-    name: 'Toyota Sienna',
+    name: 'Toyota Sienna (2010)',
     image: siennaFront,
     images: [siennaFront, siennaBack, siennaSide, siennaBoarding],
     specs: { pax: 'Up to 7 Passengers', luggage: '5 Medium Bags', type: 'Minivan' },
@@ -445,7 +445,7 @@ export const FLEET_DATA: FleetItem[] = [
   },
   {
     id: 'lexus_gx_2012',
-    name: 'Lexus GX 460',
+    name: 'Lexus GX 460 (2012)',
     image: lexusFront,
     images: [lexusFront, lexusBack, lexusSide, lexusBoarding],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Luxury Executive SUV' },
