@@ -59,7 +59,7 @@ export default function MetricsSection() {
           <div className="mt-4 space-y-2">
              <p className="text-white text-xs font-mono"><span className="text-white/70 font-bold">Benin:</span> 17 Upper Adesuwa Road, GRA — 081-8584-0000</p>
              <p className="text-white text-xs font-mono"><span className="text-white/70 font-bold">Asaba:</span> Suite 03, Faith Akpede Plaza — 081-8588-0000</p>
-             <p className="text-white text-xs font-mono"><span className="text-white/70 font-bold">Lagos:</span> 34 Ikorodu Road, Fadeyi, Yaba — 09056263010</p>
+             <p className="text-white text-xs font-mono"><span className="text-white/70 font-bold">Lagos:</span> 34 Ikorodu Road, Fadeyi, Yaba — 081-8587-0000</p>
           </div>
         </div>
 
