@@ -99,7 +99,7 @@ export default function Footer({ setView }: FooterProps) {
             <div>
               <span className="text-white font-bold block">Lagos</span>
               34 Ikorodu Road, Fadeyi, Yaba, Lagos<br />
-               <span className="text-white text-[14px]">09056263010</span>
+               <span className="text-white text-[14px]">081-8587-0000</span>
             </div>
           </div>
         </div>
