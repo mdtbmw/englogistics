@@ -38,21 +38,21 @@ export default function VehicleShowcase({ setView, setSelectedFleetId }: Vehicle
 
   // Premium features using clear, professional language
   const premiumFeatures: Record<string, { security: string; safety: string; performance: string; amenities: string[]; status: string }> = {
-    'toyota_prado_2025': {
+    'toyota_prado': {
       security: 'Reinforced security cabin options',
       safety: 'Pre-collision safety system & lane assist',
       performance: 'All-terrain 4x4 drive configuration',
       amenities: ['Advanced GPS tracking & route mapping', 'Tri-zone automatic climate control', 'Premium leather seating'],
       status: 'Available'
     },
-    'toyota_landcruiser_2024': {
+    'toyota_landcruiser': {
       security: 'Armored protection option available',
       safety: 'Underbody shielding & run-flat safety tires',
       performance: 'V8 power & multi-terrain select control',
       amenities: ['Intercom & convoy communication system', 'Executive rear-cabin legroom', 'Cooler box & refreshment bar'],
       status: 'Available'
     },
-    'toyota_hilux_2023': {
+    'toyota_hilux': {
       security: 'Security escort configuration rating',
       safety: 'Rugged underbody protection plates',
       performance: 'High-clearance suspension & utility bed',

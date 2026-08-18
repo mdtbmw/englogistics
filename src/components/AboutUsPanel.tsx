@@ -4,7 +4,7 @@
  */
 
 import { Shield, Compass, Lock, Zap, Star, CheckCircle, Target, Eye, Award, ShieldAlert } from 'lucide-react';
-import pradoImage from '../images/2025-toyota-land-cruiser.jpg';
+import pradoImage from '../images/prado_front.jpg';
 
 interface AboutUsPanelProps {
   setView: (view: string) => void;
@@ -118,7 +118,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
           <div className="relative w-full max-w-[400px] aspect-square rounded-[2rem] border border-zinc-200 shadow-xl overflow-hidden group">
             <img 
               src={pradoImage} 
-              alt="Premium Toyota Prado (2025)" 
+              alt="Premium Toyota Prado" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#030330] via-[#030330]/40 to-transparent"></div>

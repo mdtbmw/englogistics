@@ -160,7 +160,7 @@ const GlobalStyles = () => (
 
 export default function App() {
   const [view, setView] = useState('home');
-  const [selectedFleetId, setSelectedFleetId] = useState<string>('toyota_prado_2025');
+  const [selectedFleetId, setSelectedFleetId] = useState<string>('toyota_prado');
 
   // Automatically scroll to the top of the viewport when changing pages for premium single page transition UX
   useEffect(() => {
