@@ -127,7 +127,7 @@ export default function AboutUsPanel({ setView }: AboutUsPanelProps) {
             <div className="absolute bottom-6 left-6 right-6 text-left">
                <span className="text-[15px] font-mono text-white uppercase tracking-widest font-bold block mb-1">Fleet Telemetry</span>
               <span className="text-sm font-semibold text-white uppercase block">Nationwide Routing Desk</span>
-              <span className="text-white text-[16px] block mt-1">Benin Head Office • Lagos Protocol Desk</span>
+              <span className="text-white text-[16px] block mt-1">Benin Head Office • Lagos / Abuja Protocol Desk</span>
             </div>
           </div>
           

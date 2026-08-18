@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 const BRANCHES = [
   { value: 'benin', label: 'Benin', phone: '2348185840000', office: 'Benin City' },
   { value: 'asaba', label: 'Asaba', phone: '2348185880000', office: 'Asaba' },
-  { value: 'lagos', label: 'Lagos', phone: '2349056263010', office: 'Lagos' },
+  { value: 'lagos', label: 'Lagos / Abuja', phone: '2348185870000', office: 'Lagos / Abuja' },
 ];
 
 const SUGGESTIONS = [

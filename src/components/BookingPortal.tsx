@@ -26,7 +26,7 @@ import LogoIcon from './LogoIcon';
 const BRANCHES = [
   { value: 'benin', label: 'Benin City', phone: '2348185840000', address: '17 Upper Adesuwa Road, GRA, Benin City' },
   { value: 'asaba', label: 'Asaba', phone: '2348185880000', address: 'Suite 03, Faith Akpede Plaza, Asaba, Delta State' },
-  { value: 'lagos', label: 'Lagos', phone: '2349056263010', address: '34 Ikorodu Road, Fadeyi, Yaba, Lagos' },
+  { value: 'lagos', label: 'Lagos / Abuja', phone: '2348185870000', address: '34 Ikorodu Road, Fadeyi, Yaba, Lagos' },
 ];
 
 interface BookingPortalProps {

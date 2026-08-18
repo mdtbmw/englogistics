@@ -97,7 +97,7 @@ export default function Footer({ setView }: FooterProps) {
           <div className="flex items-center gap-3">
              <MapPin size={12} className="text-white/70 shrink-0" />
             <div>
-              <span className="text-white font-bold block">Lagos</span>
+              <span className="text-white font-bold block">Lagos / Abuja</span>
               34 Ikorodu Road, Fadeyi, Yaba, Lagos<br />
                <span className="text-white text-[14px]">081-8587-0000</span>
             </div>

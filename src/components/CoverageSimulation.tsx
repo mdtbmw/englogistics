@@ -28,12 +28,12 @@ export default function CoverageSimulation() {
       history: ["Our Asaba branch is ready to serve you.", "Covering Delta State and beyond."]
     },
     LAG: {
-      name: "Lagos Office",
+      name: "Lagos / Abuja Office",
       coordinates: "34 Ikorodu Road, Fadeyi, Yaba",
       convoyCounts: "081-8587-0000",
       threatLevel: "Open Mon - Sun, 6am - 10pm",
-      activeCrews: "Lagos, Nigeria",
-      history: ["Visit our Lagos office for fast service.", "Covering all of Lagos and the South-West."]
+      activeCrews: "Lagos / Abuja, Nigeria",
+      history: ["Visit our Lagos office for fast service.", "Covering Lagos, Abuja and nationwide routes."]
     }
   };
 
