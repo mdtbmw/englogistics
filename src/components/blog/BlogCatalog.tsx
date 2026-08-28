@@ -13,6 +13,7 @@ import {
   Sparkles, 
   SlidersHorizontal, 
   ChevronRight, 
+  ChevronLeft,
   Mail, 
   CheckCircle2, 
   ShieldCheck,
@@ -124,6 +125,20 @@ export default function BlogCatalog({ setView, setSelectedSlug }: BlogCatalogPro
         return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
       });
   }, [posts, activeCategory, selectedTag, activeArchetypeFilter, readTimeFilter, showOnlyBookmarks, searchQuery, sortBy, bookmarkedSlugs]);
+
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const POSTS_PER_PAGE = 6;
+
+  // Reset page to 1 whenever filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCategory, selectedTag, activeArchetypeFilter, readTimeFilter, showOnlyBookmarks, searchQuery, sortBy]);
+
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE) || 1;
+  const paginatedPosts = useMemo(() => {
+    const start = (currentPage - 1) * POSTS_PER_PAGE;
+    return filteredPosts.slice(start, start + POSTS_PER_PAGE);
+  }, [filteredPosts, currentPage, POSTS_PER_PAGE]);
 
   const sliderPosts = useMemo(() => {
     return posts.filter((p) => p.featured).concat(posts.filter((p) => !p.featured)).slice(0, 4);
@@ -476,106 +491,162 @@ export default function BlogCatalog({ setView, setSelectedSlug }: BlogCatalogPro
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {filteredPosts.map((post, idx) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="bg-white rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group cursor-pointer text-left"
-                onClick={() => openPost(post.slug)}
-              >
-                <div>
-                  {/* Image container */}
-                  <div className="relative h-52 overflow-hidden bg-zinc-100">
-                    <img
-                      src={post.coverImage}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                    <div className="absolute top-3 left-3 flex items-center gap-1.5">
-                      <span className="bg-white/95 backdrop-blur-sm text-[#050548] text-[10px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm font-mono">
-                        {post.category.replace('-', ' ')}
-                      </span>
-                      {post.postType && post.postType !== 'standard' && (
-                        <span className="bg-[#050548]/90 text-white text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider shadow-sm font-mono flex items-center gap-1">
-                          {post.postType === 'how-to' ? (
-                            <>
-                              <Zap size={11} className="text-amber-400" />
-                              <span>How-To</span>
-                            </>
-                          ) : post.postType === 'comparison' ? (
-                            <>
-                              <SlidersHorizontal size={11} className="text-blue-300" />
-                              <span>Comparison</span>
-                            </>
-                          ) : (
-                            <>
-                              <ShieldCheck size={11} className="text-emerald-300" />
-                              <span>Case Study</span>
-                            </>
-                          )}
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {paginatedPosts.map((post, idx) => (
+                <motion.article
+                  key={post.id}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: idx * 0.05 }}
+                  className="bg-white rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group cursor-pointer text-left"
+                  onClick={() => openPost(post.slug)}
+                >
+                  <div>
+                    {/* Image container */}
+                    <div className="relative h-52 overflow-hidden bg-zinc-100">
+                      <img
+                        src={post.coverImage}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute top-3 left-3 flex items-center gap-1.5">
+                        <span className="bg-white/95 backdrop-blur-sm text-[#050548] text-[10px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow-sm font-mono">
+                          {post.category.replace('-', ' ')}
                         </span>
+                        {post.postType && post.postType !== 'standard' && (
+                          <span className="bg-[#050548]/90 text-white text-[10px] font-bold px-2 py-1 rounded-lg uppercase tracking-wider shadow-sm font-mono flex items-center gap-1">
+                            {post.postType === 'how-to' ? (
+                              <>
+                                <Zap size={11} className="text-amber-400" />
+                                <span>How-To</span>
+                              </>
+                            ) : post.postType === 'comparison' ? (
+                              <>
+                                <SlidersHorizontal size={11} className="text-blue-300" />
+                                <span>Comparison</span>
+                              </>
+                            ) : (
+                              <>
+                                <ShieldCheck size={11} className="text-emerald-300" />
+                                <span>Case Study</span>
+                              </>
+                            )}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Body container */}
+                    <div className="p-6">
+                      <div className="flex items-center gap-3 text-[11px] font-semibold text-zinc-400 mb-2.5">
+                        <span className="flex items-center gap-1">
+                          <Calendar size={12} />
+                          {new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                        </span>
+                        <span>•</span>
+                        <span className="flex items-center gap-1">
+                          <Clock size={12} /> {post.readingTimeMinutes}m read
+                        </span>
+                      </div>
+
+                      <h3 className="text-lg font-bold text-zinc-900 leading-snug mb-2.5 group-hover:text-[#050548] transition-colors line-clamp-2">
+                        {post.title}
+                      </h3>
+
+                      <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed line-clamp-3 mb-4">
+                        {post.excerpt}
+                      </p>
+
+                      {/* Tags preview */}
+                      {post.tags && post.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-2">
+                          {post.tags.slice(0, 3).map((tag) => (
+                            <span key={tag} className="text-[10px] bg-zinc-100 text-zinc-600 font-medium px-2 py-0.5 rounded-md">
+                              #{tag}
+                            </span>
+                          ))}
+                        </div>
                       )}
                     </div>
                   </div>
 
-                  {/* Body container */}
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 text-[11px] font-semibold text-zinc-400 mb-2.5">
-                      <span className="flex items-center gap-1">
-                        <Calendar size={12} />
-                        {new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                      </span>
-                      <span>•</span>
-                      <span className="flex items-center gap-1">
-                        <Clock size={12} /> {post.readingTimeMinutes}m read
+                  {/* Footer bar */}
+                  <div className="px-6 py-4 bg-zinc-50/50 border-t border-zinc-100 flex items-center justify-between">
+                    <div className="flex items-center gap-2.5">
+                      <img 
+                        src={post.author.avatar} 
+                        alt={post.author.name} 
+                        className="w-7 h-7 rounded-full object-cover border border-zinc-200" 
+                      />
+                      <span className="text-xs font-semibold text-zinc-700 truncate max-w-[120px]">
+                        {post.author.name}
                       </span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-zinc-900 leading-snug mb-2.5 group-hover:text-[#050548] transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-
-                    <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed line-clamp-3 mb-4">
-                      {post.excerpt}
-                    </p>
-
-                    {/* Tags preview */}
-                    {post.tags && post.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mb-2">
-                        {post.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="text-[10px] bg-zinc-100 text-zinc-600 font-medium px-2 py-0.5 rounded-md">
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Footer bar */}
-                <div className="px-6 py-4 bg-zinc-50/50 border-t border-zinc-100 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <img 
-                      src={post.author.avatar} 
-                      alt={post.author.name} 
-                      className="w-7 h-7 rounded-full object-cover border border-zinc-200" 
-                    />
-                    <span className="text-xs font-semibold text-zinc-700 truncate max-w-[120px]">
-                      {post.author.name}
+                    <span className="text-xs font-bold text-[#050548] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      Read <ChevronRight size={14} />
                     </span>
                   </div>
+                </motion.article>
+              ))}
+            </div>
 
-                  <span className="text-xs font-bold text-[#050548] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                    Read <ChevronRight size={14} />
-                  </span>
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 bg-zinc-50 border border-zinc-200/80 rounded-3xl mb-16">
+                <div className="text-xs font-mono text-zinc-500 font-semibold text-left">
+                  Showing <strong className="text-zinc-900">{(currentPage - 1) * POSTS_PER_PAGE + 1}</strong> to <strong className="text-zinc-900">{Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)}</strong> of <strong className="text-zinc-900">{filteredPosts.length}</strong> articles
                 </div>
-              </motion.article>
-            ))}
-          </div>
+
+                <div className="flex items-center gap-1.5">
+                  <button
+                    onClick={() => {
+                      setCurrentPage((p) => Math.max(1, p - 1));
+                      window.scrollTo({ top: 350, behavior: 'smooth' });
+                    }}
+                    disabled={currentPage === 1}
+                    className="px-3.5 py-2 rounded-xl border border-zinc-200 bg-white hover:bg-zinc-100 text-zinc-700 disabled:opacity-40 disabled:pointer-events-none text-xs font-bold font-mono flex items-center gap-1 transition-all cursor-pointer shadow-sm"
+                  >
+                    <ChevronLeft size={14} />
+                    <span className="hidden sm:inline">Previous</span>
+                  </button>
+
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                      <button
+                        key={pageNum}
+                        onClick={() => {
+                          setCurrentPage(pageNum);
+                          window.scrollTo({ top: 350, behavior: 'smooth' });
+                        }}
+                        className={`w-9 h-9 rounded-xl text-xs font-bold font-mono transition-all cursor-pointer ${
+                          currentPage === pageNum
+                            ? 'bg-[#050548] text-white shadow-md'
+                            : 'bg-white border border-zinc-200 text-zinc-700 hover:bg-zinc-100'
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      setCurrentPage((p) => Math.min(totalPages, p + 1));
+                      window.scrollTo({ top: 350, behavior: 'smooth' });
+                    }}
+                    disabled={currentPage === totalPages}
+                    className="px-3.5 py-2 rounded-xl border border-zinc-200 bg-white hover:bg-zinc-100 text-zinc-700 disabled:opacity-40 disabled:pointer-events-none text-xs font-bold font-mono flex items-center gap-1 transition-all cursor-pointer shadow-sm"
+                  >
+                    <span className="hidden sm:inline">Next</span>
+                    <ChevronRight size={14} />
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
         )}
 
         {/* Executive Newsletter Subscription Hub */}
@@ -625,7 +696,7 @@ export default function BlogCatalog({ setView, setSelectedSlug }: BlogCatalogPro
 
         {/* Bottom Fast Links & Admin CMS Prompt */}
         <div className="text-center pt-6 border-t border-zinc-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-mono">
-          <span>&copy; {new Date().getFullYear()} ENGRACED LOGISTICS INTELLIGENCE DESK</span>
+          <span>&copy; {new Date().getFullYear()} ENGRACED LOGISTICS EDITORIAL &amp; FLEET DESK</span>
           <button
             onClick={() => setView('admin-cms')}
             className="text-[#050548] font-bold hover:underline cursor-pointer flex items-center gap-1.5"

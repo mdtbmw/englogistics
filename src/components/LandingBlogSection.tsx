@@ -14,6 +14,7 @@ import {
   ListChecks, 
   Eye, 
   ChevronRight,
+  ChevronLeft,
   TrendingUp,
   FileText,
   Zap,
@@ -33,6 +34,8 @@ interface LandingBlogSectionProps {
 export default function LandingBlogSection({ setView, setSelectedSlug }: LandingBlogSectionProps) {
   const [posts, setPosts] = useState<BlogPost[]>(INITIAL_BLOG_POSTS);
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'how-to' | 'fleet-spotlight' | 'vip-protocol'>('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const PAGE_SIZE = 6;
 
   useEffect(() => {
     fetchPosts().then((fetched) => {
@@ -54,10 +57,18 @@ export default function LandingBlogSection({ setView, setSelectedSlug }: Landing
     return post.category === selectedFilter;
   });
 
-  const featuredPost = filteredPosts.find((p) => p.featured) || filteredPosts[0] || posts[0];
-  const howToPost = filteredPosts.find((p) => p.postType === 'how-to' && p.id !== featuredPost?.id) || posts.find((p) => p.postType === 'how-to') || posts[1];
-  const fleetPost = filteredPosts.find((p) => p.category === 'fleet-spotlight' && p.id !== featuredPost?.id && p.id !== howToPost?.id) || posts[2];
-  const remainingPosts = filteredPosts.filter((p) => p.id !== featuredPost?.id && p.id !== howToPost?.id && p.id !== fleetPost?.id).slice(0, 3);
+  const totalPages = Math.ceil(filteredPosts.length / PAGE_SIZE) || 1;
+  const pagePosts = filteredPosts.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+
+  const featuredPost = pagePosts[0] || filteredPosts[0];
+  const howToPost = pagePosts.find((p) => p.postType === 'how-to' && p.id !== featuredPost?.id) || pagePosts[1];
+  const fleetPost = pagePosts.find((p) => p.category === 'fleet-spotlight' && p.id !== featuredPost?.id && p.id !== howToPost?.id) || pagePosts[2];
+  const remainingPosts = pagePosts.filter((p) => p.id !== featuredPost?.id && p.id !== howToPost?.id && p.id !== fleetPost?.id);
+
+  const handleFilterChange = (filterId: any) => {
+    setSelectedFilter(filterId);
+    setCurrentPage(1);
+  };
 
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full font-sans">
@@ -67,7 +78,7 @@ export default function LandingBlogSection({ setView, setSelectedSlug }: Landing
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#050548]/5 text-[#050548] text-xs font-bold uppercase tracking-widest font-mono mb-3 border border-[#050548]/10">
             <Sparkles size={13} className="text-[#050548]" />
-            <span>Executive Intelligence Desk</span>
+            <span>Verified Logistics Guides &amp; Insights</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-zinc-950 tracking-tight">
             Highway Intelligence &amp; Fleet Protocols
@@ -90,7 +101,7 @@ export default function LandingBlogSection({ setView, setSelectedSlug }: Landing
             return (
               <button
                 key={tab.id}
-                onClick={() => setSelectedFilter(tab.id as any)}
+                onClick={() => handleFilterChange(tab.id)}
                 className={`px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 ${
                   isSelected
                     ? 'bg-white text-[#050548] shadow-sm font-black'
@@ -318,8 +329,55 @@ export default function LandingBlogSection({ setView, setSelectedSlug }: Landing
 
       </div>
 
+      {/* Pagination Controls (if more than 1 page) */}
+      {totalPages > 1 && (
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 bg-zinc-50 border border-zinc-200/80 rounded-2xl">
+          <span className="text-xs font-mono text-zinc-500 font-semibold">
+            Showing Page <strong className="text-zinc-900">{currentPage}</strong> of <strong className="text-zinc-900">{totalPages}</strong> ({filteredPosts.length} Articles)
+          </span>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className="p-2 sm:px-3 sm:py-1.5 rounded-xl border border-zinc-200 bg-white hover:bg-zinc-100 text-zinc-700 disabled:opacity-40 disabled:pointer-events-none text-xs font-bold font-mono flex items-center gap-1 transition-all cursor-pointer shadow-sm"
+              title="Previous Page"
+            >
+              <ChevronLeft size={14} />
+              <span className="hidden sm:inline">Previous</span>
+            </button>
+
+            <div className="flex items-center gap-1">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                <button
+                  key={pageNum}
+                  onClick={() => setCurrentPage(pageNum)}
+                  className={`w-8 h-8 rounded-xl text-xs font-bold font-mono transition-all cursor-pointer ${
+                    currentPage === pageNum
+                      ? 'bg-[#050548] text-white shadow-md'
+                      : 'bg-white border border-zinc-200 text-zinc-700 hover:bg-zinc-100'
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className="p-2 sm:px-3 sm:py-1.5 rounded-xl border border-zinc-200 bg-white hover:bg-zinc-100 text-zinc-700 disabled:opacity-40 disabled:pointer-events-none text-xs font-bold font-mono flex items-center gap-1 transition-all cursor-pointer shadow-sm"
+              title="Next Page"
+            >
+              <span className="hidden sm:inline">Next</span>
+              <ChevronRight size={14} />
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Bottom Hub CTA Action */}
-      <div className="mt-12 text-center">
+      <div className="mt-8 text-center">
         <button
           onClick={() => {
             setView('blog');
@@ -328,7 +386,7 @@ export default function LandingBlogSection({ setView, setSelectedSlug }: Landing
           className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-[#050548] hover:bg-[#0A0A78] text-white text-xs sm:text-sm font-black uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl active:scale-95 cursor-pointer font-mono"
         >
           <BookOpen size={16} />
-          <span>Enter Full Executive Blog &amp; Intelligence Catalog ({posts.length} Publications)</span>
+          <span>Enter Full Executive Blog Catalog ({posts.length} Publications)</span>
           <ArrowRight size={16} />
         </button>
       </div>

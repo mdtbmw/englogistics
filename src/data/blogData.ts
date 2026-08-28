@@ -1,9 +1,42 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+import { BlogPost, BlogCategory, BlogAuthor } from '../types';
 
-import { BlogPost, BlogCategory } from '../types';
+export const DEFAULT_AUTHORS: BlogAuthor[] = [
+  {
+    id: 'author-engraced',
+    name: 'Engraced Editorial Board',
+    role: 'Official Logistics & Protocol Intelligence',
+    avatar: '/favicon.svg',
+    bio: 'The central research and intelligence collective for executive mobility, convoy safety, and fleet luxury across Nigeria.'
+  },
+  {
+    id: 'author-cpo',
+    name: 'Chief Protocol Officer',
+    role: 'Executive Ground Mobility & Vetting',
+    avatar: '/favicon.svg',
+    bio: 'Specialist in diplomatic itinerary coordination, airport tarmac VIP greetings, and close protection management.'
+  },
+  {
+    id: 'author-ops',
+    name: 'Head of Fleet Operations',
+    role: 'Fleet Engineering & Chauffeur Standards',
+    avatar: '/favicon.svg',
+    bio: 'Over 12 years of executive vehicle maintenance, 48-point safety vetting, and VIP telemetry operations in Nigeria.'
+  },
+  {
+    id: 'author-security',
+    name: 'Tactical Security & Convoy Desk',
+    role: 'Highway Intelligence & Armored Protection',
+    avatar: '/favicon.svg',
+    bio: 'Strategic convoy escort management, live route bypass tracking, and interstate highway risk mitigation.'
+  },
+  {
+    id: 'author-dispatch',
+    name: 'VIP Concierge & Dispatch Desk',
+    role: 'Airport Protocol & Corporate Travel',
+    avatar: '/favicon.svg',
+    bio: '24/7 dedicated dispatch manager providing real-time flight tracking and swift luxury tarmac reception.'
+  }
+];
 
 export const BLOG_CATEGORIES: BlogCategory[] = [
   {
@@ -157,20 +190,14 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 </ol>
 
 <div class="callout callout-warning">
-  <strong>⚠️ Travel Security Advisory:</strong> When coordinating inter-state movement between Edo, Delta (Asaba), and Lagos State, always register your itinerary with a licensed VIP transport provider that features GPS live telemetry and 24/7 operations room tracking.
+  <strong>Travel Security Advisory:</strong> When coordinating inter-state movement between Edo, Delta (Asaba), and Lagos State, always register your itinerary with a licensed VIP transport provider that features GPS live telemetry and 24/7 operations room tracking.
 </div>
 
 <h2>Summary & Booking Recommendations</h2>
 <p>At Engraced Logistics, our fleet of immaculate Toyota Prados, Land Cruisers, and luxury buses are stationed across GRA Benin City. Bookings can be confirmed instantly via our digital portal or 24/7 VIP hotline.</p>`,
     category: 'city-guides',
     tags: ['Benin City', 'Luxury Car Rental', 'Edo State', 'Executive Chauffeur', 'Toyota Prado'],
-    author: {
-      id: 'author-1',
-      name: 'Osasere Obasuyi',
-      role: 'Head of Fleet Operations & Logistics Protocol',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-      bio: 'Over 12 years of executive security convoy coordination and fleet management experience across South-South and Western Nigeria.',
-    },
+    author: DEFAULT_AUTHORS[0],
     coverImage: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80',
     status: 'published',
     featured: true,
@@ -275,7 +302,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 <p>The <strong>Benin-Sagamu-Lagos Expressway</strong> is the primary overland corridor connecting the industrial capital of Lagos with Edo State and the oil-rich Niger Delta. Navigating this 300+ km route requires tactical planning, disciplined speed management, and reliable vehicles.</p>
 
 <div class="callout callout-warning">
-  <strong>⚠️ Highway Advisory:</strong> Road surface conditions vary near Okada and Ore. Driving with trained executive chauffeurs prevents rim damage and ensures smooth transit.
+  <strong>Highway Advisory:</strong> Road surface conditions vary near Okada and Ore. Driving with trained executive chauffeurs prevents rim damage and ensures smooth transit.
 </div>
 
 <h2>Anatomy of a Professional Convoy Structure</h2>
@@ -288,13 +315,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 </ul>`,
     category: 'vip-protocol',
     tags: ['Security Escort', 'VIP Protection', 'Nigeria Highways', 'Convoy Management', 'Toyota Hilux'],
-    author: {
-      id: 'author-2',
-      name: 'Capt. Tariq Al-Hassan (Rtd.)',
-      role: 'Director of Tactical Security & Risk Operations',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-      bio: 'Former military operations officer with 18+ years directing executive protection details across West Africa.',
-    },
+    author: DEFAULT_AUTHORS[3],
     coverImage: 'https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=1200&q=80',
     status: 'published',
     featured: false,
@@ -369,12 +390,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 </div>`,
     category: 'fleet-spotlight',
     tags: ['Toyota Prado', 'Land Cruiser', 'Fleet Review', 'SUV Rental', 'Executive Travel'],
-    author: {
-      id: 'author-1',
-      name: 'Osasere Obasuyi',
-      role: 'Head of Fleet Operations & Logistics Protocol',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-    },
+    author: DEFAULT_AUTHORS[2],
     coverImage: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80',
     status: 'published',
     featured: false,
@@ -428,12 +444,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 </div>`,
     category: 'city-guides',
     tags: ['Benin to Lagos', 'Highway Safety', 'Route Guide', 'Interstate Logistics'],
-    author: {
-      id: 'author-2',
-      name: 'Capt. Tariq Al-Hassan (Rtd.)',
-      role: 'Director of Tactical Security & Risk Operations',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
-    },
+    author: DEFAULT_AUTHORS[1],
     coverImage: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
     status: 'published',
     featured: false,
@@ -481,12 +492,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 </div>`,
     category: 'corporate-logistics',
     tags: ['Corporate Fleet', 'Fleet Management', 'Business Logistics Nigeria', 'CapEx vs OpEx'],
-    author: {
-      id: 'author-1',
-      name: 'Osasere Obasuyi',
-      role: 'Head of Fleet Operations & Logistics Protocol',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-    },
+    author: DEFAULT_AUTHORS[0],
     coverImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
     status: 'published',
     featured: false,
@@ -528,12 +534,7 @@ export const INITIAL_BLOG_POSTS: BlogPost[] = [
 </ul>`,
     category: 'travel-tips',
     tags: ['Airport Transfer', 'VIP Chauffeur', 'Benin Airport', 'Lagos Airport', 'Luxury Travel'],
-    author: {
-      id: 'author-1',
-      name: 'Osasere Obasuyi',
-      role: 'Head of Fleet Operations & Logistics Protocol',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-    },
+    author: DEFAULT_AUTHORS[4],
     coverImage: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80',
     status: 'published',
     featured: false,

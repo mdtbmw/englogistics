@@ -35,14 +35,17 @@ import {
   X,
   Layers,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  User
 } from 'lucide-react';
 import { 
   BlogPost, 
   BlogCategory, 
   PostType, 
-  HowToStep 
+  HowToStep,
+  BlogAuthor
 } from '../../types';
+import { DEFAULT_AUTHORS } from '../../data/blogData';
 import { 
   analyzeSEO, 
   calculateReadingTime, 
@@ -91,9 +94,51 @@ export default function AdminBlogStudio({
   const [status, setStatus] = useState<'published' | 'draft' | 'scheduled'>(initialPost?.status || 'published');
   const [featured, setFeatured] = useState<boolean>(initialPost?.featured || false);
   
-  // Author State
-  const [authorName, setAuthorName] = useState(initialPost?.author?.name || 'Chief Protocol Officer');
-  const [authorRole, setAuthorRole] = useState(initialPost?.author?.role || 'Head of Fleet Logistics, Engraced');
+  // Author State with Brand Logo defaults
+  const [authorList, setAuthorList] = useState<BlogAuthor[]>(() => {
+    if (initialPost?.author && !DEFAULT_AUTHORS.some(a => a.name === initialPost.author.name)) {
+      return [initialPost.author, ...DEFAULT_AUTHORS];
+    }
+    return DEFAULT_AUTHORS;
+  });
+  
+  const [selectedAuthorId, setSelectedAuthorId] = useState<string>(
+    initialPost?.author?.id || DEFAULT_AUTHORS[0].id
+  );
+  const [authorName, setAuthorName] = useState(initialPost?.author?.name || DEFAULT_AUTHORS[0].name);
+  const [authorRole, setAuthorRole] = useState(initialPost?.author?.role || DEFAULT_AUTHORS[0].role);
+  const [authorAvatar, setAuthorAvatar] = useState(initialPost?.author?.avatar || '/favicon.svg');
+  const [isAddingNewAuthor, setIsAddingNewAuthor] = useState(false);
+  const [newAuthorNameInput, setNewAuthorNameInput] = useState('');
+  const [newAuthorRoleInput, setNewAuthorRoleInput] = useState('');
+
+  const handleSelectAuthor = (authorId: string) => {
+    setSelectedAuthorId(authorId);
+    const found = authorList.find(a => a.id === authorId);
+    if (found) {
+      setAuthorName(found.name);
+      setAuthorRole(found.role);
+      setAuthorAvatar(found.avatar || '/favicon.svg');
+    }
+  };
+
+  const handleCreateNewAuthor = () => {
+    if (!newAuthorNameInput.trim()) return;
+    const newAuth: BlogAuthor = {
+      id: `author-${Date.now()}`,
+      name: newAuthorNameInput.trim(),
+      role: newAuthorRoleInput.trim() || 'Operations & Protocol Intelligence',
+      avatar: '/favicon.svg', // Always brand with official Engraced logo by default
+    };
+    setAuthorList([newAuth, ...authorList]);
+    setSelectedAuthorId(newAuth.id);
+    setAuthorName(newAuth.name);
+    setAuthorRole(newAuth.role);
+    setAuthorAvatar(newAuth.avatar);
+    setNewAuthorNameInput('');
+    setNewAuthorRoleInput('');
+    setIsAddingNewAuthor(false);
+  };
 
   // ==========================================
   // 📘 1. HOW-TO PROTOCOL FORM STATE
@@ -194,10 +239,10 @@ export default function AdminBlogStudio({
     category,
     tags: parsedTags,
     author: {
-      id: 'cpo-1',
+      id: selectedAuthorId || 'author-1',
       name: authorName,
       role: authorRole,
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+      avatar: authorAvatar || '/favicon.svg',
     },
     coverImage,
     postType,
@@ -998,7 +1043,127 @@ export default function AdminBlogStudio({
             </div>
           </div>
 
-          {/* 2. Taxonomy & Permalinks */}
+          {/* 2. Author & Display Attributions */}
+          <div className="bg-white p-6 rounded-3xl border border-zinc-200 shadow-sm space-y-4">
+            <div className="flex items-center justify-between">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-700 font-mono flex items-center gap-1.5">
+                <User size={14} className="text-[#050548]" />
+                <span>Author &amp; Attributions</span>
+              </h4>
+              <button
+                type="button"
+                onClick={() => setIsAddingNewAuthor(!isAddingNewAuthor)}
+                className="text-[11px] font-bold text-[#050548] hover:underline flex items-center gap-1 cursor-pointer font-mono"
+              >
+                <Plus size={12} />
+                <span>{isAddingNewAuthor ? 'Cancel' : 'New Author'}</span>
+              </button>
+            </div>
+
+            {/* Active Author Preview Badge */}
+            <div className="flex items-center gap-3 p-3 bg-zinc-50 rounded-2xl border border-zinc-200/80">
+              <div className="w-10 h-10 rounded-xl bg-white border border-zinc-200 p-1 flex items-center justify-center shrink-0 shadow-sm">
+                <img
+                  src={authorAvatar || '/favicon.svg'}
+                  alt="Author Avatar"
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <span className="text-xs font-bold text-zinc-900 truncate block">
+                  {authorName || 'Unnamed Author'}
+                </span>
+                <span className="text-[10px] text-zinc-500 truncate block font-mono">
+                  {authorRole || 'Official Protocol'}
+                </span>
+              </div>
+            </div>
+
+            {/* Add New Author Form */}
+            {isAddingNewAuthor && (
+              <div className="p-3.5 bg-blue-50/60 rounded-2xl border border-blue-200 space-y-2.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#050548] font-mono block">
+                  Create New Author Profile
+                </span>
+                <div>
+                  <label className="text-[10px] font-bold uppercase text-zinc-500 font-mono block mb-1">
+                    Author Display Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Chief Mobility Officer"
+                    value={newAuthorNameInput}
+                    onChange={(e) => setNewAuthorNameInput(e.target.value)}
+                    className="w-full bg-white border border-zinc-200 rounded-xl p-2 text-xs font-semibold text-zinc-900 focus:outline-none"
+                  />
+                </div>
+                <div>
+                  <label className="text-[10px] font-bold uppercase text-zinc-500 font-mono block mb-1">
+                    Role / Department
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Tactical Escort Command"
+                    value={newAuthorRoleInput}
+                    onChange={(e) => setNewAuthorRoleInput(e.target.value)}
+                    className="w-full bg-white border border-zinc-200 rounded-xl p-2 text-xs font-semibold text-zinc-900 focus:outline-none"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={handleCreateNewAuthor}
+                  disabled={!newAuthorNameInput.trim()}
+                  className="w-full py-2 bg-[#050548] hover:bg-[#0A0A78] text-white rounded-xl text-xs font-bold font-mono transition-all disabled:opacity-40 cursor-pointer shadow-sm"
+                >
+                  Save &amp; Select Author
+                </button>
+              </div>
+            )}
+
+            {/* Select Existing Preset Author */}
+            <div>
+              <label className="text-[11px] font-bold uppercase tracking-wider text-zinc-500 block mb-1 font-mono">
+                Select Author Preset
+              </label>
+              <select
+                value={selectedAuthorId}
+                onChange={(e) => handleSelectAuthor(e.target.value)}
+                className="w-full bg-zinc-50 border border-zinc-200 rounded-xl p-2.5 text-xs font-bold text-zinc-800 focus:outline-none cursor-pointer"
+              >
+                {authorList.map((a) => (
+                  <option key={a.id} value={a.id}>{a.name} ({a.role})</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Edit Selected Author Name & Role */}
+            <div className="grid grid-cols-1 gap-2.5 pt-2 border-t border-zinc-100">
+              <div>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 block mb-1 font-mono">
+                  Edit Display Name
+                </label>
+                <input
+                  type="text"
+                  value={authorName}
+                  onChange={(e) => setAuthorName(e.target.value)}
+                  className="w-full bg-zinc-50 border border-zinc-200 rounded-xl p-2 text-xs font-bold text-zinc-900 focus:outline-none focus:bg-white"
+                />
+              </div>
+              <div>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 block mb-1 font-mono">
+                  Edit Role / Title
+                </label>
+                <input
+                  type="text"
+                  value={authorRole}
+                  onChange={(e) => setAuthorRole(e.target.value)}
+                  className="w-full bg-zinc-50 border border-zinc-200 rounded-xl p-2 text-xs text-zinc-800 focus:outline-none focus:bg-white"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* 3. Taxonomy & Permalinks */}
           <div className="bg-white p-6 rounded-3xl border border-zinc-200 shadow-sm space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-700 font-mono">
               Taxonomy &amp; Permalink
