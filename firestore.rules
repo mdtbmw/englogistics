@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // 1. Blog Posts Collection
+    match /blog_posts/{postId} {
+      // Anyone can read blog posts
+      allow read: if true;
+      // Public users can increment views/likes count or submit comments; admin has full write
+      allow update: if (
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['viewsCount', 'likesCount', 'comments'])
+      ) || isAuthenticated();
+      // Only authenticated admin can create or delete articles
+      allow create, delete, write: if isAuthenticated();
+    }
+
+    // 2. Blog Categories Collection
+    match /blog_categories/{categoryId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    // 3. Bookings Collection
+    match /bookings/{bookingId} {
+      // Public clients can submit booking requests
+      allow create: if request.resource.data.clientEmail != null || request.resource.data.clientPhone != null;
+      // Clients and admin can read bookings
+      allow read: if true;
+      // Only authenticated admin can update or delete
+      allow update, delete, write: if isAuthenticated();
+    }
+
+    // 4. Newsletter Subscribers Collection
+    match /subscribers/{subscriberId} {
+      allow create: if request.resource.data.email != null;
+      allow read, write: if isAuthenticated();
+    }
+
+    // 5. Default fallback
+    match /{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}
