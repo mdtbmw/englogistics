@@ -379,18 +379,19 @@ export default function App() {
   const [selectedFleetId, setSelectedFleetId] = useState<string>('toyota_prado');
   const [selectedSlug, setSelectedSlug] = useState<string>('luxury-car-rental-benin-city-guide');
 
-  // Check URL parameters / hash on mount & on hashchange
+  // Check URL parameters / hash on mount & on hashchange / popstate
   useEffect(() => {
     const handleUrlRoute = () => {
-      const hash = window.location.hash.replace(/^#\/?/, '');
+      const rawHash = window.location.hash.replace(/^#\/?/, '');
       const path = window.location.pathname.replace(/^\//, '');
       const params = new URLSearchParams(window.location.search);
       const portalParam = params.get('portal');
       const articleParam = params.get('article');
+      const fleetParam = params.get('fleet') || params.get('vehicle');
 
-      // Secret Protocol Vault Gate - strictly accessible only via secret vault hash
+      // 1. Secret Protocol Vault Gate - strictly accessible only via secret vault slug
       if (
-        hash === ADMIN_VAULT_SLUG || 
+        rawHash === ADMIN_VAULT_SLUG || 
         path === ADMIN_VAULT_SLUG || 
         portalParam === ADMIN_VAULT_SLUG
       ) {
@@ -398,8 +399,9 @@ export default function App() {
         return;
       }
 
-      if (hash.startsWith('blog/') || path.startsWith('blog/') || articleParam) {
-        const targetSlug = articleParam || hash.replace(/^blog\//, '') || path.replace(/^blog\//, '');
+      // 2. Direct Article Slug URL (e.g. #blog/luxury-car-rental-benin-city-guide or ?article=...)
+      if (rawHash.startsWith('blog/') || path.startsWith('blog/') || articleParam) {
+        const targetSlug = articleParam || rawHash.replace(/^blog\//, '') || path.replace(/^blog\//, '');
         if (targetSlug && targetSlug !== 'blog') {
           setSelectedSlug(targetSlug);
           setView('blog-post');
@@ -410,17 +412,43 @@ export default function App() {
         }
       }
 
-      if (hash === 'blog' || path === 'blog') {
+      // 3. Blog Catalog URL (#blog)
+      if (rawHash === 'blog' || path === 'blog') {
         setView('blog');
         return;
       }
-      if (hash === 'booking' || path === 'booking') {
+
+      // 4. Vehicle Profile URL (e.g. #fleet/toyota_prado or #vehicle/toyota_prado)
+      if (rawHash.startsWith('fleet/') || rawHash.startsWith('vehicle/') || path.startsWith('fleet/') || fleetParam) {
+        const fleetId = fleetParam || rawHash.replace(/^(fleet|vehicle)\//, '') || path.replace(/^(fleet|vehicle)\//, '');
+        if (fleetId) {
+          setSelectedFleetId(fleetId);
+          setView('vehicle-profile');
+          return;
+        }
+      }
+
+      // 5. Standalone Pages
+      if (rawHash === 'booking' || path === 'booking') {
         setView('booking');
         return;
       }
-      if (hash === 'about' || path === 'about') {
+      if (rawHash === 'about' || path === 'about') {
         setView('about');
         return;
+      }
+      if (rawHash === 'terms' || path === 'terms') {
+        setView('terms');
+        return;
+      }
+      if (rawHash === 'privacy' || path === 'privacy') {
+        setView('privacy');
+        return;
+      }
+
+      // 6. Default to Home if on root
+      if (!rawHash || rawHash === 'home' || rawHash === '/') {
+        setView('home');
       }
     };
 
@@ -432,6 +460,52 @@ export default function App() {
       window.removeEventListener('popstate', handleUrlRoute);
     };
   }, []);
+
+  // Synchronize browser address bar with current page state for SEO, direct sharing, and slug ranking
+  useEffect(() => {
+    if (view === 'blog-post' && selectedSlug) {
+      const targetHash = `#blog/${selectedSlug}`;
+      if (window.location.hash !== targetHash) {
+        window.history.pushState(null, '', targetHash);
+      }
+    } else if (view === 'blog') {
+      if (window.location.hash !== '#blog') {
+        window.history.pushState(null, '', '#blog');
+      }
+    } else if (view === 'vehicle-profile' && selectedFleetId) {
+      const targetHash = `#fleet/${selectedFleetId}`;
+      if (window.location.hash !== targetHash) {
+        window.history.pushState(null, '', targetHash);
+      }
+    } else if (view === 'booking') {
+      if (window.location.hash !== '#booking') {
+        window.history.pushState(null, '', '#booking');
+      }
+    } else if (view === 'about') {
+      if (window.location.hash !== '#about') {
+        window.history.pushState(null, '', '#about');
+      }
+    } else if (view === 'terms') {
+      if (window.location.hash !== '#terms') {
+        window.history.pushState(null, '', '#terms');
+      }
+    } else if (view === 'privacy') {
+      if (window.location.hash !== '#privacy') {
+        window.history.pushState(null, '', '#privacy');
+      }
+    } else if (view === 'admin-cms') {
+      const targetHash = `#${ADMIN_VAULT_SLUG}`;
+      if (window.location.hash !== targetHash) {
+        window.history.replaceState(null, '', targetHash);
+      }
+    } else if (view === 'home') {
+      // If returning to home, clean the hash if it was a deep route
+      const h = window.location.hash;
+      if (h.startsWith('#blog') || h.startsWith('#fleet') || h.startsWith('#booking') || h.startsWith('#about') || h.startsWith('#terms') || h.startsWith('#privacy') || h.startsWith('#eng-protocol')) {
+        window.history.pushState(null, '', window.location.pathname);
+      }
+    }
+  }, [view, selectedSlug, selectedFleetId]);
 
   // Automatically scroll to the top of the viewport when changing pages for premium single page transition UX
   useEffect(() => {

@@ -43,12 +43,12 @@ let firestoreDb: Firestore | null = null;
 let firebaseAuth: Auth | null = null;
 
 export const getDefaultFirebaseConfig = (): FirebaseConfigState => {
-  const envKey = import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyBt8iKTwmrqNPZdCi6o6daQ8v1l6GzEla0';
-  const envAuth = import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'engracedlogistics-6b51c.firebaseapp.com';
-  const envProject = import.meta.env.VITE_FIREBASE_PROJECT_ID || 'engracedlogistics-6b51c';
-  const envBucket = import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'engracedlogistics-6b51c.firebasestorage.app';
-  const envSender = import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '254344071705';
-  const envAppId = import.meta.env.VITE_FIREBASE_APP_ID || '1:254344071705:web:d85aae36426bbfa8163888';
+  const envKey = import.meta.env.VITE_FIREBASE_API_KEY || '';
+  const envAuth = import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '';
+  const envProject = import.meta.env.VITE_FIREBASE_PROJECT_ID || '';
+  const envBucket = import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || '';
+  const envSender = import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '';
+  const envAppId = import.meta.env.VITE_FIREBASE_APP_ID || '';
 
   const hasEnv = Boolean(envKey && envProject);
   return {
