@@ -694,16 +694,9 @@ export default function BlogCatalog({ setView, setSelectedSlug }: BlogCatalogPro
           </div>
         </div>
 
-        {/* Bottom Fast Links & Admin CMS Prompt */}
-        <div className="text-center pt-6 border-t border-zinc-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-mono">
+        {/* Bottom Fast Links & Editorial Notice */}
+        <div className="text-center pt-6 border-t border-zinc-100 flex items-center justify-center text-xs text-zinc-500 font-mono">
           <span>&copy; {new Date().getFullYear()} ENGRACED LOGISTICS EDITORIAL &amp; FLEET DESK</span>
-          <button
-            onClick={() => setView('admin-cms')}
-            className="text-[#050548] font-bold hover:underline cursor-pointer flex items-center gap-1.5"
-          >
-            <ShieldCheck size={14} />
-            <span>Admin Studio &amp; CMS Login</span>
-          </button>
         </div>
 
       </div>
