@@ -388,7 +388,16 @@ export default function App() {
       const portalParam = params.get('portal');
       const articleParam = params.get('article');
 
-      if (hash === ADMIN_VAULT_SLUG || path === ADMIN_VAULT_SLUG || portalParam === ADMIN_VAULT_SLUG) {
+      if (
+        hash === 'admin' || 
+        hash === 'admin-cms' || 
+        path === 'admin' || 
+        path === 'admin-cms' || 
+        hash === ADMIN_VAULT_SLUG || 
+        path === ADMIN_VAULT_SLUG || 
+        portalParam === 'admin' || 
+        portalParam === ADMIN_VAULT_SLUG
+      ) {
         setView('admin-cms');
         return;
       }

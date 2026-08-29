@@ -42,6 +42,7 @@ export default function Footer({ setView }: FooterProps) {
               <button onClick={() => setView('blog')} className="text-[15px] text-white hover:text-blue-200 cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200 font-bold text-yellow-300">Executive Blog</button>
               <button onClick={() => setView('about')} className="text-[15px] text-white hover:text-blue-200 cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">About Us</button>
               <button onClick={() => setView('booking')} className="text-[15px] text-white hover:text-blue-200 cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200">Booking Desk</button>
+              <button onClick={() => setView('admin-cms')} className="text-[14px] text-zinc-400 hover:text-white cursor-pointer text-left transition-colors font-sans hover:translate-x-1 duration-200 flex items-center gap-1 font-mono">Admin Studio</button>
             </div>
           </div>
 
