@@ -133,7 +133,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [pradoFront, pradoBack, pradoSide, pradoBoarding],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Classic 4x4 SUV' },
     desc: 'A reliable and sturdy SUV perfect for executives and VIPs. Comfortable, spacious, and built for long trips. Available in Benin City, Lagos, and Abuja.',
-    pricePerDay: 80000,
     category: 'suvs',
     seo: {
       title: 'Toyota Prado Rental in Nigeria | Reliable SUV Hire Benin City, Lagos & Abuja',
@@ -161,7 +160,7 @@ export const FLEET_DATA: FleetItem[] = [
       'Government official movement and protocol'
     ],
     faq: [
-      { q: 'How much does it cost to rent a Toyota Prado per day in Nigeria?', a: 'The Toyota Prado rents for ₦80,000 per day with a professional chauffeur included. Long-term and corporate rates are available on request.' },
+      { q: 'How do I get pricing for renting a Toyota Prado in Nigeria?', a: 'Rental rates for the Toyota Prado are provided on-demand upon booking based on your route, duration, and escort requirements. Contact our protocol desk or submit a reservation to receive an immediate custom quote.' },
       { q: 'Can I drive the Prado myself or does a driver come with it?', a: 'Our standard rental includes a professional chauffeur. Self-drive options may be available for qualified clients with valid ID and driving license.' },
       { q: 'Which cities can I rent the Toyota Prado in?', a: 'The Toyota Prado is available for rental in Benin City, Lagos, and Abuja. Interstate travel between these cities is our specialty.' },
       { q: 'Is the Prado good for long road trips from Benin to Lagos?', a: 'Absolutely. The Prado is built for durability and comfort on long journeys, making it ideal for Benin City to Lagos trips.' }
@@ -174,7 +173,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [lcFront, lcBack, lcSide, lcBoarding],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'VIP Convoy SUV' },
     desc: 'The classic king of SUVs. Strong, tough, and great for VIP trips. Used by government officials and executives who want reliable prestige.',
-    pricePerDay: 120000,
     category: 'suvs',
     seo: {
       title: 'Toyota Land Cruiser Rental Nigeria | VIP SUV Hire',
@@ -202,7 +200,7 @@ export const FLEET_DATA: FleetItem[] = [
       'Corporate CEO daily transport'
     ],
     faq: [
-      { q: 'How much per day for the Land Cruiser rental in Nigeria?', a: 'The Toyota Land Cruiser rents for ₦120,000 per day with a professional chauffeur and full support. Security escort packages are available extra.' },
+      { q: 'How do I get pricing for the Land Cruiser rental in Nigeria?', a: 'Pricing is tailored to your mission and route parameters. Submit a booking request or contact our protocol desk for a customized daily or long-term quote.' },
       { q: 'Is the Land Cruiser available for security convoy operations?', a: 'Yes. We specialize in security convoy deployments. The Land Cruiser can be configured with escort vehicles, trained drivers, and coordination support.' },
       { q: 'Can I rent the Land Cruiser for a wedding in Benin City?', a: 'Certainly. The Land Cruiser is an excellent choice for wedding convoys. It brings prestige and elegance to any occasion.' }
     ]
@@ -214,7 +212,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [hiluxFront, hiluxBack, hiluxSide, hiluxBoarding],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Medium Bags', type: 'Escort Pickup' },
     desc: 'A tough, proven pickup truck built for rough roads and heavy work. Perfect for security, farm work, and construction sites.',
-    pricePerDay: 70000,
     category: 'vip',
     seo: {
       title: 'Toyota Hilux Rental Nigeria | Security Escort & Utility Pickup Hire',
@@ -241,7 +238,7 @@ export const FLEET_DATA: FleetItem[] = [
       'Organized patrol and surveillance operations'
     ],
     faq: [
-      { q: 'How much to rent a Toyota Hilux per day in Nigeria?', a: 'The Toyota Hilux rents for ₦70,000 per day with a professional driver. Long-term and corporate rates are available.' },
+      { q: 'How do I get a price quote for renting a Toyota Hilux in Nigeria?', a: 'Rates for the Toyota Hilux depend on trip scope, utility needs, and escort configuration. You will receive an exact custom quote directly from our team when you submit your booking.' },
       { q: 'Can the Hilux be used for armed security escort?', a: 'Yes. The Hilux is our primary vehicle for security escort operations. It can be equipped for support roles and convoy coordination.' },
       { q: 'Is the Hilux available for farm and rural use?', a: 'Absolutely. The Hilux is built for tough conditions. It is perfect for farm access roads, rural communities, and construction zones.' }
     ]
@@ -253,7 +250,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [corollaFront, corollaBack, corollaSide, corollaBoarding],
     specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Comfort Sedan' },
     desc: 'A simple, reliable car that is easy on fuel. Great for city trips, meetings, and airport runs. Affordable and comfortable.',
-    pricePerDay: 25000,
     category: 'sedans',
     seo: {
       title: 'Toyota Corolla Rental Nigeria | Affordable Sedan Hire Benin City',
@@ -281,7 +277,7 @@ export const FLEET_DATA: FleetItem[] = [
       'University and school-related transport'
     ],
     faq: [
-      { q: 'How much does the Corolla cost per day?', a: 'The Toyota Corolla rents for ₦25,000 per day, making it our most affordable option. Driver and fuel are included.' },
+      { q: 'How do I receive pricing for the Toyota Corolla?', a: 'Rates are provided upon booking based on your schedule, itinerary, and duration. Submit a reservation request to get your quote from our desk.' },
       { q: 'Is the Corolla good for airport transfers?', a: 'Yes, the Corolla is perfect for airport runs in Benin City and Lagos. It is fuel-efficient, easy to park, and comfortable for short trips.' },
       { q: 'How many people fit in the Corolla?', a: 'The Corolla comfortably seats 4 passengers plus the driver. It is ideal for individuals or small groups.' }
     ]
@@ -293,7 +289,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [camryFront, camryBack, camrySide, camryBoarding],
     specs: { pax: 'Up to 4 Passengers', luggage: '2 Medium Bags', type: 'Premium Sedan' },
     desc: 'A spacious and smooth sedan. Perfect for executive travel and long trips. Comfortable seats and a quiet ride.',
-    pricePerDay: 30000,
     category: 'sedans',
     seo: {
       title: 'Toyota Camry Rental Nigeria | Executive Sedan Hire Benin City',
@@ -321,7 +316,7 @@ export const FLEET_DATA: FleetItem[] = [
       'Corporate staff transport and client pickups'
     ],
     faq: [
-      { q: 'What is the daily rental price for the Toyota Camry?', a: 'The Toyota Camry rents for ₦30,000 per day with a professional driver. Long-term discounts are available.' },
+      { q: 'How is the rental price determined for the Toyota Camry?', a: 'Pricing is custom-quoted upon reservation based on your trip duration, route, and chauffeur requirements.' },
       { q: 'Is the Camry good for Benin to Lagos road trips?', a: 'Yes, the Camry is an excellent choice for Benin to Lagos journeys. Its spacious interior and smooth ride make long trips comfortable.' },
       { q: 'How many passengers fit in the Camry?', a: 'The Camry seats up to 4 passengers plus the driver. It offers more rear legroom than the Corolla.' }
     ]
@@ -333,7 +328,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [hiaceFront, hiaceBack, hiaceSide, hiaceBoarding],
     specs: { pax: 'Up to 14 Passengers', luggage: '8 Medium Bags', type: 'Commuter Bus' },
     desc: 'A 14-seater bus perfect for groups, family trips, and corporate outings. The classic reliable "Hummer" bus.',
-    pricePerDay: 60000,
     category: 'vans',
     seo: {
       title: 'Toyota Hiace Bus Rental Nigeria | 14-Seater Group Transport Benin City',
@@ -359,7 +353,7 @@ export const FLEET_DATA: FleetItem[] = [
       'Church and community group transportation'
     ],
     faq: [
-      { q: 'How much to rent a Toyota Hiace Bus per day?', a: 'The Toyota Hiace Bus rents for ₦60,000 per day with a professional driver and fuel included. Volume discounts for multiple days.' },
+      { q: 'How do I get a quote for the Toyota Hiace Bus?', a: 'Pricing for the Hiace Bus is provided upon booking depending on group size, route itinerary, and trip span. Submit your booking details for an immediate custom quote.' },
       { q: 'How many people can the Hiace Bus carry?', a: 'The Hiace Bus seats up to 14 passengers comfortably plus the driver.' },
       { q: 'Can I use the Hiace Bus for a wedding in Benin City?', a: 'Absolutely. The Hiace Bus is frequently booked for wedding guest transport. It keeps your guests together and on time.' }
     ]
@@ -371,7 +365,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [coasterFront, coasterBack, coasterSide, coasterBoarding],
     specs: { pax: 'Up to 28 Passengers', luggage: '15 Large Bags', type: 'Group Transit Coach' },
     desc: 'A big 28-seater bus for large groups, weddings, and events. Spacious and reliable for long trips.',
-    pricePerDay: 100000,
     category: 'vans',
     seo: {
       title: 'Toyota Coaster Bus Rental Nigeria | 28-Seater Coach Hire Benin City',
@@ -399,7 +392,7 @@ export const FLEET_DATA: FleetItem[] = [
       'Mass transit for events and conferences'
     ],
     faq: [
-      { q: 'How much is the Toyota Coaster Bus rental per day?', a: 'The Toyota Coaster Bus rents for ₦100,000 per day with a professional driver. Fuel and basic maintenance included.' },
+      { q: 'How do I get pricing for the Toyota Coaster Bus rental?', a: 'Group transit and event coach rates are quoted upon booking based on distance, event schedule, and logistics support. Contact our protocol desk for your custom quote.' },
       { q: 'How many passengers can the Coaster Bus carry?', a: 'The Coaster Bus seats up to 28 passengers comfortably.' },
       { q: 'Is the Coaster Bus good for interstate travel?', a: 'Yes, the Coaster Bus is built for long-distance travel. It is comfortable, air conditioned, and reliable for cross-country trips.' }
     ]
@@ -411,7 +404,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [siennaFront, siennaBack, siennaSide, siennaBoarding],
     specs: { pax: 'Up to 7 Passengers', luggage: '5 Medium Bags', type: 'Minivan' },
     desc: 'A spacious minivan for families and small groups. Great for airport runs, city trips, and comfortable travel with luggage.',
-    pricePerDay: 45000,
     category: 'vans',
     seo: {
       title: 'Toyota Sienna Rental Nigeria | 7-Seater Family Van Hire',
@@ -438,7 +430,7 @@ export const FLEET_DATA: FleetItem[] = [
       'Comfortable travel for elderly passengers'
     ],
     faq: [
-      { q: 'What is the daily rental price for the Toyota Sienna?', a: 'The Toyota Sienna rents for ₦45,000 per day with a professional driver included.' },
+      { q: 'How do I receive pricing for the Toyota Sienna?', a: 'Rates are custom calculated and provided upon booking based on passenger requirements, luggage volume, and travel corridor. Submit a booking request to receive your quote.' },
       { q: 'How many people fit in the Sienna?', a: 'The Sienna seats up to 7 passengers comfortably. It is ideal for families and small groups.' },
       { q: 'Can I rent the Sienna for a trip from Benin to Lagos?', a: 'Absolutely. The Sienna is comfortable for Benin to Lagos trips and offers a smooth, quiet ride for everyone.' }
     ]
@@ -450,7 +442,6 @@ export const FLEET_DATA: FleetItem[] = [
     images: [lexusFront, lexusBack, lexusSide, lexusBoarding],
     specs: { pax: 'Up to 5 Passengers', luggage: '4 Large Bags', type: 'Luxury Executive SUV' },
     desc: 'Classic luxury SUV with leather seats and a super smooth ride. A favorite for VIPs and executives.',
-    pricePerDay: 100000,
     category: 'suvs',
     seo: {
       title: 'Lexus GX 460 Rental Nigeria | Luxury Executive SUV Hire Benin City',
@@ -477,7 +468,7 @@ export const FLEET_DATA: FleetItem[] = [
       'Exclusive leisure and weekend getaways'
     ],
     faq: [
-      { q: 'What is the rental cost for a Lexus GX 460 per day?', a: 'The Lexus GX 460 SUV rents for ₦100,000 per day with a professional chauffeur. Executive packages available.' },
+      { q: 'How do I get a rental quote for the Lexus GX 460?', a: 'Executive luxury rates are provided on-demand upon booking to accommodate VIP itinerary requirements, protocol escort options, and multi-day schedules. Contact our desk for an exact quotation.' },
       { q: 'Is the Lexus GX better than the Prado?', a: 'The Lexus GX is the luxury version of the Prado. It offers a quieter cabin, more premium materials, and a smoother ride.' },
       { q: 'Can the Lexus GX be used for interstate VIP travel?', a: 'Yes. The Lexus GX is perfect for VIP interstate travel. Its luxury interior and smooth suspension make long trips enjoyable.' }
     ]

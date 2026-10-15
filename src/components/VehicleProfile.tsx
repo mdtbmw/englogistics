@@ -40,10 +40,8 @@ export default function VehicleProfile({ vehicleId, setView, setSelectedFleetId 
       },
       offers: {
         '@type': 'Offer',
-        price: vehicle.pricePerDay,
-        priceCurrency: 'NGN',
         availability: 'https://schema.org/InStock',
-        description: `Daily rental rate: ₦${vehicle.pricePerDay.toLocaleString()}`
+        description: 'Custom rental quotation provided on demand upon reservation'
       },
       category: categoryLabels[vehicle.category] || 'Vehicle Rental'
     }, null, 2);
@@ -133,12 +131,11 @@ export default function VehicleProfile({ vehicleId, setView, setSelectedFleetId 
           </div>
 
           <div className="bg-gradient-to-br from-[#050548] to-[#030330] rounded-2xl p-5 text-white">
-            <span className="text-xs font-mono uppercase tracking-widest text-white/70">Daily Rate</span>
-            <div className="flex items-baseline gap-1 mt-1">
-              <span className="text-3xl font-bold">₦{vehicle.pricePerDay.toLocaleString()}</span>
-              <span className="text-sm text-white/70">/ day</span>
+            <span className="text-xs font-mono uppercase tracking-widest text-white/70">Pricing Structure</span>
+            <div className="mt-1">
+              <span className="text-2xl font-bold">Custom Quote On-Demand</span>
             </div>
-            <p className="text-xs text-white/60 mt-1">Chauffeur and fuel included. Custom quote for long-term hire.</p>
+            <p className="text-xs text-white/60 mt-1">Chauffeur and fuel options available. Tailored quote provided directly upon reservation.</p>
           </div>
 
           <button
@@ -238,7 +235,7 @@ export default function VehicleProfile({ vehicleId, setView, setSelectedFleetId 
             >
               <img src={v.image} alt={v.name} className="w-full h-16 object-cover rounded-lg mb-2" />
               <span className="text-xs font-bold text-zinc-900 block">{v.name}</span>
-              <span className="text-[11px] text-zinc-400 font-mono">₦{v.pricePerDay.toLocaleString()}/day</span>
+              <span className="text-[11px] text-zinc-400 font-mono">Custom Quote</span>
             </button>
           ))}
         </div>
@@ -258,7 +255,7 @@ export default function VehicleProfile({ vehicleId, setView, setSelectedFleetId 
             onClick={handleBook}
             className="bg-white text-[#050548] font-bold px-8 py-4 rounded-xl uppercase tracking-widest active:scale-95 cursor-pointer transition-all hover:bg-white/90 shadow-lg"
           >
-            Book Now — ₦{vehicle.pricePerDay.toLocaleString()}/day
+            Book Now — Get Your Custom Quote
           </button>
         </div>
       </section>
@@ -268,7 +265,7 @@ export default function VehicleProfile({ vehicleId, setView, setSelectedFleetId 
         <h2>About the {vehicle.name} — Engraced Logistics</h2>
         <p>{vehicle.seo.description}</p>
         <p>Keywords: {vehicle.seo.keywords.join(', ')}</p>
-        <p>Daily rental rate: ₦{vehicle.pricePerDay.toLocaleString()} in Benin City, Lagos, and Abuja. Chauffeur included.</p>
+        <p>Custom rental quotes available in Benin City, Lagos, and Abuja upon booking. Chauffeur included.</p>
       </div>
     </div>
   );

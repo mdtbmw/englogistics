@@ -18,7 +18,7 @@ export default function HeroSlider({ setView }: HeroSliderProps) {
 
   const LIVE_FEED = [
     "We are here for you 24/7. Call or chat with us!",
-    "Booking a ride is easy. Select, pay, and go!",
+    "Booking a ride is easy. Select your vehicle, get your quote, and go!",
     "New vehicles available. Check our fleet!",
     "We cover Benin, Asaba, Lagos, and all of Nigeria.",
     "Need a Hilux? We have the toughest trucks ready!"

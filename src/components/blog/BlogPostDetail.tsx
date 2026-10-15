@@ -247,19 +247,7 @@ export default function BlogPostDetail({ slug, setView, setSelectedSlug }: BlogP
     setTimeout(() => setCommentSuccess(false), 5000);
   };
 
-  // Estimate Calculation
-  const estimatedCost = useMemo(() => {
-    let base = 85000;
-    if (estimatorVehicle === 'land_cruiser') base = 160000;
-    if (estimatorVehicle === 'hilux_escort') base = 120000;
-    if (estimatorVehicle === 'toyota_hiace') base = 110000;
-
-    let distanceMultiplier = 1;
-    if (estimatorOrigin !== estimatorDest) distanceMultiplier = 1.6;
-    if (estimatorEscort) base += 75000;
-
-    return Math.round(base * distanceMultiplier);
-  }, [estimatorOrigin, estimatorDest, estimatorVehicle, estimatorEscort]);
+  // In-article inquiry state ready for booking handover
 
   if (loading) {
     return (
@@ -584,14 +572,14 @@ export default function BlogPostDetail({ slug, setView, setSelectedSlug }: BlogP
               dangerouslySetInnerHTML={{ __html: processedContent }}
             />
 
-            {/* Interactive In-Article Rental Cost & Route Estimator */}
+            {/* Interactive In-Article Route & Fleet Inquiry */}
             <div className="my-12 bg-zinc-50 border border-zinc-200 rounded-3xl p-6 sm:p-8 shadow-sm">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#050548] mb-2 font-mono">
                 <Calculator size={16} />
-                <span>Executive Trip Cost &amp; Fleet Estimator</span>
+                <span>Executive Route &amp; Fleet Logistics Inquiry</span>
               </div>
-              <h3 className="text-xl font-black text-zinc-900 mb-2">Estimate Your Route Logistics Rate</h3>
-              <p className="text-xs text-zinc-500 mb-6">Calculate estimated pricing for Prado, Land Cruiser, and armed tactical escort convoys.</p>
+              <h3 className="text-xl font-black text-zinc-900 mb-2">Request Route Logistics Pricing</h3>
+              <p className="text-xs text-zinc-500 mb-6">Select your planned departure corridor and preferred fleet category. Rates are calculated on demand and confirmed directly upon booking.</p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div>
@@ -652,17 +640,18 @@ export default function BlogPostDetail({ slug, setView, setSelectedSlug }: BlogP
 
               <div className="p-4 bg-white rounded-2xl border border-zinc-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                  <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest block">Estimated Rate / Day</span>
-                  <div className="text-2xl font-black text-[#050548] font-mono">
-                    ₦{estimatedCost.toLocaleString()}
+                  <span className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest block">Pricing Structure</span>
+                  <div className="text-xl font-black text-[#050548]">
+                    Custom Quote On-Demand
                   </div>
+                  <span className="text-[11px] text-zinc-500 block mt-0.5">Calculated by protocol desk upon reservation</span>
                 </div>
 
                 <button
                   onClick={() => setView('booking')}
                   className="bg-[#050548] hover:bg-[#0A0A78] text-white px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider shadow-md cursor-pointer active:scale-95 transition-all"
                 >
-                  Reserve This Ride in Booking Desk &rarr;
+                  Proceed to Booking Desk for Quote &rarr;
                 </button>
               </div>
             </div>

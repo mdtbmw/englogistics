@@ -15,7 +15,7 @@ export interface FleetItem {
     type: string;
   };
   desc: string;
-  pricePerDay: number;
+  pricePerDay?: number;
   category: string;
   seo: {
     title: string;
@@ -50,7 +50,7 @@ export interface Booking {
   pickupTime: string;
   securityLevel: 'standard' | 'armed-escort' | 'covert';
   durationDays: number;
-  totalCost: number;
+  totalCost?: number;
   status: 'pending' | 'active' | 'completed';
   clientName: string;
   clientEmail: string;
@@ -200,7 +200,7 @@ export interface BookingRecord {
   pickupTime: string;
   securityLevel: string;
   durationDays: number;
-  totalCost: number;
+  totalCost?: number;
   clientName: string;
   clientEmail: string;
   clientPhone: string;

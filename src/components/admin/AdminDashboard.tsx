@@ -372,8 +372,16 @@ export default function AdminDashboard({
                           {booking.securityLevel}
                         </span>
                       </td>
-                      <td className="py-3.5 pr-4 font-mono font-bold text-emerald-700">
-                        ₦{booking.totalCost?.toLocaleString() || 'Custom'}
+                      <td className="py-3.5 pr-4">
+                        {booking.totalCost && booking.totalCost > 0 ? (
+                          <span className="font-mono font-bold text-emerald-700">
+                            ₦{booking.totalCost.toLocaleString()}
+                          </span>
+                        ) : (
+                          <span className="bg-amber-50 text-amber-800 border border-amber-200 px-2 py-0.5 rounded text-[10px] font-bold font-mono uppercase tracking-wider">
+                            Quote Required
+                          </span>
+                        )}
                       </td>
                       <td className="py-3.5 pr-4">
                         <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase font-mono ${

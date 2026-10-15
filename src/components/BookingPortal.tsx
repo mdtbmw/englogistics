@@ -80,10 +80,6 @@ export default function BookingPortal({ initialVehicleId, setView }: BookingPort
     }
     const receiptId = `ENG-${randCode}-${Math.floor(1000 + Math.random() * 9000)}`;
 
-    const dailyRate = selectedVehicle.pricePerDay || 85000;
-    const escortSurcharge = securityLevel === 'armed-escort' ? 75000 : securityLevel === 'covert' ? 120000 : 0;
-    const computedTotal = (dailyRate + escortSurcharge) * duration;
-
     const newBooking: BookingRecord = {
       id: receiptId,
       vehicleType: selectedVehicle.name,
@@ -94,7 +90,7 @@ export default function BookingPortal({ initialVehicleId, setView }: BookingPort
       pickupTime,
       securityLevel,
       durationDays: duration,
-      totalCost: computedTotal,
+      totalCost: 0,
       clientName,
       clientEmail,
       clientPhone,
